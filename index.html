@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>N³ Innovations</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="N³ Innovations runs a four-week, self-funded study at South African mines to find where information breaks down between people, machines and control rooms, and what each breakdown costs.">
+<meta property="og:title" content="N³ Innovations | Safer mines, more tonnes">
+<meta property="og:description" content="A four-week operational study at your mine. R0 to the mine. No obligation to buy.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B1F33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1F33'/%3E%3Crect x='10' y='20' width='22' height='24' fill='%23EEF2F4'/%3E%3Ccircle cx='43' cy='32' r='12' fill='%23F26A21'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: alternating deep-navy and mist bands, like a mine plan sheet: a section drawing up top,
+   then a reading column of 1120px with plan-style hairline rules and mono "survey" labels. */
+:root {
+  --navy: #0B1F33;      /* deck ground */
+  --navy-2: #12304B;    /* raised surface on navy */
+  --steel: #9DB4C3;     /* deck sub-head blue-grey */
+  --mist: #EEF2F4;      /* light band */
+  --paper: #FFFFFF;
+  --ink: #0B1F33;
+  --ink-2: #3D5567;
+  --rule-dark: rgba(238, 242, 244, 0.14);
+  --rule-light: #D3DDE3;
+  --hivis: #F26A21;     /* reflective-overall orange, used sparingly */
+  --hivis-ink: #B9470B; /* hi-vis that passes contrast on light grounds */
+
+  --f-display: "Poppins", "Segoe UI", system-ui, sans-serif;
+  --f-body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --t-xs: 0.78rem; --t-sm: 0.9rem; --t-md: 1.0625rem; --t-lg: 1.25rem;
+  --t-xl: clamp(1.6rem, 1.1rem + 1.6vw, 2.25rem);
+  --t-2xl: clamp(2.6rem, 1.4rem + 4.6vw, 4.75rem);
+  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 72px;
+  --wrap: 1120px;
+  --r: 10px;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+body {
+  margin: 0;
+  background: var(--navy);
+  color: var(--mist);
+  font-family: var(--f-body);
+  font-size: var(--t-md);
+  line-height: 1.6;
+}
+img, svg { max-width: 100%; }
+a { color: inherit; }
+:focus-visible { outline: 2px solid var(--hivis); outline-offset: 3px; border-radius: 4px; }
+h1, h2, h3 { font-family: var(--f-display); font-weight: 700; line-height: 1.12; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
+h2 { font-size: var(--t-xl); }
+h3 { font-size: var(--t-lg); font-weight: 600; }
+p { margin: 0; }
+
+.wrap {
+  width: 100%;
+  max-width: calc(var(--wrap) + 2 * 32px);
+  margin-inline: auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (min-width: 720px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
+
+.band { padding-block: var(--s8); }
+.band.light { background: var(--mist); color: var(--ink); }
+.band.white { background: var(--paper); color: var(--ink); }
+.band.raised { background: var(--navy-2); }
+
+.label {
+  font-family: var(--f-mono);
+  font-size: var(--t-xs);
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--steel);
+}
+.light .label, .white .label { color: var(--ink-2); }
+.section-head { display: grid; gap: var(--s3); max-width: 46rem; margin-bottom: var(--s7); }
+.section-head .lead { font-size: var(--t-lg); color: var(--steel); line-height: 1.5; }
+.light .section-head .lead, .white .section-head .lead { color: var(--ink-2); }
+
+/* ---------- Header ---------- */
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--navy); }
+.site-head {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20;
+  background: rgba(11, 31, 51, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule-dark);
+}
+.head-row { display: flex; align-items: center; gap: var(--s5); min-height: 64px; }
+.brand { display: flex; align-items: center; gap: var(--s3); text-decoration: none; font-family: var(--f-display); font-weight: 700; font-size: 1.1rem; white-space: nowrap; }
+.brand svg { width: 34px; height: 24px; flex: none; }
+.brand sup { font-size: 0.6em; }
+.nav { display: flex; gap: var(--s5); margin-left: auto; font-size: var(--t-sm); font-weight: 500; }
+.nav a { text-decoration: none; color: var(--steel); }
+.nav a:hover { color: var(--mist); }
+.menu-btn { display: none; margin-left: auto; background: none; border: 1px solid var(--rule-dark); color: var(--mist); border-radius: 6px; min-height: 40px; padding: 0 var(--s4); font: 600 var(--t-sm) var(--f-body); cursor: pointer; }
+
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--s2);
+  min-height: 48px; padding: 0 var(--s5);
+  border-radius: 6px; border: 1.5px solid transparent;
+  font: 600 var(--t-md) var(--f-body);
+  text-decoration: none; cursor: pointer; background: transparent; color: inherit;
+  white-space: nowrap; max-width: 100%;
+  transition: background-color 0.15s, border-color 0.15s, color 0.15s;
+}
+.btn-primary { background: var(--hivis); color: #1A0D04; }
+.btn-primary:hover { background: #FF7D36; }
+.btn-ghost { border-color: var(--rule-dark); color: var(--mist); }
+.btn-ghost:hover { border-color: var(--steel); }
+.btn-dark { background: var(--navy); color: var(--mist); }
+.btn-dark:hover { background: var(--navy-2); }
+.btn-line { border-color: var(--rule-light); color: var(--ink); background: var(--paper); }
+.btn-line:hover { border-color: var(--ink); }
+.head-row .btn { min-height: 40px; padding: 0 var(--s4); font-size: var(--t-sm); }
+@media (max-width: 560px) { .btn { white-space: normal; text-align: center; padding-block: 6px; } }
+
+@media (max-width: 900px) {
+  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--navy); border-bottom: 1px solid var(--rule-dark); padding: var(--s2) max(16px, env(safe-area-inset-right, 0px)) var(--s4) max(16px, env(safe-area-inset-left, 0px)); }
+  .nav.open { display: flex; }
+  .nav a { padding: var(--s3) 0; border-bottom: 1px solid var(--rule-dark); color: var(--mist); }
+  .menu-btn { display: inline-flex; align-items: center; }
+  .head-row > .btn { display: none; }
+}
+
+/* ---------- Hero ---------- */
+.hero { padding-block: var(--s7) var(--s8); overflow: hidden; }
+.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--s7); align-items: center; }
+.hero-copy { display: grid; gap: var(--s5); min-width: 0; }
+.hero h1 { font-size: var(--t-2xl); }
+.hero h1 em { font-style: normal; color: var(--hivis); }
+.hero .lead { font-size: var(--t-lg); color: var(--steel); max-width: 34rem; line-height: 1.5; }
+.actions { display: flex; flex-wrap: wrap; gap: var(--s3); }
+.section-drawing { min-width: 0; }
+.section-drawing svg { display: block; width: 100%; height: auto; }
+.drawing-note { margin-top: var(--s3); font-family: var(--f-mono); font-size: var(--t-xs); color: var(--steel); }
+@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } .section-drawing { order: 2; } }
+
+.facts { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin: var(--s7) 0 0; border-top: 1px solid var(--rule-dark); }
+.facts > div { padding: var(--s5) var(--s4) 0 0; display: grid; gap: var(--s1); min-width: 0; }
+.facts > div + div { padding-left: var(--s4); border-left: 1px solid var(--rule-dark); }
+.facts dt { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--steel); }
+.facts dd { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: 1.35rem; line-height: 1.25; }
+@media (max-width: 860px) {
+  .facts { grid-template-columns: repeat(auto-fit, minmax(min(150px, 100%), 1fr)); }
+  .facts > div, .facts > div + div { padding: var(--s4) var(--s3) var(--s4) 0; border-left: 0; border-bottom: 1px solid var(--rule-dark); }
+}
+
+/* ---------- Why now ---------- */
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s6); }
+.stat { display: grid; align-content: start; gap: var(--s3); padding-top: var(--s5); border-top: 3px solid var(--ink); min-width: 0; }
+.stat.alert { border-top-color: var(--hivis); }
+.stat-num { font-family: var(--f-display); font-weight: 700; font-size: clamp(2.8rem, 2rem + 2.4vw, 4rem); line-height: 1; font-variant-numeric: tabular-nums; }
+.stat p { color: var(--ink-2); }
+.stat .src { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--ink-2); }
+.stat .src a { color: var(--ink-2); }
+.reg-note { margin-top: var(--s7); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--s5); align-items: start; padding: var(--s5); background: var(--paper); border: 1px solid var(--rule-light); border-radius: var(--r); }
+.reg-tag { font-family: var(--f-mono); font-size: var(--t-xs); font-weight: 500; padding: 4px 8px; border-radius: 4px; background: var(--navy); color: var(--mist); white-space: nowrap; }
+.reg-note p { color: var(--ink-2); max-width: 62ch; }
+.reg-note strong { color: var(--ink); }
+@media (max-width: 760px) { .stats { grid-template-columns: minmax(0, 1fr); } .reg-note { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- The idea ---------- */
+.idea { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: var(--s7); align-items: start; }
+.idea blockquote { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: var(--t-xl); line-height: 1.25; text-wrap: balance; }
+.questions { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.questions li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: var(--s4); padding: var(--s5) 0; border-top: 1px solid var(--rule-dark); }
+.questions li:last-child { border-bottom: 1px solid var(--rule-dark); }
+.q-num { font-family: var(--f-mono); color: var(--hivis); font-size: var(--t-sm); padding-top: 3px; }
+.questions h3 { margin-bottom: var(--s2); }
+.questions p { color: var(--steel); }
+.defs { margin-top: var(--s6); display: grid; gap: var(--s4); }
+.defs p { color: var(--steel); font-size: var(--t-sm); max-width: 52ch; }
+.defs strong { color: var(--mist); font-family: var(--f-mono); font-weight: 500; }
+@media (max-width: 860px) { .idea { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Study areas ---------- */
+.areas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
+.area { background: var(--paper); border: 1px solid var(--rule-light); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; }
+.area h3 { font-size: 1.12rem; }
+.area .ask { color: var(--ink); }
+.area .ev { font-size: var(--t-sm); color: var(--ink-2); padding-top: var(--s3); border-top: 1px dashed var(--rule-light); }
+.area .ev b { font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; display: block; margin-bottom: 2px; }
+.caveat { margin-top: var(--s5); color: var(--ink-2); font-size: var(--t-sm); }
+@media (max-width: 960px) { .areas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .areas { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- How it works: a plan of the seven weeks ---------- */
+.track { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 0; position: relative; }
+.track li { position: relative; padding: var(--s6) var(--s4) 0 0; min-width: 0; display: grid; align-content: start; gap: var(--s2); }
+.track li::before { content: ""; position: absolute; top: 9px; left: 0; right: 0; height: 2px; background: var(--rule-dark); }
+.track li::after { content: ""; position: absolute; top: 2px; left: 0; width: 16px; height: 16px; border-radius: 50%; background: var(--navy); border: 2px solid var(--steel); }
+.track li.onsite::before { background: var(--hivis); }
+.track li.onsite::after { border-color: var(--hivis); background: var(--hivis); }
+.track .wk { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--steel); letter-spacing: 0.06em; text-transform: uppercase; }
+.track h3 { font-size: 1.05rem; }
+.track p { font-size: var(--t-sm); color: var(--steel); }
+.track-legend { display: flex; flex-wrap: wrap; gap: var(--s5); margin-top: var(--s6); font-family: var(--f-mono); font-size: var(--t-xs); color: var(--steel); }
+.track-legend span { display: inline-flex; align-items: center; gap: var(--s2); }
+.track-legend i { display: inline-block; width: 22px; height: 2px; background: var(--rule-dark); }
+.track-legend i.on { background: var(--hivis); }
+@media (max-width: 960px) {
+  .track { grid-template-columns: minmax(0, 1fr); }
+  .track li { padding: 0 0 var(--s5) var(--s6); }
+  .track li::before { top: 0; bottom: 0; left: 7px; right: auto; width: 2px; height: auto; }
+  .track li::after { top: 2px; left: 0; }
+}
+
+.day { margin-top: var(--s7); display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: var(--s7); align-items: start; }
+.day p { color: var(--steel); max-width: 44ch; }
+.day-table { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: var(--t-sm); }
+th, td { text-align: left; padding: var(--s3) var(--s4) var(--s3) 0; border-bottom: 1px solid var(--rule-dark); vertical-align: top; }
+th { font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--steel); }
+td.time { font-family: var(--f-mono); white-space: nowrap; color: var(--mist); font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) { .day { grid-template-columns: minmax(0, 1fr); gap: var(--s5); } }
+
+/* ---------- Methods and scoring ---------- */
+.methods { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s6) var(--s5); }
+.method { display: grid; align-content: start; gap: var(--s2); min-width: 0; }
+.method .target { font-family: var(--f-mono); font-size: var(--t-sm); color: var(--hivis-ink); font-weight: 500; }
+.method p { color: var(--ink-2); font-size: var(--t-sm); }
+@media (max-width: 900px) { .methods { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .methods { grid-template-columns: minmax(0, 1fr); } }
+
+.scoring { margin-top: var(--s8); display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: var(--s7); align-items: start; }
+.scoring-copy { display: grid; gap: var(--s4); }
+.scoring-copy p { color: var(--ink-2); }
+.formula { font-family: var(--f-mono); font-size: var(--t-sm); background: var(--navy); color: var(--mist); padding: var(--s4); border-radius: 6px; overflow-x: auto; white-space: nowrap; }
+.weights { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--s4); }
+.weights li { display: grid; grid-template-columns: minmax(0, 1fr) 3.2rem; gap: var(--s1) var(--s3); align-items: center; }
+.weights .w-name { font-weight: 600; }
+.weights .w-pct { font-family: var(--f-mono); text-align: right; font-variant-numeric: tabular-nums; }
+.weights .w-bar { grid-column: 1 / -1; height: 10px; background: var(--mist); border-radius: 2px; overflow: hidden; }
+.weights .w-bar span { display: block; height: 100%; background: var(--navy); }
+.weights li:first-child .w-bar span { background: var(--hivis); }
+.weights .w-q { grid-column: 1 / -1; font-size: var(--t-sm); color: var(--ink-2); }
+.rules { margin-top: var(--s6); display: grid; gap: var(--s2); padding: 0; list-style: none; }
+.rules li { padding-left: var(--s5); position: relative; color: var(--ink-2); font-size: var(--t-sm); }
+.rules li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 10px; height: 10px; background: var(--navy); }
+@media (max-width: 860px) { .scoring { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Receive / need ---------- */
+.two-col { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--s7); align-items: start; }
+.receive { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
+.receive li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: var(--s3); padding: var(--s4) 0; border-top: 1px solid var(--rule-dark); }
+.receive li:last-child { border-bottom: 1px solid var(--rule-dark); }
+.tick { width: 22px; height: 22px; margin-top: 2px; }
+.receive b { display: block; font-weight: 600; }
+.receive span { color: var(--steel); font-size: var(--t-sm); }
+.need td:first-child { font-weight: 600; color: var(--mist); width: 48%; }
+.need td { color: var(--steel); }
+.col-title { margin-bottom: var(--s4); }
+@media (max-width: 860px) { .two-col { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Commitments ---------- */
+.commit { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
+.commit section { background: var(--paper); border: 1px solid var(--rule-light); border-radius: var(--r); padding: var(--s5); min-width: 0; }
+.commit h3 { font-size: 1.12rem; margin-bottom: var(--s4); }
+.commit ul { margin: 0; padding-left: 1.1em; display: grid; gap: var(--s2); color: var(--ink-2); font-size: var(--t-sm); }
+.law { margin-top: var(--s5); display: flex; flex-wrap: wrap; gap: var(--s2); }
+.law span { font-family: var(--f-mono); font-size: var(--t-xs); padding: 4px 8px; border: 1px solid var(--rule-light); border-radius: 4px; color: var(--ink-2); background: var(--paper); }
+@media (max-width: 900px) { .commit { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Lessons ---------- */
+.lessons-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: var(--s7); align-items: start; }
+.lessons-grid .section-head { margin-bottom: 0; }
+@media (max-width: 860px) { .lessons-grid { grid-template-columns: minmax(0, 1fr); } }
+.lessons { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+.lessons li:last-child { border-bottom: 1px solid var(--rule-light); }
+.lessons li { padding: var(--s4) 0; border-top: 1px solid var(--rule-light); display: grid; gap: var(--s1); min-width: 0; }
+.lessons b { font-weight: 600; }
+.lessons span { font-size: var(--t-sm); color: var(--ink-2); }
+.lessons .from { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--ink-2); letter-spacing: 0.04em; }
+
+/* ---------- Team ---------- */
+.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
+.person { border: 1px solid var(--rule-dark); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; background: var(--navy-2); }
+.mark { display: flex; align-items: center; gap: 0; height: 44px; }
+.mark .sq { width: 40px; height: 44px; background: var(--mist); color: var(--navy); display: grid; place-items: center; font-family: var(--f-display); font-weight: 700; font-size: 1.1rem; }
+.mark .ci { width: 44px; height: 44px; border-radius: 50%; background: var(--steel); opacity: 0.35; }
+.person .role { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--hivis); }
+.person p { color: var(--steel); font-size: var(--t-sm); overflow-wrap: anywhere; }
+.person .leads { padding-top: var(--s3); border-top: 1px solid var(--rule-dark); }
+.person .leads b { color: var(--mist); font-weight: 600; }
+@media (max-width: 900px) { .team { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Contact ---------- */
+.contact { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--s7); align-items: start; }
+.contact h2 { font-size: clamp(2rem, 1.3rem + 2.4vw, 3rem); }
+.contact .lead { color: var(--ink-2); font-size: var(--t-lg); margin-top: var(--s4); max-width: 36rem; }
+.card-contact { background: var(--navy); color: var(--mist); border-radius: var(--r); padding: var(--s6); display: grid; gap: var(--s5); min-width: 0; }
+.card-contact dl { margin: 0; display: grid; gap: var(--s4); }
+.card-contact dt { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--steel); }
+.card-contact dd { margin: 2px 0 0; font-size: var(--t-lg); font-weight: 600; overflow-wrap: anywhere; user-select: all; }
+.card-contact dd a { text-decoration: none; }
+.card-contact dd a:hover { text-decoration: underline; }
+.card-contact .actions .btn { flex: 1 1 10rem; }
+.copy-state { font-size: var(--t-sm); color: var(--steel); min-height: 1.4em; }
+@media (max-width: 860px) { .contact { grid-template-columns: minmax(0, 1fr); } }
+
+/* ---------- Footer ---------- */
+.site-foot { padding-block: var(--s7) var(--s6); border-top: 1px solid var(--rule-dark); font-size: var(--t-sm); color: var(--steel); }
+.foot-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--s6); }
+.sources { list-style: none; margin: var(--s2) 0 0; padding: 0; display: grid; gap: var(--s1); font-size: var(--t-xs); }
+.sources a { color: var(--steel); overflow-wrap: anywhere; }
+.foot-base { margin-top: var(--s6); padding-top: var(--s4); border-top: 1px solid var(--rule-dark); display: flex; flex-wrap: wrap; gap: var(--s3) var(--s6); justify-content: space-between; font-size: var(--t-xs); }
+@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
+</style>
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="#top" aria-label="N³ Innovations, home">
+      <svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg>
+      <span>N<sup>3</sup> Innovations</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="#why">Why now</a>
+      <a href="#areas">What we study</a>
+      <a href="#how">How it works</a>
+      <a href="#commitments">Commitments</a>
+      <a href="#team">Team</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <a class="btn btn-primary" href="#contact">Request a study</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="label">Self-funded operational study · South African mines</p>
+          <h1>Safer mines,<br><em>more tonnes.</em></h1>
+          <p class="lead">We spend 20 working days at your mine finding where information breaks down between people, machines and control rooms, and what each breakdown costs in tonnes, hours, rand and risk.</p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#contact">Request a study</a>
+            <a class="btn btn-ghost" href="#how">See how the study works</a>
+          </div>
+        </div>
+
+        <figure class="section-drawing" style="margin:0">
+          <svg viewBox="0 0 520 420" role="img" aria-label="Section drawing of a mine: a control room at surface, a shaft, three working levels, and places where messages between people, machines and the control room are delayed or lost.">
+            <defs>
+              <pattern id="rock" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+                <line x1="0" y1="0" x2="0" y2="14" stroke="#9DB4C3" stroke-opacity="0.10" stroke-width="1"/>
+              </pattern>
+            </defs>
+            <!-- ground -->
+            <rect x="0" y="92" width="520" height="328" fill="url(#rock)"/>
+            <line x1="0" y1="92" x2="520" y2="92" stroke="#9DB4C3" stroke-width="1.5"/>
+            <text x="8" y="84" font-family="IBM Plex Mono, monospace" font-size="11" fill="#9DB4C3">SURFACE</text>
+
+            <!-- headframe -->
+            <g stroke="#EEF2F4" stroke-width="2" fill="none">
+              <path d="M150 92 L170 30 L190 92"/>
+              <path d="M160 62 L180 62"/>
+              <circle cx="170" cy="28" r="7"/>
+            </g>
+            <!-- shaft -->
+            <rect x="163" y="92" width="14" height="300" fill="#0B1F33" stroke="#EEF2F4" stroke-width="1.5"/>
+            <line x1="170" y1="96" x2="170" y2="388" stroke="#9DB4C3" stroke-dasharray="2 6"/>
+
+            <!-- control room -->
+            <rect x="330" y="44" width="120" height="48" rx="3" fill="#12304B" stroke="#EEF2F4" stroke-width="1.5"/>
+            <text x="390" y="64" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#EEF2F4">CONTROL</text>
+            <text x="390" y="79" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#EEF2F4">ROOM</text>
+            <!-- radio arcs from control room -->
+            <g stroke="#9DB4C3" fill="none" stroke-width="1.2">
+              <path d="M325 54 a14 14 0 0 0 0 28" />
+              <path d="M317 46 a24 24 0 0 0 0 44" stroke-opacity="0.6"/>
+            </g>
+
+            <!-- levels -->
+            <g font-family="IBM Plex Mono, monospace" font-size="11" fill="#9DB4C3">
+              <text x="190" y="176">LEVEL A</text>
+              <text x="190" y="266">LEVEL B</text>
+              <text x="190" y="356">LEVEL C</text>
+            </g>
+            <g stroke="#EEF2F4" stroke-width="10" stroke-linecap="square">
+              <line x1="177" y1="190" x2="490" y2="190" stroke-opacity="0.9"/>
+              <line x1="40" y1="280" x2="163" y2="280" stroke-opacity="0.9"/>
+              <line x1="177" y1="280" x2="470" y2="280" stroke-opacity="0.9"/>
+              <line x1="177" y1="370" x2="420" y2="370" stroke-opacity="0.9"/>
+            </g>
+
+            <!-- good link: level A -->
+            <path d="M390 92 L390 182" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <circle cx="390" cy="190" r="4" fill="#0B1F33"/>
+
+            <!-- machine on level B -->
+            <g>
+              <rect x="300" y="268" width="38" height="20" rx="3" fill="#F26A21"/>
+              <circle cx="309" cy="290" r="4" fill="#0B1F33"/><circle cx="330" cy="290" r="4" fill="#0B1F33"/>
+            </g>
+            <!-- person on level B -->
+            <g fill="#EEF2F4"><circle cx="364" cy="264" r="5"/><rect x="360" y="270" width="8" height="12" rx="2"/></g>
+
+            <!-- dead zone markers -->
+            <g>
+              <circle cx="440" cy="280" r="22" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <text x="440" y="246" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#F26A21">NO SIGNAL?</text>
+            </g>
+            <g>
+              <circle cx="100" cy="280" r="22" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <text x="100" y="318" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#F26A21">LATE REPORT?</text>
+            </g>
+            <g>
+              <circle cx="300" cy="370" r="22" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <text x="300" y="408" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="11" fill="#F26A21">LOST AT HANDOVER?</text>
+            </g>
+
+            <!-- broken link to level B -->
+            <path d="M438 92 L438 180" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <path d="M438 200 L438 230" stroke="#F26A21" stroke-width="1.2" stroke-dasharray="4 4"/>
+          </svg>
+          <figcaption class="drawing-note">Illustrative section. The study finds where these gaps really are at your mine.</figcaption>
+        </figure>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Cost to the mine</dt><dd>R0</dd></div>
+        <div><dt>On site</dt><dd>20 working days</dd></div>
+        <div><dt>Team</dt><dd>3 researchers</dd></div>
+        <div><dt>Findings report</dt><dd>Within 14 days</dd></div>
+        <div><dt>Obligation to buy</dt><dd>None</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- Why now -->
+  <section class="band light" id="why">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Why mining, and why now</p>
+        <h2>Better information saves lives and money at the same time.</h2>
+        <p class="lead">Three numbers from this year make the case.</p>
+      </div>
+      <div class="stats">
+        <article class="stat alert">
+          <div class="stat-num">53</div>
+          <p>deaths at South African mines by 12 October 2026, already above the 41 recorded in all of 2025, which was a record low.</p>
+          <p class="src">Minerals Council SA, via <a href="https://www.miningweekly.com/article/deaths-prompt-south-african-miners-safety-review-minerals-council-ceo-says-2026-10-15" target="_blank" rel="noopener">Mining Weekly</a>, 15 Oct 2026</p>
+        </article>
+        <article class="stat">
+          <div class="stat-num">&minus;12.7%</div>
+          <p>mining production in August 2026 against August 2025, the largest year-on-year fall since October 2022.</p>
+          <p class="src">Stats SA, <a href="https://www.statssa.gov.za/publications/P2041/P2041August2026.pdf" target="_blank" rel="noopener">Mining: production and sales</a>, 13 Oct 2026</p>
+        </article>
+        <article class="stat">
+          <div class="stat-num">15</div>
+          <p>fall-of-ground deaths in 2025, up from 12 in 2024, even as total deaths reached a record low.</p>
+          <p class="src"><a href="https://www.miningmx.com/news/markets/64075-despite-improvements-last-year-sa-mines-remain-deadly/" target="_blank" rel="noopener">Miningmx</a>, Feb 2026</p>
+        </article>
+      </div>
+      <div class="reg-note">
+        <span class="reg-tag">MHSA Ch. 8 · Level 9</span>
+        <p><strong>Regulation already expects machines and people to talk to each other.</strong> Since December 2022, diesel trackless mobile machines must slow and stop on their own when the operator does not act. Adoption is still uneven, and a system is only as good as the information it acts on.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- The idea -->
+  <section class="band" id="study">
+    <div class="wrap idea">
+      <div>
+        <p class="label" style="margin-bottom:12px">The idea we test</p>
+        <blockquote>Faster, more reliable information between people, machines and control rooms raises production and cuts risk.</blockquote>
+        <div class="defs">
+          <p><strong>AI</strong> &nbsp;Software that learns from data to predict, detect or recommend, such as a warning before a pump fails or a pattern in near-miss reports.</p>
+          <p><strong>SI</strong> &nbsp;Sensor intelligence: the sensors, tags, radios and networks that carry live data from people, machines, air and water to the people who decide.</p>
+        </div>
+      </div>
+      <ol class="questions">
+        <li><span class="q-num">Q1</span><div><h3>Where does information fail?</h3><p>A call that does not get through, a report that arrives late, a warning nobody sees, a handover that drops a detail.</p></div></li>
+        <li><span class="q-num">Q2</span><div><h3>What does each failure cost?</h3><p>Lost production time, delayed response, repeat work, exposure to a hazard, hours of manual reporting.</p></div></li>
+        <li><span class="q-num">Q3</span><div><h3>What would fix it, and what must the fix connect to?</h3><p>The radios, networks, sensors, software and people that any fix depends on.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- Study areas -->
+  <section class="band light" id="areas">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">What we study</p>
+        <h2>Six places where information tends to break.</h2>
+        <p class="lead">Each area starts with one question and the evidence that would answer it.</p>
+      </div>
+      <div class="areas">
+        <article class="area">
+          <h3>Underground and pit communication</h3>
+          <p class="ask">Where do radio or network dead zones delay calls, and what does each delay cost in time or risk?</p>
+          <p class="ev"><b>Evidence</b>Coverage walk with your communications team, call logs, incident reports</p>
+        </article>
+        <article class="area">
+          <h3>People and machines</h3>
+          <p class="ask">What do proximity and collision system logs show about near misses, false alarms and lost production?</p>
+          <p class="ev"><b>Evidence</b>PDS and CPS event logs, TMM delay records</p>
+        </article>
+        <article class="area">
+          <h3>Shift handover</h3>
+          <p class="ask">What information gets lost between shifts, and how often does that cause delays, rework or incidents?</p>
+          <p class="ev"><b>Evidence</b>Handover observation, shift reports, interviews</p>
+        </article>
+        <article class="area">
+          <h3>Maintenance</h3>
+          <p class="ask">How much unplanned downtime gives early warning signs that nobody sees in time?</p>
+          <p class="ev"><b>Evidence</b>Maintenance system records, breakdown reports</p>
+        </article>
+        <article class="area">
+          <h3>Water and closed collieries</h3>
+          <p class="ask">How does the mine track water levels, decant and seepage, and how fast does it learn of a change?</p>
+          <p class="ev"><b>Evidence</b>Monitoring records, water licence reports, site visits</p>
+        </article>
+        <article class="area">
+          <h3>Admin and reporting</h3>
+          <p class="ask">How many hours a week go into compiling production and safety reports by hand?</p>
+          <p class="ev"><b>Evidence</b>Time spent per report, report templates</p>
+        </article>
+      </div>
+      <p class="caveat">These are starting questions. The evidence may prove some of them wrong, and the report will say so.</p>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section class="band" id="how">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">How the study works</p>
+        <h2>One block of departments a week, planned around production.</h2>
+        <p class="lead">No department hosts us for more than a few days. Information is traced end to end, from the face to the control room to the monthly report.</p>
+      </div>
+      <ol class="track">
+        <li>
+          <span class="wk">Week 0 · about 2 weeks</span>
+          <h3>Preparation</h3>
+          <p>Approval and NDA, sponsor and hosts named, inductions and medicals, briefing with organised labour and health and safety representatives.</p>
+        </li>
+        <li class="onsite">
+          <span class="wk">Week 1</span>
+          <h3>Support functions</h3>
+          <p>Administration, HR and training, finance, procurement and stores, IT and communications, security.</p>
+        </li>
+        <li class="onsite">
+          <span class="wk">Week 2</span>
+          <h3>Production and technical</h3>
+          <p>Mining production, survey, geology, planning, ventilation, rock engineering, processing plant.</p>
+        </li>
+        <li class="onsite">
+          <span class="wk">Week 3</span>
+          <h3>Engineering and safety</h3>
+          <p>Engineering and maintenance, safety and health, emergency response, control room.</p>
+        </li>
+        <li class="onsite">
+          <span class="wk">Week 4</span>
+          <h3>Water and closure</h3>
+          <p>Water treatment, environment, closed collieries and rehabilitation, then a findings workshop and exit briefing.</p>
+        </li>
+        <li>
+          <span class="wk">Weeks 5–6</span>
+          <h3>Report</h3>
+          <p>Analysis off site. Findings report within 14 days of exit, then a presentation to management.</p>
+        </li>
+      </ol>
+      <div class="track-legend">
+        <span><i class="on"></i>On site · 20 working days, Friday sponsor briefing each week</span>
+        <span><i></i>Off site</span>
+      </div>
+
+      <div class="day">
+        <div>
+          <h3 style="margin-bottom:12px">A typical study day</h3>
+          <p>We ask for one night-shift visit a week where the mine allows it, because night-shift problems rarely reach day-shift managers.</p>
+        </div>
+        <div class="day-table">
+          <table>
+            <thead><tr><th scope="col">Time</th><th scope="col">Activity</th></tr></thead>
+            <tbody>
+              <tr><td class="time">05:30–06:30</td><td>Arrive, sign in, observe shift start and handover (two mornings a week)</td></tr>
+              <tr><td class="time">07:00–12:00</td><td>Escorted observation or interviews in the week's departments</td></tr>
+              <tr><td class="time">12:00–13:00</td><td>Write up notes while they are fresh</td></tr>
+              <tr><td class="time">13:00–15:00</td><td>Interviews, record review, follow-up questions</td></tr>
+              <tr><td class="time">15:00–16:00</td><td>Team debrief: update the pain-point log, plan tomorrow with hosts</td></tr>
+              <tr><td class="time">Fri 14:00</td><td>30-minute briefing with the mine sponsor</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Methods and scoring -->
+  <section class="band white" id="methods">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Methods and scoring</p>
+        <h2>Six methods that check each other.</h2>
+        <p class="lead">No finding rests on a single opinion, and problems are ranked by evidence, not by who complained loudest.</p>
+      </div>
+      <div class="methods">
+        <div class="method"><span class="target">60–80 interviews</span><h3>Semi-structured interviews</h3><p>30 to 45 minutes, one person, the same core questions, in the person's preferred language where we can. At least half with frontline workers and supervisors.</p></div>
+        <div class="method"><span class="target">8 full shifts</span><h3>Escorted observation</h3><p>We shadow a crew or operator and log every wait, call, delay and workaround with the time. Including four night shifts where allowed.</p></div>
+        <div class="method"><span class="target">8 handovers</span><h3>Shift handover observation</h3><p>What gets passed on, how (verbal, paper or system) and what gets missed, across departments.</p></div>
+        <div class="method"><span class="target">1 walk per working area</span><h3>Communications coverage walk</h3><p>With your communications technician, we note where radios and networks drop, with location and time. Your equipment only.</p></div>
+        <div class="method"><span class="target">Every department</span><h3>Record review</h3><p>We read the records each host chooses to share and measure delays, downtime and manual hours.</p></div>
+        <div class="method"><span class="target">4 workshops</span><h3>Weekly workshop</h3><p>60 minutes with the week's department heads to test and correct what we found.</p></div>
+      </div>
+
+      <div class="scoring">
+        <div class="scoring-copy">
+          <h3>Every problem gets a score out of 100</h3>
+          <p>Each criterion is rated from 1 to 5. Safety carries the most weight. A problem scoring 70 or more goes on the shortlist.</p>
+          <div class="formula">score = &Sigma;(rating &times; weight) &times; 20</div>
+          <p>For each shortlisted problem we estimate yearly value in arithmetic the mine can check: minutes lost per shift &times; shifts per year &times; the mine's own value per minute of production. We use your figures, never industry averages.</p>
+          <ul class="rules">
+            <li>Confirmed by at least two independent sources, such as an interview and a record.</li>
+            <li>Describes a system or process, never a named person.</li>
+            <li>Tested with the department head in the weekly workshop before it enters the report.</li>
+          </ul>
+        </div>
+        <ul class="weights" aria-label="Scoring weights">
+          <li><span class="w-name">Safety risk</span><span class="w-pct">30%</span><span class="w-bar"><span style="width:100%"></span></span><span class="w-q">Can this failure contribute to an injury or fatality?</span></li>
+          <li><span class="w-name">Production impact</span><span class="w-pct">25%</span><span class="w-bar"><span style="width:83.3%"></span></span><span class="w-q">Minutes or tonnes lost per shift</span></li>
+          <li><span class="w-name">Frequency</span><span class="w-pct">15%</span><span class="w-bar"><span style="width:50%"></span></span><span class="w-q">Daily, weekly, monthly or rare</span></li>
+          <li><span class="w-name">Data available</span><span class="w-pct">10%</span><span class="w-bar"><span style="width:33.3%"></span></span><span class="w-q">Does the data a fix needs already exist at the mine?</span></li>
+          <li><span class="w-name">Ease of fixing</span><span class="w-pct">10%</span><span class="w-bar"><span style="width:33.3%"></span></span><span class="w-q">Time and cost to fix, inverted so easy scores high</span></li>
+          <li><span class="w-name">Fit with existing systems</span><span class="w-pct">10%</span><span class="w-bar"><span style="width:33.3%"></span></span><span class="w-q">Can a fix connect to the radios, networks and software already in use?</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- What the mine receives / needs -->
+  <section class="band raised" id="receive">
+    <div class="wrap two-col">
+      <div>
+        <p class="label col-title">What your mine receives, at no cost</p>
+        <ul class="receive">
+          <li><svg class="tick" viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="4" fill="#F26A21"/><path d="M6 11.5l3.2 3.2L16 8" stroke="#1A0D04" stroke-width="2.2" fill="none"/></svg><div><b>A confidential findings report</b><span>Within 14 days of the study ending, with problems ranked by safety risk, production impact and cost to fix.</span></div></li>
+          <li><svg class="tick" viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="4" fill="#F26A21"/><path d="M6 11.5l3.2 3.2L16 8" stroke="#1A0D04" stroke-width="2.2" fill="none"/></svg><div><b>A map of communication dead zones and delays</b><span>From the coverage walk with your team.</span></div></li>
+          <li><svg class="tick" viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="4" fill="#F26A21"/><path d="M6 11.5l3.2 3.2L16 8" stroke="#1A0D04" stroke-width="2.2" fill="none"/></svg><div><b>A short list of opportunities</b><span>Each with a rough value estimate, the data it needs and the systems it must connect to.</span></div></li>
+          <li><svg class="tick" viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="4" fill="#F26A21"/><path d="M6 11.5l3.2 3.2L16 8" stroke="#1A0D04" stroke-width="2.2" fill="none"/></svg><div><b>A 30-minute briefing every Friday</b><span>For your sponsor, so nothing in the final report comes as a surprise.</span></div></li>
+          <li><svg class="tick" viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="4" fill="#F26A21"/><path d="M6 11.5l3.2 3.2L16 8" stroke="#1A0D04" stroke-width="2.2" fill="none"/></svg><div><b>A presentation to management</b><span>At the end of the study.</span></div></li>
+          <li><svg class="tick" viewBox="0 0 22 22" aria-hidden="true"><rect width="22" height="22" rx="4" fill="#F26A21"/><path d="M6 11.5l3.2 3.2L16 8" stroke="#1A0D04" stroke-width="2.2" fill="none"/></svg><div><b>First right to host any pilot</b><span>On terms agreed separately. There is no obligation to buy anything.</span></div></li>
+        </ul>
+      </div>
+      <div>
+        <p class="label col-title">What we ask of the mine</p>
+        <div style="overflow-x:auto">
+          <table class="need">
+            <tbody>
+              <tr><td>One senior sponsor, such as the General Manager or Engineering Manager</td><td>Approves the plan and receives weekly briefings</td></tr>
+              <tr><td>One host per department</td><td>Arranges interviews and escorts</td></tr>
+              <tr><td>Induction slots for three people in the week before start</td><td>Legal access to site</td></tr>
+              <tr><td>A desk and a lockable cabinet</td><td>Safe storage of notes</td></tr>
+              <tr><td>Access to non-confidential records the mine selects</td><td>Measures problems with real numbers</td></tr>
+              <tr><td>A short briefing with organised labour and health and safety representatives</td><td>Workers know why we are there</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:16px;color:var(--steel);font-size:var(--t-sm)">Staff time: 30 to 45 minutes per interview, plus escorted visits booked around production. N³ Innovations pays for travel, accommodation, PPE, medicals and insurance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Commitments -->
+  <section class="band light" id="commitments">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Our commitments</p>
+        <h2>The mine's rules come first, at all times.</h2>
+        <p class="lead">We observe, listen and measure. We do not operate equipment, change settings or install anything without separate written approval.</p>
+      </div>
+      <div class="commit">
+        <section>
+          <h3>Safety and conduct</h3>
+          <ul>
+            <li>We follow the Mine Health and Safety Act and every site standard, permit and instruction.</li>
+            <li>We complete the mine's induction and any required medical fitness assessment, at our own cost.</li>
+            <li>We supply our own approved PPE. An authorised employee escorts us in operational areas.</li>
+            <li>We never touch controls, valves, panels, radios or computers.</li>
+            <li>We report any immediate hazard to our escort and the safety officer on the spot.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Confidentiality and personal information</h3>
+          <ul>
+            <li>We sign the mine's non-disclosure agreement, or ours if the mine prefers.</li>
+            <li>Interviews are voluntary and anonymous. Reports name roles, never individuals.</li>
+            <li>No photos, video or recordings without written permission for each one.</li>
+            <li>Study data stays on encrypted devices and is returned or destroyed within 30 days of the report.</li>
+            <li>We publish nothing about the mine without its written consent.</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Intellectual property</h3>
+          <ul>
+            <li>The mine owns its data and the findings report.</li>
+            <li>We keep the general know-how we bring and build, without any mine-identifying data.</li>
+            <li>Any product built on the mine's data needs a separate written agreement.</li>
+            <li>No vendors or products are named in interviews or in the report.</li>
+          </ul>
+        </section>
+      </div>
+      <div class="law">
+        <span>Mine Health and Safety Act, 1996</span>
+        <span>POPIA</span>
+        <span>NDA before day one</span>
+        <span>Public liability and personal accident cover</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lessons -->
+  <section class="band white" id="lessons">
+    <div class="wrap lessons-grid">
+      <div class="section-head">
+        <p class="label">What the research taught us</p>
+        <h2>Technology wins in mining when it starts with a measured problem on site.</h2>
+        <p class="lead">We studied 14 companies and projects, from Komatsu's autonomous haulage to platforms that spent billions before proving a use case. These rules come from that work.</p>
+      </div>
+      <ul class="lessons">
+        <li><b>Problem first, product later</b><span>This study exists to find and measure problems before anything is built.</span><span class="from">Lesson from GE Predix, Argo AI</span></li>
+        <li><b>Mining people in the room</b><span>We work with your own staff and an experienced mining advisor.</span><span class="from">Lesson from Plotlogic, KoBold Metals</span></li>
+        <li><b>One use case, proven, before a platform</b><span>We recommend one pilot, with a measured baseline.</span><span class="from">Lesson from GE Predix, Komatsu FrontRunner</span></li>
+        <li><b>No AI claims we cannot show</b><span>Every figure in the report traces back to a data source or interview at your mine.</span><span class="from">Lesson from Builder.ai, IBM Watson Health</span></li>
+        <li><b>Plan for integration and people</b><span>Level 9 shows that technology alone does not change outcomes.</span><span class="from">Lesson from Rio Tinto AutoHaul</span></li>
+        <li><b>Work with what the mine already has</b><span>Any future fix must connect to your existing radios, networks and systems.</span><span class="from">Lesson from Newtrax</span></li>
+        <li><b>Earn trust on the floor</b><span>We brief unions and health and safety representatives before we start.</span><span class="from">Lesson from Nautilus Minerals</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Team -->
+  <section class="band" id="team">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">The team</p>
+        <h2>Three founders, all on site for the full study.</h2>
+        <p class="lead">N³ (N-cubed) Innovations is a South African technology start-up. We start in the mine, with the people who do the work, before we write any code.</p>
+      </div>
+      <div class="team">
+        <article class="person">
+          <div class="mark"><span class="sq">NM</span><span class="ci"></span></div>
+          <div><h3>Nkanyiso Gracious Maqubela</h3><p class="role" style="margin-top:6px">Study lead · Stakeholders and partnerships</p></div>
+          <p>Co-Director and Head of Strategic Partnerships, Price Land Enterprise (Pty) Ltd. Registered POPIA Information Officer.</p>
+          <p class="leads"><b>Leads on</b> the sponsor relationship, administration, HR, finance, procurement, community and closure.</p>
+        </article>
+        <article class="person">
+          <div class="mark"><span class="sq">N</span><span class="ci"></span></div>
+          <div><h3>Neo</h3><p class="role" style="margin-top:6px">Operations analyst</p></div>
+          <p>Production, technical services and engineering. Owns process maps, shift handover observation and downtime analysis.</p>
+          <p class="leads"><b>Leads on</b> production, technical services, the processing plant, and engineering and maintenance.</p>
+        </article>
+        <article class="person">
+          <div class="mark"><span class="sq">N</span><span class="ci"></span></div>
+          <div><h3>Nkululeko</h3><p class="role" style="margin-top:6px">Technology and data analyst</p></div>
+          <p>Communication systems, safety and water data. Owns the communications coverage walk, the systems inventory and the data request log.</p>
+          <p class="leads"><b>Leads on</b> IT and communications, the control room, safety and health, emergency response and water.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="band light" id="contact">
+    <div class="wrap contact">
+      <div>
+        <p class="label" style="margin-bottom:12px">Request a study</p>
+        <h2>Find out where your mine loses time, tonnes and safety margin.</h2>
+        <p class="lead">Tell us the mine, the commodity and who would sponsor the study. We will send the full proposal and methodology, and arrange a first meeting with your team.</p>
+      </div>
+      <div class="card-contact">
+        <dl>
+          <div><dt>Study lead</dt><dd>Nkanyiso Gracious Maqubela</dd></div>
+          <div><dt>Email</dt><dd><a id="email" href="mailto:qhubela_nk@live.com?subject=Operational%20study%20request">qhubela_nk@live.com</a></dd></div>
+          <div><dt>Phone</dt><dd><a href="tel:+27715983895">071 598 3895</a></dd></div>
+        </dl>
+        <div class="actions">
+          <a class="btn btn-primary" href="mailto:qhubela_nk@live.com?subject=Operational%20study%20request">Email the study lead</a>
+          <button class="btn btn-ghost" id="copy-email" type="button">Copy email address</button>
+        </div>
+        <p class="copy-state" id="copy-state" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="#top"><svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg><span>N<sup>3</sup> Innovations</span></a>
+        <p style="margin-top:12px">Safer mines, more tonnes.<br>South Africa.</p>
+      </div>
+      <div>
+        <p class="label">Sources for figures on this page</p>
+        <ul class="sources">
+          <li><a href="https://www.miningweekly.com/article/deaths-prompt-south-african-miners-safety-review-minerals-council-ceo-says-2026-10-15" target="_blank" rel="noopener">Mining Weekly (Reuters): Deaths prompt South African miners' safety review, 15 Oct 2026</a></li>
+          <li><a href="https://www.statssa.gov.za/publications/P2041/P2041August2026.pdf" target="_blank" rel="noopener">Stats SA P2041: Mining production and sales, August 2026</a></li>
+          <li><a href="https://www.ewn.co.za/sa-mining-production-reports-127-plunge-in-august/" target="_blank" rel="noopener">EWN: SA mining production plunged 12.7% in August, 13 Oct 2026</a></li>
+          <li><a href="https://www.miningmx.com/news/markets/64075-despite-improvements-last-year-sa-mines-remain-deadly/" target="_blank" rel="noopener">Miningmx: Despite improvements last year, SA mines remain deadly</a></li>
+          <li><a href="https://www.harmony.co.za/?p=12729" target="_blank" rel="noopener">Harmony: Level 9 collision avoidance in law since 22 December 2022</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 N³ Innovations</span>
+      <span>Information you share with us is handled under POPIA.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var btn = document.getElementById('menu-btn');
+  var nav = document.getElementById('nav');
+  btn.addEventListener('click', function () {
+    var open = nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
+  });
+
+  var copyBtn = document.getElementById('copy-email');
+  var state = document.getElementById('copy-state');
+  var address = document.getElementById('email').textContent.trim();
+  copyBtn.addEventListener('click', function () {
+    function fallback() {
+      var r = document.createRange();
+      r.selectNodeContents(document.getElementById('email'));
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+      state.textContent = 'Address selected. Press Ctrl+C or Cmd+C to copy.';
+    }
+    try {
+      navigator.clipboard.writeText(address).then(function () {
+        state.textContent = 'Copied ' + address;
+      }, fallback);
+    } catch (e) { fallback(); }
+  });
+})();
+</script>
+</body>
+</html>
