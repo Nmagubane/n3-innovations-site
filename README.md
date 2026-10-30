@@ -1,6 +1,6 @@
 # N³ Innovations website
 
-Single-page static site for N³ Innovations, a South African mining technology company building AI and sensor intelligence for mines, with the self-funded discovery study as its first offer.
+Single-page static site for N³ Innovations, a South African mining technology company building AI and sensor intelligence for mines.
 
 Everything is in `index.html` (inline CSS and JS, fonts from Google Fonts). No build step.
 
@@ -33,6 +33,6 @@ Change it there, and also in the two `href="mailto:..."` fallbacks and the visib
 
 ## Before going live, confirm
 
-- Formal company titles for the three co-founders. The site shows each person's focus area and their role in the discovery study, with no descriptions.
+- Formal company titles for the three co-founders. The site shows names and co-founder roles only.
 - Whether the study lead's mobile number should be public.
 - The product name "N³ Action Ledger" (a working name).
