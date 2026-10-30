@@ -36,3 +36,4 @@ Change it there, and also in the two `href="mailto:..."` fallbacks and the visib
 - Formal company titles for the three co-founders. The site shows names and co-founder roles only.
 - Whether the study lead's mobile number should be public.
 - The product name "N³ Action Ledger" (a working name).
+- That each of the six services can be delivered from the first engagement.

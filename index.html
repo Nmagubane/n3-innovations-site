@@ -7,7 +7,7 @@
 <meta name="claude:viewport-fit-sides" content="cover">
 <meta name="description" content="N³ Innovations is a South African mining company that starts with technology: AI and sensor intelligence for operating mines, then mine rehabilitation and, in time, mining.">
 <meta property="og:title" content="N³ Innovations · Safer mines, more tonnes">
-<meta property="og:description" content="AI decision support for mines: read-only, built around the systems a mine already owns, and proven on site before it is sold.">
+<meta property="og:description" content="Operational diagnostics, maintenance intelligence, data integration, connectivity, energy and water monitoring for South African mines.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#0B1F33">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1F33'/%3E%3Crect x='10' y='20' width='22' height='24' fill='%23EEF2F4'/%3E%3Ccircle cx='43' cy='32' r='12' fill='%23F26A21'/%3E%3C/svg%3E">
@@ -165,6 +165,27 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .questions p { color: var(--steel); }
 @media (max-width: 860px) { .gap-grid { grid-template-columns: minmax(0, 1fr); } }
 
+/* ---------- Services ---------- */
+.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
+.service { border: 1px solid var(--rule-light); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; background: var(--paper); }
+.service.feature { background: var(--navy); color: var(--mist); border-color: var(--navy); }
+.svc-tag { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--hivis-ink); }
+.service.feature .svc-tag { color: var(--hivis); }
+.service h3 { font-size: 1.2rem; }
+.svc-lead { color: var(--ink-2); }
+.service.feature .svc-lead { color: var(--steel); }
+.service ul { list-style: none; padding: 0; display: grid; gap: var(--s2); font-size: var(--t-sm); }
+.service li { position: relative; padding-left: var(--s5); }
+.service li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; background: var(--hivis); }
+.svc-measure { margin-top: var(--s2); padding-top: var(--s3); border-top: 1px dashed var(--rule-light); font-size: var(--t-sm); color: var(--ink-2); }
+.service.feature .svc-measure { border-top-color: var(--rule-dark); color: var(--steel); }
+.svc-measure b { display: block; font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin-bottom: 2px; }
+.service.feature .svc-measure b { color: var(--mist); }
+.svc-note { margin-top: var(--s5); font-size: var(--t-sm); color: var(--ink-2); }
+.svc-note b { color: var(--ink); }
+@media (max-width: 960px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .services { grid-template-columns: minmax(0, 1fr); } }
+
 /* ---------- Stages ---------- */
 .stages { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); counter-reset: stage; }
 .stage { background: var(--paper); border: 1px solid var(--rule-light); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; position: relative; }
@@ -284,7 +305,7 @@ td { color: var(--steel); }
 @media (max-width: 900px) { .why-back { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .why-back { grid-template-columns: minmax(0, 1fr); } }
 
-.roadmap { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
+.roadmap { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
 .roadmap li { position: relative; padding: var(--s6) var(--s4) 0 0; display: grid; align-content: start; gap: var(--s2); min-width: 0; }
 .roadmap li::before { content: ""; position: absolute; top: 9px; left: 0; right: 0; height: 2px; background: var(--rule-light); }
 .roadmap li::after { content: ""; position: absolute; top: 2px; left: 0; width: 16px; height: 16px; transform: rotate(45deg); background: var(--paper); border: 2px solid var(--ink); }
@@ -368,8 +389,9 @@ td { color: var(--steel); }
       <span>N<sup>3</sup> Innovations</span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
+      <a href="#services">Services</a>
       <a href="#approach">Approach</a>
-      <a href="#product">Product</a>
+      <a href="#technology">Technology</a>
       <a href="#security">Security</a>
       <a href="#direction">Direction</a>
       <a href="#partners">Partners and funders</a>
@@ -392,7 +414,7 @@ td { color: var(--steel); }
           <p class="lead">N³ Innovations is a South African mining company that starts with technology. Our software reads the data a mine already collects, finds the warnings and delays that nobody acted on, and puts a rand value on each one. From there, we are building towards mine rehabilitation and, in time, mining our own projects.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#contact">Talk to us about your mine</a>
-            <a class="btn btn-ghost" href="#partners">For partners and funders</a>
+            <a class="btn btn-ghost" href="#services">See our services</a>
           </div>
         </div>
 
@@ -452,7 +474,7 @@ td { color: var(--steel); }
       <div class="principles">
         <div><h3>Decision support</h3><p>Our software advises people. It never controls equipment.</p></div>
         <div><h3>Read-only by design</h3><p>We read copies of your data. Nothing we install connects to PLCs or SCADA.</p></div>
-        <div><h3>Evidence before code</h3><p>Every product starts with a problem measured at a real mine.</p></div>
+        <div><h3>Evidence first</h3><p>Every engagement starts with a problem measured at your operation.</p></div>
         <div><h3>Vendor-neutral</h3><p>We work with the radios, sensors and systems you already own.</p></div>
       </div>
     </div>
@@ -517,48 +539,128 @@ td { color: var(--steel); }
     </div>
   </section>
 
+  <!-- Services -->
+  <section class="band white" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Services</p>
+        <h2>Six services that turn a mine's own data into safer shifts and more tonnes.</h2>
+        <p class="lead">Each service works with the systems a mine already owns, starts from a baseline the mine agrees to, and reports its results in the mine's own numbers.</p>
+      </div>
+      <div class="services">
+        <article class="service">
+          <span class="svc-tag">Assess</span>
+          <h3>Operational diagnostics</h3>
+          <p class="svc-lead">We find where information breaks down across your operation and what each breakdown costs.</p>
+          <ul>
+            <li>A ranked register of problems, each with a rand value</li>
+            <li>A map of how information flows between departments</li>
+            <li>A recommended first fix, with its baseline</li>
+          </ul>
+          <p class="svc-measure"><b>Measured by</b>A problem register your managers agree with, priced in rand</p>
+        </article>
+        <article class="service feature">
+          <span class="svc-tag">Maintenance</span>
+          <h3>Maintenance intelligence</h3>
+          <p class="svc-lead">Every condition-monitoring finding, alarm and inspection note in one ranked list, tracked until the work is done.</p>
+          <ul>
+            <li>One warning queue, linked to your asset register</li>
+            <li>Rand-at-risk ranking, overdue and repeat-failure alerts</li>
+            <li>A monthly value report your finance team can audit</li>
+          </ul>
+          <p class="svc-measure"><b>Measured by</b>Findings closed on time, and failures that had an earlier warning</p>
+        </article>
+        <article class="service">
+          <span class="svc-tag">Data</span>
+          <h3>Data integration and reporting</h3>
+          <p class="svc-lead">We connect the systems you already run and take the manual work out of reporting.</p>
+          <ul>
+            <li>Read-only links to your CMMS, historian, SCADA exports and spreadsheets</li>
+            <li>Automated shift, production and safety reports</li>
+            <li>One trusted set of numbers for management</li>
+          </ul>
+          <p class="svc-measure"><b>Measured by</b>Hours of manual reporting removed each week</p>
+        </article>
+        <article class="service">
+          <span class="svc-tag">Connectivity</span>
+          <h3>Communications and connectivity</h3>
+          <p class="svc-lead">A vendor-neutral view of where radio and network coverage fails underground and in the pit, and what each gap costs.</p>
+          <ul>
+            <li>A coverage map of dead zones and delays</li>
+            <li>An inventory of systems and the data they hold</li>
+            <li>Prioritised recommendations that name no vendor</li>
+          </ul>
+          <p class="svc-measure"><b>Measured by</b>Delays to calls and alarms in the areas that matter most</p>
+        </article>
+        <article class="service">
+          <span class="svc-tag">Energy</span>
+          <h3>Energy and compressed-air analytics</h3>
+          <p class="svc-lead">Live energy baselines that show where electricity is wasted, as tariffs keep rising.</p>
+          <ul>
+            <li>kWh-per-tonne baselines by area and shift</li>
+            <li>Detection of compressed-air leaks and misuse</li>
+            <li>Scheduling advice for peak tariff periods</li>
+          </ul>
+          <p class="svc-measure"><b>Measured by</b>Energy cost per tonne</p>
+        </article>
+        <article class="service">
+          <span class="svc-tag">Water and closure</span>
+          <h3>Water and closed-mine monitoring</h3>
+          <p class="svc-lead">Continuous visibility of water levels, decant and closed workings between site visits.</p>
+          <ul>
+            <li>Water balance and support for licence reporting</li>
+            <li>Alerts on changes in level, quality and decant</li>
+            <li>Monitoring of closed shafts for subsidence and illegal access</li>
+          </ul>
+          <p class="svc-measure"><b>Measured by</b>Time from a change on site to the person who must act</p>
+        </article>
+      </div>
+      <p class="svc-note"><b>Every service</b> reads data without changing it, names no vendor, and supports decisions rather than making them. Nothing we install controls equipment or connects to PLCs or SCADA.</p>
+    </div>
+  </section>
+
   <!-- Approach -->
   <section class="band light" id="approach">
     <div class="wrap">
       <div class="section-head">
         <p class="label">How we work</p>
-        <h2>Discover, pilot, then build. Each stage earns the next.</h2>
-        <p class="lead">We do not sell a platform and hope it fits. We measure a problem at a mine, prove one fix against a baseline, and only then turn it into a product.</p>
+        <h2>Assess, prove, then run. Every engagement is measured.</h2>
+        <p class="lead">We do not sell a platform and hope it fits. We measure the problem at your operation, prove the fix against a baseline, and then run it as a supported service.</p>
       </div>
       <ol class="stages">
         <li class="stage">
           <span class="num">Stage 1</span>
-          <h3>Discover</h3>
+          <h3>Assess</h3>
           <div class="terms"><span>On site</span><span>With your teams</span></div>
-          <p>We work alongside the mine's own people to find where information breaks down, and rank each problem by safety risk, production impact and cost to fix.</p>
-          <p class="gate"><b>Gate to stage 2</b>A problem worth fixing, where the mine already collects the data needed to fix it.</p>
+          <p>We work alongside your people to find where information breaks down, and rank each problem by safety risk, production impact and cost to fix.</p>
+          <p class="gate"><b>You receive</b>A ranked problem register and a recommended first fix, with its baseline.</p>
         </li>
         <li class="stage">
           <span class="num">Stage 2</span>
-          <h3>Pilot</h3>
+          <h3>Prove</h3>
           <div class="terms"><span>One use case</span><span>Measured baseline</span></div>
-          <p>We deploy one module against a measured baseline, on read-only data, with the mine's own staff approving every action it recommends.</p>
-          <p class="gate"><b>Gate to stage 3</b>A measured improvement against the baseline, valued with the mine's finance team.</p>
+          <p>We deploy the fix on read-only data, with your own staff approving every action it recommends.</p>
+          <p class="gate"><b>You receive</b>A measured improvement against the baseline, valued with your finance team.</p>
         </li>
         <li class="stage">
           <span class="num">Stage 3</span>
-          <h3>Product</h3>
+          <h3>Run</h3>
           <div class="terms"><span>Per-site subscription</span></div>
-          <p>The proven module runs as a supported service, connected to the mine's maintenance and reporting systems, and grows one module at a time.</p>
-          <p class="gate"><b>We keep reporting</b>Closure rates, lead times, false alarms and the rand value agreed with the mine.</p>
+          <p>The proven service runs on your site, connected to your maintenance and reporting systems, and extends to the next problem on the register.</p>
+          <p class="gate"><b>You receive</b>Monthly reporting on closure rates, lead times, false alarms and the rand value agreed with you.</p>
         </li>
       </ol>
-      <p class="stages-note">We build one proven product before we build a platform. Every layer of the platform has to be earned by a module that works.</p>
+      <p class="stages-note">Mines can start at any stage. Where a problem is already clear, we go straight to proving the fix.</p>
     </div>
   </section>
 
   <!-- Product -->
-  <section class="band raised" id="product">
+  <section class="band raised" id="technology">
     <div class="wrap">
       <div class="section-head">
-        <span class="status">In development</span>
+        <p class="label">Our technology</p>
         <h2>N³ Action Ledger: every warning, ranked in rand and tracked to closure.</h2>
-        <p class="lead">Our first product brings the warnings a plant already has together in one list of actions. It shows what each one puts at risk, who approved it, and whether the work was done in time.</p>
+        <p class="lead">The Action Ledger is the software at the centre of our maintenance intelligence service. It brings the warnings a plant already has together in one list of actions, and shows what each one puts at risk, who approved it, and whether the work was done in time.</p>
       </div>
       <div class="product">
         <div class="flow" aria-label="How the Action Ledger works">
@@ -619,17 +721,6 @@ td { color: var(--steel); }
         <li><b>Data stays where the mine allows</b><span>On-site or South African hosting. We send no plant data to a public AI service without written consent.</span></li>
       </ul>
 
-      <div class="sub-head">
-        <p class="label">Roadmap</p>
-        <h3>Later modules, added in order and only after the one before is proven.</h3>
-      </div>
-      <ol class="modules">
-        <li><span class="after">After the Action Ledger</span><b>Repeat-failure analysis</b><span>Finds assets that fail the same way twice and tracks whether root-cause actions were closed.</span></li>
-        <li><span class="after">Next</span><b>Energy and compressed-air cost intelligence</b><span>Live kWh-per-tonne baselines and leak detection, as electricity tariffs keep rising.</span></li>
-        <li><span class="after">Next</span><b>Maintenance knowledge assistant</b><span>Answers grounded in the mine's own manuals and past job cards, always citing the source.</span></li>
-        <li><span class="after">Next</span><b>Closed-mine and water monitoring</b><span>Water levels, decant, subsidence and illegal access at closed shafts, watched between site visits.</span></li>
-        <li><span class="after">At three or more sites</span><b>Multi-site view</b><span>One picture of risk and value across operations, for executives.</span></li>
-      </ol>
     </div>
   </section>
 
@@ -674,8 +765,8 @@ td { color: var(--steel); }
         <li class="horizon now">
           <span class="h-when">Now</span>
           <h3>Mining technology</h3>
-          <p>AI and sensor intelligence for operating mines and processing plants, starting with the Action Ledger.</p>
-          <p class="h-needs"><b>What it needs</b>Engineers, pilot sites and technology partners.</p>
+          <p>AI and sensor intelligence for operating mines and processing plants, delivered through our six services.</p>
+          <p class="h-needs"><b>What it needs</b>Engineers, client sites and technology partners.</p>
         </li>
         <li class="horizon">
           <span class="h-when">Next</span>
@@ -701,15 +792,15 @@ td { color: var(--steel); }
       <div class="section-head">
         <p class="label">For partners and funders</p>
         <h2>A disciplined route from a measured mine problem to recurring revenue.</h2>
-        <p class="lead">We are an early-stage company, and we say so plainly. What we offer partners is a plan designed to fail cheaply if it is wrong and to compound if it is right.</p>
+        <p class="lead">Our model is capital-light and measured at every step. Each site adds data, references and recurring revenue, and each stage funds the next.</p>
       </div>
       <ul class="why-back">
         <li><span class="k">Need</span><b>Safety and output are both slipping</b><span>53 deaths by mid-October 2026 against 41 in all of 2025, and production down 12.7% year on year in August 2026.</span></li>
         <li><span class="k">Market</span><b>AI in mining is growing fast</b><span>MarketsandMarkets forecasts growth from USD 2.60 billion in 2025 to USD 9.93 billion by 2032 (<a href="https://www.marketsandmarkets.com/PressReleases/ai-in-mining.asp" target="_blank" rel="noopener">source</a>).</span></li>
-        <li><span class="k">Capital</span><b>No hardware to build</b><span>We read data that mines already collect, so the first product needs engineers, not factories.</span></li>
+        <li><span class="k">Capital</span><b>No hardware to build</b><span>We read data that mines already collect, so our services need engineers, not capital equipment.</span></li>
         <li><span class="k">Access</span><b>Designed to pass security review</b><span>Read-only, outbound-only software gives a mine's IT and OT teams far fewer reasons to say no.</span></li>
         <li><span class="k">Channel</span><b>Partners, not rivals</b><span>Condition-monitoring providers and automation integrators already work on site and produce much of the evidence we use. That makes them natural resellers.</span></li>
-        <li><span class="k">Discipline</span><b>Every stage has a gate</b><span>Discovery, pilot and product each have a pass mark set in advance. If the evidence says stop, we stop.</span></li>
+        <li><span class="k">Discipline</span><b>Every stage has a gate</b><span>Assess, prove and run each have a pass mark set in advance. If the evidence says stop, we stop.</span></li>
       </ul>
 
       <div class="sub-head">
@@ -717,19 +808,18 @@ td { color: var(--steel); }
         <h3>From first site to a mining company.</h3>
       </div>
       <ol class="roadmap">
-        <li class="now"><span class="when">Q4 2026</span><h3>Problem interviews</h3><p>Interviews with maintenance, reliability and operations leads at mid-tier mines, processing plants and contractors.</p><span class="gate">Gate: the problem is confirmed, with a cost</span></li>
-        <li><span class="when">Q1 2027</span><h3>First site engagement</h3><p>Discovery work at the first partner mine. Partner and funder meetings at Mining Indaba, Cape Town, 8 to 11 February 2027.</p><span class="gate">Gate: a problem worth fixing, with the data to fix it</span></li>
-        <li><span class="when">Q2 2027</span><h3>First paid pilot</h3><p>The Action Ledger on read-only data at the first site, measured against a baseline.</p><span class="gate">Gate: measured improvement, valued with finance</span></li>
-        <li><span class="when">H2 2027</span><h3>Pilots two and three</h3><p>A mining contractor and a second commodity. An independent penetration test and a reseller partner.</p><span class="gate">Gate: renewals and a written reference</span></li>
+                <li class="now"><span class="when">Q1 2027</span><h3>Client engagements</h3><p>Operational diagnostics at mid-tier mines, processing plants and contractors. Partner and funder meetings at Mining Indaba, Cape Town, 8 to 11 February 2027.</p><span class="gate">Gate: a ranked problem worth fixing</span></li>
+        <li><span class="when">Q2 2027</span><h3>Paid deployments</h3><p>Maintenance intelligence on read-only data, measured against each site's baseline.</p><span class="gate">Gate: measured improvement, valued with finance</span></li>
+        <li><span class="when">H2 2027</span><h3>Recurring contracts</h3><p>Per-site subscriptions across a second commodity and a mining contractor, an independent penetration test and a reseller partner.</p><span class="gate">Gate: renewals and written references</span></li>
         <li><span class="when">2028</span><h3>Scale</h3><p>Multi-site customers, the energy module, and a first market outside South Africa, starting with Zambia's Copperbelt.</p><span class="gate">Gate: three or more paying sites</span></li>
         <li><span class="when">Later</span><h3>Rehabilitation, then mining</h3><p>Rehabilitation contracts that use our monitoring, then our own mining projects.</p><span class="gate">Gate: licences, specialists and funding in place</span></li>
       </ol>
 
       <div class="seeking">
-        <div><b>Host mines</b><span>Mid-tier operations and processing plants ready to work with us on a first deployment.</span></div>
+        <div><b>Mines and plants</b><span>Mid-tier operations, processing plants and contractors that want measurable gains in safety and output.</span></div>
         <div><b>Technology partners</b><span>Condition-monitoring providers and automation integrators already working on site.</span></div>
-        <div><b>An industry advisor</b><span>An experienced mining engineer or mine manager to guide our discovery work and pilots.</span></div>
-        <div><b>Funding partners</b><span>Grant funders, development finance and early-stage investors for the pilot phase.</span></div>
+        <div><b>Rehabilitation partners</b><span>Environmental and rehabilitation specialists to deliver with us on closed and derelict sites.</span></div>
+        <div><b>Funding partners</b><span>Grant funders, development finance and investors to fund growth across sites.</span></div>
       </div>
     </div>
   </section>
@@ -746,7 +836,7 @@ td { color: var(--steel); }
         <ul class="lessons">
           <li><b>Problem first, product later</b><span>We find and measure problems before we build anything.</span><span class="from">Lesson from GE Predix and Argo AI</span></li>
           <li><b>Mining people in the room</b><span>We work alongside each mine's own staff and experienced mining practitioners.</span><span class="from">Lesson from Plotlogic and KoBold Metals</span></li>
-          <li><b>One use case, proven, before a platform</b><span>We recommend one pilot, with a measured baseline.</span><span class="from">Lesson from GE Predix and Komatsu FrontRunner</span></li>
+          <li><b>One use case, proven, before a platform</b><span>We recommend one fix at a time, proven against a measured baseline.</span><span class="from">Lesson from GE Predix and Komatsu FrontRunner</span></li>
           <li><b>No AI claims we cannot show</b><span>Every figure we report traces back to a data source or an interview at the mine.</span><span class="from">Lesson from Builder.ai and IBM Watson Health</span></li>
           <li><b>Plan for integration and people</b><span>Level 9 shows that technology alone does not change outcomes.</span><span class="from">Lesson from Rio Tinto AutoHaul</span></li>
           <li><b>Work with what the mine already has</b><span>Any fix must connect to the radios, networks and systems in use.</span><span class="from">Lesson from Newtrax</span></li>
@@ -789,7 +879,6 @@ td { color: var(--steel); }
           <div><h3>Nkululeko Mdluli</h3><p class="role" style="margin-top:6px">Co-founder · Technology and data</p></div>
         </article>
       </div>
-      <p class="advisor"><b>Industry advisor.</b> We are appointing an experienced mining engineer or mine manager to advise on our discovery work and pilots.</p>
     </div>
   </section>
 
@@ -799,7 +888,7 @@ td { color: var(--steel); }
       <div>
         <p class="label" style="margin-bottom:12px">Contact us</p>
         <h2>Find out where your mine loses time, tonnes and safety margin.</h2>
-        <p class="lead">Mines: tell us about your operation and the problem you most want solved. Partners and funders: ask for our plan and we will arrange a meeting.</p>
+        <p class="lead">Mines: tell us about your operation and the problem you most want solved, and we will propose the right service. Partners and funders: ask for our plan and we will arrange a meeting.</p>
       </div>
       <div class="card-contact">
         <dl>
