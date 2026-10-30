@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>N³ Innovations</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="N³ Innovations is a South African mining technology company. We build AI and sensor intelligence that turns the data a mine already collects into decisions made in time.">
+<meta name="description" content="N³ Innovations is a South African mining company that starts with technology: AI and sensor intelligence for operating mines, then mine rehabilitation and, in time, mining.">
 <meta property="og:title" content="N³ Innovations · Safer mines, more tonnes">
 <meta property="og:description" content="AI decision support for mines: read-only, built around the systems a mine already owns, and proven on site before it is sold.">
 <meta property="og:type" content="website">
@@ -228,12 +228,12 @@ td { color: var(--steel); }
 @media (max-width: 1000px) { .rules-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .rules-grid { grid-template-columns: minmax(0, 1fr); } }
 
-.modules { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3); }
+.modules { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s3); }
 .modules li { border: 1px dashed var(--rule-dark); border-radius: 8px; padding: var(--s4); display: grid; gap: var(--s1); align-content: start; min-width: 0; }
 .modules .after { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--steel); }
 .modules b { font-weight: 600; }
 .modules span { font-size: var(--t-sm); color: var(--steel); }
-@media (max-width: 960px) { .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 1060px) { .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 520px) { .modules { grid-template-columns: minmax(0, 1fr); } }
 
 /* ---------- Security layers ---------- */
@@ -261,6 +261,19 @@ td { color: var(--steel); }
   .layer.control b::after { display: block; margin-left: 0; }
 }
 
+/* ---------- Direction ---------- */
+.horizons { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
+.horizon { border: 1px solid var(--rule-dark); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; background: var(--navy-2); }
+.horizon.now { border: 2px solid var(--hivis); }
+.h-when { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--hivis); }
+.horizon h3 { font-size: 1.3rem; }
+.horizon p { color: var(--steel); }
+.h-fact { font-size: var(--t-sm); padding: var(--s3); border-left: 3px solid var(--hivis); background: var(--navy); }
+.h-fact a { color: var(--steel); }
+.h-needs { font-size: var(--t-sm); padding-top: var(--s3); border-top: 1px dashed var(--rule-dark); }
+.h-needs b { display: block; font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--mist); margin-bottom: 2px; }
+@media (max-width: 900px) { .horizons { grid-template-columns: minmax(0, 1fr); } }
+
 /* ---------- Partners ---------- */
 .why-back { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s6) var(--s5); }
 .why-back li { display: grid; gap: var(--s2); align-content: start; min-width: 0; }
@@ -271,7 +284,7 @@ td { color: var(--steel); }
 @media (max-width: 900px) { .why-back { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 560px) { .why-back { grid-template-columns: minmax(0, 1fr); } }
 
-.roadmap { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.roadmap { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); }
 .roadmap li { position: relative; padding: var(--s6) var(--s4) 0 0; display: grid; align-content: start; gap: var(--s2); min-width: 0; }
 .roadmap li::before { content: ""; position: absolute; top: 9px; left: 0; right: 0; height: 2px; background: var(--rule-light); }
 .roadmap li::after { content: ""; position: absolute; top: 2px; left: 0; width: 16px; height: 16px; transform: rotate(45deg); background: var(--paper); border: 2px solid var(--ink); }
@@ -358,6 +371,7 @@ td { color: var(--steel); }
       <a href="#approach">Approach</a>
       <a href="#product">Product</a>
       <a href="#security">Security</a>
+      <a href="#direction">Direction</a>
       <a href="#partners">Partners and funders</a>
       <a href="#team">Team</a>
     </nav>
@@ -373,9 +387,9 @@ td { color: var(--steel); }
     <div class="wrap">
       <div class="hero-grid">
         <div class="hero-copy">
-          <p class="label">Mining technology · South Africa</p>
+          <p class="label">Technology · Rehabilitation · Mining · South Africa</p>
           <h1>Safer mines,<br><em>more tonnes.</em></h1>
-          <p class="lead">N³ Innovations builds AI and sensor intelligence for mines. Our software reads the data a mine already collects, finds the warnings and delays that nobody acted on, and puts a rand value on each one, so the right person can act in time.</p>
+          <p class="lead">N³ Innovations is a South African mining company that starts with technology. Our software reads the data a mine already collects, finds the warnings and delays that nobody acted on, and puts a rand value on each one. From there, we are building towards mine rehabilitation and, in time, mining our own projects.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#contact">Talk to us about your mine</a>
             <a class="btn btn-ghost" href="#partners">For partners and funders</a>
@@ -485,7 +499,7 @@ td { color: var(--steel); }
   <section class="band" id="gap">
     <div class="wrap gap-grid">
       <div>
-        <p class="label" style="margin-bottom:12px">The problem we solve</p>
+        <p class="label" style="margin-bottom:12px">The first problem we solve</p>
         <blockquote>Mines already collect the warnings. Too often, they do not reach the right person in time.</blockquote>
         <div class="body">
           <p>Condition-monitoring reports, alarm logs, maintenance records and shift reports can point to a failure before it happens. Each sits in a different system, inbox or spreadsheet, so by the time someone connects them, the pump has failed or the shift has ended.</p>
@@ -613,6 +627,7 @@ td { color: var(--steel); }
         <li><span class="after">After the Action Ledger</span><b>Repeat-failure analysis</b><span>Finds assets that fail the same way twice and tracks whether root-cause actions were closed.</span></li>
         <li><span class="after">Next</span><b>Energy and compressed-air cost intelligence</b><span>Live kWh-per-tonne baselines and leak detection, as electricity tariffs keep rising.</span></li>
         <li><span class="after">Next</span><b>Maintenance knowledge assistant</b><span>Answers grounded in the mine's own manuals and past job cards, always citing the source.</span></li>
+        <li><span class="after">Next</span><b>Closed-mine and water monitoring</b><span>Water levels, decant, subsidence and illegal access at closed shafts, watched between site visits.</span></li>
         <li><span class="after">At three or more sites</span><b>Multi-site view</b><span>One picture of risk and value across operations, for executives.</span></li>
       </ol>
     </div>
@@ -647,6 +662,39 @@ td { color: var(--steel); }
     </div>
   </section>
 
+  <!-- Direction -->
+  <section class="band" id="direction">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Where we are going</p>
+        <h2>Technology first, then rehabilitation, then mining.</h2>
+        <p class="lead">We start where we can earn revenue and trust fastest. Each step builds on the data, relationships and cash flow of the one before it.</p>
+      </div>
+      <ol class="horizons">
+        <li class="horizon now">
+          <span class="h-when">Now</span>
+          <h3>Mining technology</h3>
+          <p>AI and sensor intelligence for operating mines and processing plants, starting with the Action Ledger.</p>
+          <p class="h-needs"><b>What it needs</b>Engineers, pilot sites and technology partners.</p>
+        </li>
+        <li class="horizon">
+          <span class="h-when">Next</span>
+          <h3>Mine rehabilitation</h3>
+          <p>Rehabilitating closed and derelict mine sites, with the same monitoring and data discipline: water, decant, subsidence and illegal access tracked and reported.</p>
+          <p class="h-fact">The Department of Mineral and Petroleum Resources puts the closure cost of derelict and ownerless mine sites at about R51.5 billion, R8.6 billion of it for high-priority sites (<a href="https://pmg.org.za/committee-question/41520/" target="_blank" rel="noopener">parliamentary reply</a>, October 2026).</p>
+          <p class="h-needs"><b>What it needs</b>Environmental authorisations, rehabilitation specialists, and contracts with mine owners or the state.</p>
+        </li>
+        <li class="horizon">
+          <span class="h-when">Later</span>
+          <h3>Mining</h3>
+          <p>Our own mining projects, starting where existing infrastructure lowers the cost of entry, such as mines under care and maintenance.</p>
+          <p class="h-fact">The Minerals Council has recommended letting junior miners restart derelict mines and the more than 30 mines under care and maintenance (<a href="https://www.dailymaverick.co.za/article/2026-04-14-zama-zama-operations-easier-than-legal-mining-new-report-details-woes-of-sas-junior-miners/" target="_blank" rel="noopener">Daily Maverick</a>, April 2026).</p>
+          <p class="h-needs"><b>What it needs</b>A mining right, capital and an experienced mining team.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
   <!-- Partners and funders -->
   <section class="band white" id="partners">
     <div class="wrap">
@@ -666,7 +714,7 @@ td { color: var(--steel); }
 
       <div class="sub-head">
         <p class="label">Plan · reviewed at every gate</p>
-        <h3>From first site to first paying customers.</h3>
+        <h3>From first site to a mining company.</h3>
       </div>
       <ol class="roadmap">
         <li class="now"><span class="when">Q4 2026</span><h3>Problem interviews</h3><p>Interviews with maintenance, reliability and operations leads at mid-tier mines, processing plants and contractors.</p><span class="gate">Gate: the problem is confirmed, with a cost</span></li>
@@ -674,6 +722,7 @@ td { color: var(--steel); }
         <li><span class="when">Q2 2027</span><h3>First paid pilot</h3><p>The Action Ledger on read-only data at the first site, measured against a baseline.</p><span class="gate">Gate: measured improvement, valued with finance</span></li>
         <li><span class="when">H2 2027</span><h3>Pilots two and three</h3><p>A mining contractor and a second commodity. An independent penetration test and a reseller partner.</p><span class="gate">Gate: renewals and a written reference</span></li>
         <li><span class="when">2028</span><h3>Scale</h3><p>Multi-site customers, the energy module, and a first market outside South Africa, starting with Zambia's Copperbelt.</p><span class="gate">Gate: three or more paying sites</span></li>
+        <li><span class="when">Later</span><h3>Rehabilitation, then mining</h3><p>Rehabilitation contracts that use our monitoring, then our own mining projects.</p><span class="gate">Gate: licences, specialists and funding in place</span></li>
       </ol>
 
       <div class="seeking">
@@ -705,14 +754,14 @@ td { color: var(--steel); }
         </ul>
       </div>
       <div class="limits">
-        <h3>What we will not build</h3>
+        <h3>What our technology will never do</h3>
         <ul>
-          <li>Anything that controls equipment or writes to PLCs and SCADA</li>
-          <li>Our own sensors or hardware</li>
-          <li>Safety-critical systems such as collision avoidance</li>
-          <li>Replacements for a mine's CMMS, historian or fleet system</li>
-          <li>A large platform before one module has proven its value</li>
-          <li>AI features that a spreadsheet would do just as well</li>
+          <li>Control equipment, or write to PLCs and SCADA</li>
+          <li>Take the place of certified safety systems such as collision avoidance</li>
+          <li>Replace a mine's CMMS, historian or fleet system</li>
+          <li>Grow into a large platform before one module has proven its value</li>
+          <li>Use AI where a spreadsheet would do just as well</li>
+          <li>Make a claim we cannot show with the mine's own data</li>
         </ul>
       </div>
     </div>
@@ -775,7 +824,7 @@ td { color: var(--steel); }
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top"><svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg><span>N<sup>3</sup> Innovations</span></a>
-        <p style="margin-top:12px">AI and sensor intelligence for mining.<br>South Africa.</p>
+        <p style="margin-top:12px">Technology, rehabilitation and mining.<br>South Africa.</p>
       </div>
       <div>
         <p class="label">Sources for the figures on this page</p>
@@ -787,6 +836,8 @@ td { color: var(--steel); }
           <li><a href="https://engineeringnews.co.za/article/strong-commodity-prices-in-2025-ensure-modest-growth-backing-for-sa-mining-minerals-council-2026-10-16" target="_blank" rel="noopener">Engineering News: Minerals Council Facts and Figures 2025</a></li>
           <li><a href="https://miningfocusafrica.com/?p=6511" target="_blank" rel="noopener">Mining Focus Africa: Level 9 collision avoidance in law, December 2022</a></li>
           <li><a href="https://www.marketsandmarkets.com/PressReleases/ai-in-mining.asp" target="_blank" rel="noopener">MarketsandMarkets: AI in Mining Market</a></li>
+          <li><a href="https://pmg.org.za/committee-question/41520/" target="_blank" rel="noopener">Parliamentary Monitoring Group: Question NW5121 to the Minister of Mineral and Petroleum Resources, October 2026</a></li>
+          <li><a href="https://www.dailymaverick.co.za/article/2026-04-14-zama-zama-operations-easier-than-legal-mining-new-report-details-woes-of-sas-junior-miners/" target="_blank" rel="noopener">Daily Maverick: Minerals Council report on junior miners, April 2026</a></li>
         </ul>
       </div>
     </div>

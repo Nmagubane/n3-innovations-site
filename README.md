@@ -1,6 +1,6 @@
 # N³ Innovations website
 
-Single-page static site for N³ Innovations, a South African mining technology company building AI and sensor intelligence for mines.
+Single-page static site for N³ Innovations, a South African mining company that starts with technology (AI and sensor intelligence for mines) and is building towards mine rehabilitation and mining.
 
 Everything is in `index.html` (inline CSS and JS, fonts from Google Fonts). No build step.
 
