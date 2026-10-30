@@ -282,7 +282,7 @@ td { color: var(--steel); }
   .layer.control b::after { display: block; margin-left: 0; }
 }
 
-/* ---------- Direction ---------- */
+/* ---------- Mine life cycle ---------- */
 .horizons { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
 .horizon { border: 1px solid var(--rule-dark); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; background: var(--navy-2); }
 .horizon.now { border: 2px solid var(--hivis); }
@@ -393,7 +393,7 @@ td { color: var(--steel); }
       <a href="#approach">Approach</a>
       <a href="#technology">Technology</a>
       <a href="#security">Security</a>
-      <a href="#direction">Direction</a>
+      <a href="#lifecycle">Life cycle</a>
       <a href="#partners">Partners and funders</a>
       <a href="#team">Team</a>
     </nav>
@@ -411,7 +411,7 @@ td { color: var(--steel); }
         <div class="hero-copy">
           <p class="label">Technology · Rehabilitation · Mining · South Africa</p>
           <h1>Safer mines,<br><em>more tonnes.</em></h1>
-          <p class="lead">N³ Innovations is a South African mining company that starts with technology. Our software reads the data a mine already collects, finds the warnings and delays that nobody acted on, and puts a rand value on each one. From there, we are building towards mine rehabilitation and, in time, mining our own projects.</p>
+          <p class="lead">N³ Innovations is a South African mining company. We use AI and sensor intelligence to find the warnings and delays already in a mine's own data, put a rand value on each one, and make sure the right person acts. Our work covers operating mines, closure and rehabilitation, and mine development.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#contact">Talk to us about your mine</a>
             <a class="btn btn-ghost" href="#services">See our services</a>
@@ -753,34 +753,35 @@ td { color: var(--steel); }
     </div>
   </section>
 
-  <!-- Direction -->
-  <section class="band" id="direction">
+  <!-- Mine life cycle -->
+  <section class="band" id="lifecycle">
     <div class="wrap">
       <div class="section-head">
-        <p class="label">Where we are going</p>
-        <h2>Technology first, then rehabilitation, then mining.</h2>
-        <p class="lead">We start where we can earn revenue and trust fastest. Each step builds on the data, relationships and cash flow of the one before it.</p>
+        <p class="label">Across the mine life cycle</p>
+        <h2>From operating mines to closure and new projects.</h2>
+        <p class="lead">The same data discipline that makes an operating mine safer and more productive also guides how a site is closed, rehabilitated and brought back into production.</p>
       </div>
       <ol class="horizons">
         <li class="horizon now">
-          <span class="h-when">Now</span>
-          <h3>Mining technology</h3>
-          <p>AI and sensor intelligence for operating mines and processing plants, delivered through our six services.</p>
-          <p class="h-needs"><b>What it needs</b>Engineers, client sites and technology partners.</p>
+          <span class="h-when">Operate</span>
+          <h3>Operating mines and plants</h3>
+          <p>Our six services help operating mines, processing plants and contractors act on the warnings in their own data: fewer unplanned stoppages, faster response and lower cost per tonne.</p>
+          <p class="h-fact"><a href="#services">Operational diagnostics · Maintenance intelligence · Data integration and reporting · Communications and connectivity · Energy and compressed-air analytics · Water and closed-mine monitoring</a></p>
+          <p class="h-needs"><b>Who we work with</b>Mine and plant managers, engineering and maintenance teams, contractors.</p>
         </li>
         <li class="horizon">
-          <span class="h-when">Next</span>
-          <h3>Mine rehabilitation</h3>
-          <p>Rehabilitating closed and derelict mine sites, with the same monitoring and data discipline: water, decant, subsidence and illegal access tracked and reported.</p>
+          <span class="h-when">Close and rehabilitate</span>
+          <h3>Closure and rehabilitation</h3>
+          <p>We bring the same monitoring to closed and derelict sites: water, decant, subsidence and illegal access tracked and reported, so rehabilitation is planned on evidence and its progress can be shown.</p>
           <p class="h-fact">The Department of Mineral and Petroleum Resources puts the closure cost of derelict and ownerless mine sites at about R51.5 billion, R8.6 billion of it for high-priority sites (<a href="https://pmg.org.za/committee-question/41520/" target="_blank" rel="noopener">parliamentary reply</a>, October 2026).</p>
-          <p class="h-needs"><b>What it needs</b>Environmental authorisations, rehabilitation specialists, and contracts with mine owners or the state.</p>
+          <p class="h-needs"><b>Who we work with</b>Mine owners, the state, and environmental and rehabilitation specialists.</p>
         </li>
         <li class="horizon">
-          <span class="h-when">Later</span>
-          <h3>Mining</h3>
-          <p>Our own mining projects, starting where existing infrastructure lowers the cost of entry, such as mines under care and maintenance.</p>
-          <p class="h-fact">The Minerals Council has recommended letting junior miners restart derelict mines and the more than 30 mines under care and maintenance (<a href="https://www.dailymaverick.co.za/article/2026-04-14-zama-zama-operations-easier-than-legal-mining-new-report-details-woes-of-sas-junior-miners/" target="_blank" rel="noopener">Daily Maverick</a>, April 2026).</p>
-          <p class="h-needs"><b>What it needs</b>A mining right, capital and an experienced mining team.</p>
+          <span class="h-when">Develop</span>
+          <h3>Mine development</h3>
+          <p>We assess and develop mining opportunities, with a focus on mines under care and maintenance, where existing infrastructure lowers the cost of returning to production.</p>
+          <p class="h-fact">The Minerals Council has recommended opening derelict mines and the more than 30 mines under care and maintenance to junior miners (<a href="https://www.dailymaverick.co.za/article/2026-04-14-zama-zama-operations-easier-than-legal-mining-new-report-details-woes-of-sas-junior-miners/" target="_blank" rel="noopener">Daily Maverick</a>, April 2026).</p>
+          <p class="h-needs"><b>Who we work with</b>Rights holders, investors and experienced mining partners.</p>
         </li>
       </ol>
     </div>
@@ -792,7 +793,7 @@ td { color: var(--steel); }
       <div class="section-head">
         <p class="label">For partners and funders</p>
         <h2>A disciplined route from a measured mine problem to recurring revenue.</h2>
-        <p class="lead">Our model is capital-light and measured at every step. Each site adds data, references and recurring revenue, and each stage funds the next.</p>
+        <p class="lead">Our model is capital-light and measured at every step. Each site adds data, references and recurring revenue, and our services business funds the move into rehabilitation and mine development.</p>
       </div>
       <ul class="why-back">
         <li><span class="k">Need</span><b>Safety and output are both slipping</b><span>53 deaths by mid-October 2026 against 41 in all of 2025, and production down 12.7% year on year in August 2026.</span></li>
@@ -805,14 +806,14 @@ td { color: var(--steel); }
 
       <div class="sub-head">
         <p class="label">Plan · reviewed at every gate</p>
-        <h3>From first site to a mining company.</h3>
+        <h3>Milestones to 2028 and beyond.</h3>
       </div>
       <ol class="roadmap">
                 <li class="now"><span class="when">Q1 2027</span><h3>Client engagements</h3><p>Operational diagnostics at mid-tier mines, processing plants and contractors. Partner and funder meetings at Mining Indaba, Cape Town, 8 to 11 February 2027.</p><span class="gate">Gate: a ranked problem worth fixing</span></li>
         <li><span class="when">Q2 2027</span><h3>Paid deployments</h3><p>Maintenance intelligence on read-only data, measured against each site's baseline.</p><span class="gate">Gate: measured improvement, valued with finance</span></li>
         <li><span class="when">H2 2027</span><h3>Recurring contracts</h3><p>Per-site subscriptions across a second commodity and a mining contractor, an independent penetration test and a reseller partner.</p><span class="gate">Gate: renewals and written references</span></li>
         <li><span class="when">2028</span><h3>Scale</h3><p>Multi-site customers, the energy module, and a first market outside South Africa, starting with Zambia's Copperbelt.</p><span class="gate">Gate: three or more paying sites</span></li>
-        <li><span class="when">Later</span><h3>Rehabilitation, then mining</h3><p>Rehabilitation contracts that use our monitoring, then our own mining projects.</p><span class="gate">Gate: licences, specialists and funding in place</span></li>
+        <li><span class="when">Beyond 2028</span><h3>Rehabilitation and development</h3><p>Rehabilitation contracts and mine development projects, delivered with specialist partners.</p><span class="gate">Gate: contracts and rights secured</span></li>
       </ol>
 
       <div class="seeking">
