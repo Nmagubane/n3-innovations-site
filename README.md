@@ -33,6 +33,6 @@ Change it there, and also in the two `href="mailto:..."` fallbacks and the visib
 
 ## Before going live, confirm
 
-- Formal company titles for the three co-founders. The site shows each person's focus area and their role in the discovery study.
-- Whether Neo's background line and the study lead's mobile number should be public.
+- Formal company titles for the three co-founders. The site shows each person's focus area and their role in the discovery study, with no descriptions.
+- Whether the study lead's mobile number should be public.
 - The product name "N³ Action Ledger" (a working name).
