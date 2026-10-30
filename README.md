@@ -1,6 +1,6 @@
 # N³ Innovations website
 
-Single-page static site for N³ Innovations: the self-funded four-week operational study offered to South African mines.
+Single-page static site for N³ Innovations, a South African mining technology company building AI and sensor intelligence for mines, with the self-funded discovery study as its first offer.
 
 Everything is in `index.html` (inline CSS and JS, fonts from Google Fonts). No build step.
 
@@ -21,8 +21,18 @@ When N³ Innovations has its own domain:
 3. For the bare domain, add `A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153` and `185.199.111.153`.
 4. Tick **Enforce HTTPS** once the certificate is issued.
 
+## Changing the contact email
+
+The email address is set once, near the bottom of `index.html`:
+
+```js
+var CONTACT_EMAIL = 'qhubela_nk@live.com';
+```
+
+Change it there, and also in the two `href="mailto:..."` fallbacks and the visible address in the Contact section, so the page is right even before its script runs.
+
 ## Before going live, confirm
 
-- The contact email. The proposal uses `qhubela_nk@live.com`; the deck uses `qhubela.nk@live.com`. The site uses the proposal's version.
-- Whether the study lead's mobile number should be public.
-- Surnames for Neo and Nkululeko (the site shows first names only, as the deck does).
+- Formal company titles for the three co-founders. The site shows each person's focus area and their role in the discovery study.
+- Whether Neo's background line and the study lead's mobile number should be public.
+- The product name "N³ Action Ledger" (a working name).
