@@ -29,7 +29,7 @@
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
 body { margin: 0; background: var(--navy); color: var(--mist); font-family: var(--f-body); font-size: var(--t-md); line-height: 1.6; }
 img, svg { max-width: 100%; }
 a { color: inherit; }
@@ -443,9 +443,15 @@ td { color: var(--steel); }
   .slide p { font-size: var(--t-sm); }
   .dot { width: 18px; }
 }
+/* Reduced motion: keep gentle fades, counters and a crossfading slideshow; drop sliding, zooming and the moving drawing. */
 @media (prefers-reduced-motion: reduce) {
-  .js .reveal { opacity: 1; transform: none; transition: none; }
-  .section-drawing .sig, .section-drawing .ping, .section-drawing .cage, .section-drawing .truck { animation: none; }
-  .slide, .slide img, .slide figcaption > * { transition: none !important; }
-  .slide img { transform: none; }
+  .js .reveal { transform: none; transition: opacity .9s ease; }
+  .section-drawing .ping, .section-drawing .truck { animation: none; }
+  .section-drawing .sig { animation-duration: 2.4s; }
+  .section-drawing .cage { animation-duration: 12s; }
+  .slides { display: grid; }
+  .slide { grid-area: 1 / 1; transform: none !important; opacity: 0; transition: opacity .9s ease; }
+  .slide.is-active { opacity: 1; }
+  .slide img, .slide.is-active img { transform: none; transition: none; }
+  .slide figcaption > * { transform: none; }
 }

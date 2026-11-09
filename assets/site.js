@@ -49,7 +49,7 @@ var CONTACT_EMAIL = 'qhubela_nk@live.com';
     window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
   }
 
-  // Scroll reveals, staggered among siblings.
+  // Scroll reveals, staggered among siblings (opacity only when reduced motion is on).
   var sel = '.section-head, .stat, .service, .also-card, .principles > div, .questions > li, .src-chip, .flow-step, ' +
             '.stage, .horizon, .person, .seeking > div, .reg-note, .slider, .prose, .tech-more';
   var items = Array.prototype.slice.call(document.querySelectorAll(sel));
@@ -58,7 +58,7 @@ var CONTACT_EMAIL = 'qhubela_nk@live.com';
     el.style.transitionDelay = Math.min(sibs.indexOf(el), 6) * 80 + 'ms';
     el.classList.add('reveal');
   });
-  if (!hasIO || reduce) { items.forEach(function (el) { el.classList.add('in'); }); }
+  if (!hasIO) { items.forEach(function (el) { el.classList.add('in'); }); }
   else {
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -82,7 +82,7 @@ var CONTACT_EMAIL = 'qhubela_nk@live.com';
     requestAnimationFrame(step);
   }
   var nums = document.querySelectorAll('.stat-num');
-  if (hasIO && !reduce && nums.length) {
+  if (hasIO && nums.length) {
     var nio = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) { if (e.isIntersecting) { countUp(e.target); nio.unobserve(e.target); } });
     }, { threshold: 0.6 });
@@ -91,7 +91,7 @@ var CONTACT_EMAIL = 'qhubela_nk@live.com';
 
   // Walk the Action Ledger steps one at a time while it is on screen.
   var steps = document.querySelectorAll('.flow .flow-step');
-  if (steps.length && hasIO && !reduce) {
+  if (steps.length && hasIO) {
     var k = -1, timer = null;
     var tick = function () { steps.forEach(function (s) { s.classList.remove('lit'); }); k = (k + 1) % (steps.length + 1); if (k < steps.length) steps[k].classList.add('lit'); };
     new IntersectionObserver(function (entries) {
@@ -107,9 +107,8 @@ var CONTACT_EMAIL = 'qhubela_nk@live.com';
   if (!slider) return;
   var slides = slider.querySelectorAll('.slide'), dots = slider.querySelectorAll('.dot');
   var pauseBtn = slider.querySelector('.pause'), cur = 0, auto = null, MS = 6500;
-  var userPaused = reduce, hover = false;
+  var userPaused = false, hover = false;
   slider.style.setProperty('--slide-ms', MS + 'ms');
-  if (reduce) { slider.classList.add('no-autoplay'); pauseBtn.setAttribute('aria-pressed', 'true'); pauseBtn.setAttribute('aria-label', 'Play the slideshow'); }
 
   function show(n) {
     cur = (n + slides.length) % slides.length;
@@ -144,9 +143,14 @@ var CONTACT_EMAIL = 'qhubela_nk@live.com';
     show(cur);
   });
   var box = slider.querySelector('.slides');
-  box.addEventListener('mouseenter', function () { hover = true; restart(); });
-  box.addEventListener('mouseleave', function () { hover = false; restart(); });
-  slider.addEventListener('focusin', function () { hover = true; restart(); });
+  // Pause while a mouse is over the photo or a keyboard user is in the controls. Taps on a phone
+  // also fire hover and focus events, and would otherwise pause the slideshow for good.
+  box.addEventListener('pointerenter', function (e) { if (e.pointerType === 'mouse') { hover = true; restart(); } });
+  box.addEventListener('pointerleave', function (e) { if (e.pointerType === 'mouse') { hover = false; restart(); } });
+  slider.addEventListener('focusin', function (e) {
+    var kb = false; try { kb = e.target.matches(':focus-visible'); } catch (x) {}
+    if (kb) { hover = true; restart(); }
+  });
   slider.addEventListener('focusout', function () { hover = false; restart(); });
   slider.addEventListener('keydown', function (e) {
     if (e.key === 'ArrowLeft') show(cur - 1);
