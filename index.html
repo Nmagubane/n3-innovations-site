@@ -2,6 +2,7 @@
 <html lang="en-ZA">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.add('js')</script>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>N³ Innovations</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -82,6 +83,7 @@
             </g>
             <rect x="163" y="92" width="14" height="300" fill="#0B1F33" stroke="#EEF2F4" stroke-width="1.5"/>
             <line x1="170" y1="96" x2="170" y2="388" stroke="#9DB4C3" stroke-dasharray="2 6"/>
+            <rect class="cage" x="165" y="100" width="10" height="16" rx="1" fill="#F26A21"/>
             <rect x="318" y="38" width="144" height="54" rx="3" fill="#12304B" stroke="#EEF2F4" stroke-width="1.5"/>
             <text x="390" y="60" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#EEF2F4">CONTROL</text>
             <text x="390" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#EEF2F4">ROOM</text>
@@ -96,21 +98,21 @@
               <line x1="177" y1="280" x2="470" y2="280"/>
               <line x1="177" y1="370" x2="420" y2="370"/>
             </g>
-            <path d="M380 92 L380 182" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <path class="sig" d="M380 92 L380 182" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
             <circle cx="380" cy="190" r="4" fill="#0B1F33"/>
-            <path d="M438 92 L438 180" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
-            <path d="M438 200 L438 234" stroke="#F26A21" stroke-width="1.2" stroke-dasharray="4 4"/>
-            <g>
+            <path class="sig" d="M438 92 L438 180" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <path class="sig" d="M438 200 L438 234" stroke="#F26A21" stroke-width="1.2" stroke-dasharray="4 4"/>
+            <g class="truck">
               <rect x="300" y="268" width="38" height="20" rx="3" fill="#F26A21"/>
               <circle cx="309" cy="290" r="4" fill="#0B1F33"/><circle cx="330" cy="290" r="4" fill="#0B1F33"/>
             </g>
             <g fill="#EEF2F4"><circle cx="364" cy="264" r="5"/><rect x="360" y="270" width="8" height="12" rx="2"/></g>
             <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#F26A21" text-anchor="middle">
-              <circle cx="440" cy="280" r="22" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <circle cx="440" cy="280" r="22" class="ping" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
               <text x="440" y="324">NO SIGNAL?</text>
-              <circle cx="100" cy="280" r="22" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <circle cx="100" cy="280" r="22" class="ping" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
               <text x="100" y="324">LATE REPORT?</text>
-              <circle cx="300" cy="370" r="22" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
+              <circle cx="300" cy="370" r="22" class="ping" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
               <text x="300" y="414">MISSED WARNING?</text>
             </g>
           </svg>
@@ -123,6 +125,98 @@
         <div><h3>Read-only by design</h3><p>We read copies of your data. Nothing we install connects to PLCs or SCADA.</p></div>
         <div><h3>Evidence first</h3><p>Every engagement starts with a problem measured at your operation.</p></div>
         <div><h3>Vendor-neutral</h3><p>We work with the radios, sensors and systems you already own.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Where we work (photo slider) -->
+  <section class="band showcase" id="where" aria-labelledby="where-title">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Where we work</p>
+        <h2 id="where-title">From the pit and the plant to the control room and the water around the mine.</h2>
+      </div>
+      <div class="slider" aria-roledescription="carousel" aria-label="Where we work">
+        <div class="slides">
+          <figure class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 7: Underground operations">
+            <img src="https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="A truck in a dimly lit underground tunnel" loading="eager" decoding="async">
+            <figcaption>
+              <span class="slide-tag">01 · Underground</span>
+              <h3>Underground operations</h3>
+              <p>Warnings from machines, radios and shift reports, brought together and ranked by what they put at risk.</p>
+              <a class="slide-credit" href="https://unsplash.com/photos/construction-truck-inside-dark-tunnel-F2iCP_knaj8" target="_blank" rel="noopener">Illustrative photo: Ricardo Gomez Angel / Unsplash</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 7: Open-pit operations" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="Aerial view of haul trucks and loaders working in an open pit" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="slide-tag">02 · Open pit</span>
+              <h3>Open-pit operations</h3>
+              <p>Delays and downtime measured against the mine's own baseline, so every improvement is counted in tonnes and rand.</p>
+              <a class="slide-credit" href="https://unsplash.com/photos/aerial-photography-of-dump-trucks-EN1tF2EG-50" target="_blank" rel="noopener">Illustrative photo: Shane McLendon / Unsplash</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 7: Processing plants" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="Conveyor gantries and steel walkways at a processing plant" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="slide-tag">03 · Processing</span>
+              <h3>Processing plants</h3>
+              <p>Condition data from conveyors, pumps and crushers, turned into jobs that are done before the failure.</p>
+              <a class="slide-credit" href="https://unsplash.com/photos/a-building-under-construction-JipsToMInVI" target="_blank" rel="noopener">Illustrative photo: Jandira Sonnendeck / Unsplash</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 7: Maintenance teams" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1595856898575-9d187bd32fd6?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="A technician in a hard hat working on an electrical panel" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="slide-tag">04 · Maintenance</span>
+              <h3>Maintenance teams</h3>
+              <p>Every warning linked to an asset, approved by a planner and tracked to a closed work order.</p>
+              <a class="slide-credit" href="https://unsplash.com/photos/man-in-red-and-black-jacket-wearing-black-pants-and-red-helmet-holding-green-and-black-Jt01DmHeiqM" target="_blank" rel="noopener">Illustrative photo: Anton Dmitriev / Unsplash</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 of 7: Control rooms" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="An industrial control room with rows of consoles and screens" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="slide-tag">05 · Control room</span>
+              <h3>Control rooms</h3>
+              <p>Read-only software that advises people and never controls equipment.</p>
+              <a class="slide-credit" href="https://unsplash.com/photos/a-room-with-many-screens-and-monitors-wrx2tdzzgDw" target="_blank" rel="noopener">Illustrative photo: Ana Garnica / Unsplash</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="6 of 7: Water and environment" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="Red-tinted water filling a flooded open-pit mine" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="slide-tag">06 · Water</span>
+              <h3>Water and environment</h3>
+              <p>Water quality and discharge data kept current, so audits are clean and problems are caught early.</p>
+              <a class="slide-credit" href="https://unsplash.com/photos/lake-near-mountain-during-daytime-EY83fMqR4_o" target="_blank" rel="noopener">Illustrative photo: Evgenii Pliusnin / Unsplash</a>
+            </figcaption>
+          </figure>
+          <figure class="slide" role="group" aria-roledescription="slide" aria-label="7 of 7: Closure and mine development" aria-hidden="true">
+            <img src="https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="A steel mine headframe against a blue sky" loading="lazy" decoding="async">
+            <figcaption>
+              <span class="slide-tag">07 · Closure and development</span>
+              <h3>Closure and mine development</h3>
+              <p>Closed and derelict sites rehabilitated on evidence, and mines under care and maintenance brought back.</p>
+              <a class="slide-credit" href="https://unsplash.com/photos/black-metal-tower-under-blue-sky-IjOPD3VosTs" target="_blank" rel="noopener">Illustrative photo: Colter Olmstead / Unsplash</a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="slider-ui">
+          <button class="slider-btn prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
+          <div class="dots">
+            <button class="dot is-active" type="button" aria-label="Show slide 1: Underground operations" aria-current="true"></button>
+            <button class="dot" type="button" aria-label="Show slide 2: Open-pit operations"></button>
+            <button class="dot" type="button" aria-label="Show slide 3: Processing plants"></button>
+            <button class="dot" type="button" aria-label="Show slide 4: Maintenance teams"></button>
+            <button class="dot" type="button" aria-label="Show slide 5: Control rooms"></button>
+            <button class="dot" type="button" aria-label="Show slide 6: Water and environment"></button>
+            <button class="dot" type="button" aria-label="Show slide 7: Closure and mine development"></button>
+          </div>
+          <button class="slider-btn next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
+          <button class="slider-btn pause" type="button" aria-label="Pause the slideshow" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.6"/><path class="i-play" d="M8 5l11 7-11 7z" fill="currentColor"/></svg></button>
+        </div>
+        <p class="slider-note">Stock photos for illustration. They are not N³ projects.</p>
       </div>
     </div>
   </section>
