@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en-ZA">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Technology · N³ Innovations</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="How N³ Innovations uses AI, where it does not, and how its read-only software sits on a mine's network.">
+<meta property="og:title" content="N³ Innovations · Safer mines, more tonnes">
+<meta property="og:description" content="Operational diagnostics, maintenance intelligence and environmental compliance for South African mines. 100% black-owned, B-BBEE Level 1.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.n3innovations.co.za/technology.html">
+<meta property="og:site_name" content="N³ Innovations">
+<meta property="og:image" content="https://www.n3innovations.co.za/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="N³ Innovations: Safer mines, more tonnes.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.n3innovations.co.za/technology.html">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B1F33">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1F33'/%3E%3Crect x='10' y='20' width='22' height='24' fill='%23EEF2F4'/%3E%3Ccircle cx='43' cy='32' r='12' fill='%23F26A21'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html#top" aria-label="N³ Innovations, home">
+      <svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg>
+      <span>N<sup>3</sup> Innovations</span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="technology.html">Technology</a>
+      <a href="index.html#lifecycle">Life cycle</a>
+      <a href="index.html#partners">Partners and funders</a>
+      <a href="index.html#team">Team</a>
+    </nav>
+    <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
+    <a class="btn btn-primary" href="index.html#contact">Contact us</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="band raised" id="technology">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Our technology</p>
+        <h1 class="page-title">How our technology works, and how it stays secure.</h1>
+        <p class="lead">Our software reads the warnings a mine already collects, ranks them by what they put at risk, and tracks each one until the work is done. It advises people. It never controls equipment.</p>
+      </div>
+      <div class="sub-head">
+        <p class="label">Where AI earns its place</p>
+        <h3>We use AI where it does work a person cannot do at scale, and plain software everywhere else.</h3>
+      </div>
+      <div class="table-wrap">
+        <table class="ai-table">
+          <thead><tr><th scope="col">Task</th><th scope="col">What the AI does</th><th scope="col">What stays plain software</th></tr></thead>
+          <tbody>
+            <tr><td>Reading condition-monitoring reports</td><td data-label="What the AI does">Language models extract the asset, fault mode, severity and recommended action from PDFs and free-text work orders.</td><td data-label="What stays plain software">Storing the finding, its due date and who owns it</td></tr>
+            <tr><td>Matching tags to assets</td><td data-label="What the AI does">Fuzzy matching links names such as "Pump 4 DE bearing" to the right entry in the asset register.</td><td data-label="What stays plain software">The asset register itself, which stays in the mine's CMMS</td></tr>
+            <tr><td>Checking a warning against plant data</td><td data-label="What the AI does">Anomaly detection on historian tags (current, temperature, vibration) shows whether a trend supports the finding.</td><td data-label="What stays plain software">Thresholds, alarms and trend charts</td></tr>
+            <tr><td>Writing the weekly summary</td><td data-label="What the AI does">A draft summary of open risks, which a planner edits and approves.</td><td data-label="What stays plain software">Overdue lists, closure rates and the rand calculation</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul class="rules-grid" aria-label="AI rules we build by">
+        <li><b>Decision support only</b><span>No model writes to a PLC, SCADA setpoint or permit system.</span></li>
+        <li><b>Every output shows its evidence</b><span>The page, trend or work order it came from.</span></li>
+        <li><b>A person approves</b><span>Nothing becomes a work order without a named approver.</span></li>
+        <li><b>We publish our misses</b><span>False-alarm rates and lead times are reported, not hidden.</span></li>
+        <li><b>Data stays where the mine allows</b><span>On-site or South African hosting. We send no plant data to a public AI service without written consent.</span></li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- Security -->
+  <section class="band light" id="security">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="label">Security and OT</p>
+        <h2>Built to pass a mine's IT and OT security review.</h2>
+        <p class="lead">A mine is not an office network, and a cyberattack can stop a plant. Our design keeps us out of the control layer entirely.</p>
+      </div>
+      <div class="security">
+        <div class="layers" aria-label="Where N³ software sits on a mine's network">
+          <div class="layer cloud"><span class="lvl">Hosting</span><div><b>N³ service</b><span>South African cloud region, or a server at the mine</span></div></div>
+          <p class="layer-arrow">↑ outbound HTTPS only</p>
+          <div class="layer"><span class="lvl">Levels 4–5</span><div><b>Business IT</b><span>CMMS, email, reports</span></div></div>
+          <div class="layer dmz"><span class="lvl">DMZ</span><div><b>N³ site agent</b><span>Reads exports and a historian replica. Accepts no inbound connections.</span></div></div>
+          <div class="layer"><span class="lvl">Level 3</span><div><b>Site operations</b><span>Historian, alarm logs</span></div></div>
+          <div class="layer control"><span class="lvl">Levels 0–2</span><div><b>Control</b><span>PLCs, SCADA, field devices</span></div></div>
+        </div>
+        <ul class="sec-list">
+          <li><b>Read-only</b><span>We read copies and exports. We never write to plant systems.</span></li>
+          <li><b>No inbound access</b><span>The site agent connects out. No vendor remote sessions are needed.</span></li>
+          <li><b>Out of the control layer</b><span>Nothing we install touches PLCs, SCADA or field devices.</span></li>
+          <li><b>Data sovereignty</b><span>Hosting in South Africa or on the mine's own server, with the same software.</span></li>
+          <li><b>POPIA by design</b><span>Names in work orders are pseudonymised on arrival. Access is by role.</span></li>
+          <li><b>Works offline</b><span>The agent buffers data and syncs when the link returns.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="band white">
+    <div class="wrap">
+      <div class="section-head" style="margin-bottom:0">
+        <p class="label">Next step</p>
+        <h2>Ask us to walk your IT and OT teams through the design.</h2>
+        <p class="lead">We are happy to answer a mine's security questionnaire before any data is shared.</p>
+        <p><a class="btn btn-primary" href="index.html#contact">Contact us</a></p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a class="brand" href="index.html#top"><svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg><span>N<sup>3</sup> Innovations</span></a>
+        <div class="foot-meta">
+          <span>Mining technology and services · South Africa</span>
+          <span><b>100% black-owned</b> · B-BBEE Level 1</span>
+        </div>
+      </div>
+    </div>
+    <div class="foot-base">
+      <span>&copy; 2026 N³ Innovations</span>
+      <span class="foot-links"><a href="technology.html">Technology</a><a href="privacy.html">Privacy notice</a><a href="assets/N3-Innovations-Company-Profile.pdf" download>Company profile (PDF)</a></span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>

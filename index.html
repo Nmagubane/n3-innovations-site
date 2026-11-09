@@ -5,380 +5,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>N³ Innovations</title>
 <meta name="claude:viewport-fit-sides" content="cover">
-<meta name="description" content="N³ Innovations is a South African mining company that starts with technology: AI and sensor intelligence for operating mines, then mine rehabilitation and, in time, mining.">
+<meta name="description" content="N³ Innovations is a South African mining technology and services company. We find the warnings and delays in a mine's own data, value each in rand and make sure the right person acts.">
 <meta property="og:title" content="N³ Innovations · Safer mines, more tonnes">
-<meta property="og:description" content="Operational diagnostics, maintenance intelligence, data integration, connectivity, energy and water monitoring for South African mines.">
+<meta property="og:description" content="Operational diagnostics, maintenance intelligence and environmental compliance for South African mines. 100% black-owned, B-BBEE Level 1.">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://www.n3innovations.co.za/">
+<meta property="og:site_name" content="N³ Innovations">
+<meta property="og:image" content="https://www.n3innovations.co.za/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="N³ Innovations: Safer mines, more tonnes.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="canonical" href="https://www.n3innovations.co.za/">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Organization","name":"N³ Innovations","alternateName":"N3 Innovations","url":"https://www.n3innovations.co.za/","logo":"https://www.n3innovations.co.za/assets/apple-touch-icon.png","description":"South African mining technology and services company.","areaServed":"ZA","founder":[{"@type":"Person","name":"Nkanyiso Gracious Maqubela"},{"@type":"Person","name":"Neo Magubane"},{"@type":"Person","name":"Nkululeko Mdluli"}]}
+</script>
 <meta name="theme-color" content="#0B1F33">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230B1F33'/%3E%3Crect x='10' y='20' width='22' height='24' fill='%23EEF2F4'/%3E%3Ccircle cx='43' cy='32' r='12' fill='%23F26A21'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>
-/* Layout: a mine plan sheet. Deep-navy and mist bands alternate; a 1120px reading column;
-   hairline rules and mono "survey" labels; hi-vis orange only where something needs attention. */
-:root {
-  --navy: #0B1F33;
-  --navy-2: #12304B;
-  --navy-3: #1A3D5C;
-  --steel: #9DB4C3;
-  --mist: #EEF2F4;
-  --paper: #FFFFFF;
-  --ink: #0B1F33;
-  --ink-2: #3D5567;
-  --rule-dark: rgba(238, 242, 244, 0.14);
-  --rule-light: #D3DDE3;
-  --hivis: #F26A21;
-  --hivis-ink: #B9470B;
-  --ok: #3FA37A;
-
-  --f-display: "Poppins", "Segoe UI", system-ui, sans-serif;
-  --f-body: "Figtree", "Segoe UI", system-ui, -apple-system, sans-serif;
-  --f-mono: "IBM Plex Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
-
-  --t-xs: 0.78rem; --t-sm: 0.9rem; --t-md: 1.0625rem; --t-lg: 1.25rem;
-  --t-xl: clamp(1.6rem, 1.1rem + 1.6vw, 2.3rem);
-  --t-2xl: clamp(2.6rem, 1.4rem + 4.6vw, 4.75rem);
-  --s1: 4px; --s2: 8px; --s3: 12px; --s4: 16px; --s5: 24px; --s6: 32px; --s7: 48px; --s8: 80px;
-  --wrap: 1120px;
-  --r: 10px;
-  color-scheme: dark;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; scroll-padding-top: 80px; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { transition: none !important; } }
-body { margin: 0; background: var(--navy); color: var(--mist); font-family: var(--f-body); font-size: var(--t-md); line-height: 1.6; }
-img, svg { max-width: 100%; }
-a { color: inherit; }
-:focus-visible { outline: 2px solid var(--hivis); outline-offset: 3px; border-radius: 4px; }
-h1, h2, h3 { font-family: var(--f-display); font-weight: 700; line-height: 1.12; margin: 0; text-wrap: balance; letter-spacing: -0.01em; }
-h2 { font-size: var(--t-xl); }
-h3 { font-size: var(--t-lg); font-weight: 600; }
-p { margin: 0; }
-ul, ol { margin: 0; }
-
-.wrap {
-  width: 100%;
-  max-width: calc(var(--wrap) + 64px);
-  margin-inline: auto;
-  padding-left: max(16px, env(safe-area-inset-left, 0px));
-  padding-right: max(16px, env(safe-area-inset-right, 0px));
-}
-@media (min-width: 720px) { .wrap { padding-left: max(32px, env(safe-area-inset-left, 0px)); padding-right: max(32px, env(safe-area-inset-right, 0px)); } }
-
-.band { padding-block: var(--s8); }
-.band.light { background: var(--mist); color: var(--ink); }
-.band.white { background: var(--paper); color: var(--ink); }
-.band.raised { background: var(--navy-2); }
-@media (max-width: 560px) { .band { padding-block: 56px; } }
-
-.label { font-family: var(--f-mono); font-size: var(--t-xs); font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--steel); }
-.light .label, .white .label { color: var(--ink-2); }
-.section-head { display: grid; gap: var(--s3); max-width: 48rem; margin-bottom: var(--s7); }
-.section-head .lead { font-size: var(--t-lg); color: var(--steel); line-height: 1.5; }
-.light .section-head .lead, .white .section-head .lead { color: var(--ink-2); }
-.sub-head { display: grid; gap: var(--s2); margin: var(--s8) 0 var(--s5); max-width: 46rem; }
-.sub-head p { color: var(--steel); }
-.light .sub-head p, .white .sub-head p { color: var(--ink-2); }
-.status { display: inline-flex; align-items: center; gap: var(--s2); width: fit-content; font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; padding: 4px 10px; border-radius: 4px; border: 1px solid var(--hivis); color: var(--hivis); }
-.status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--hivis); }
-
-/* ---------- Header ---------- */
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--navy); }
-.site-head { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: rgba(11, 31, 51, 0.95); backdrop-filter: blur(8px); border-bottom: 1px solid var(--rule-dark); }
-.head-row { display: flex; align-items: center; gap: var(--s5); min-height: 64px; position: relative; }
-.brand { display: flex; align-items: center; gap: var(--s3); text-decoration: none; font-family: var(--f-display); font-weight: 700; font-size: 1.1rem; white-space: nowrap; }
-.brand svg { width: 34px; height: 24px; flex: none; }
-.brand sup { font-size: 0.6em; }
-.nav { display: flex; gap: var(--s5); margin-left: auto; font-size: var(--t-sm); font-weight: 500; }
-.nav a { text-decoration: none; color: var(--steel); }
-.nav a:hover { color: var(--mist); }
-.menu-btn { display: none; margin-left: auto; background: none; border: 1px solid var(--rule-dark); color: var(--mist); border-radius: 6px; min-height: 40px; padding: 0 var(--s4); font: 600 var(--t-sm) var(--f-body); cursor: pointer; }
-
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: var(--s2); min-height: 48px; padding: 0 var(--s5); border-radius: 6px; border: 1.5px solid transparent; background: transparent; color: inherit; font: 600 var(--t-md) var(--f-body); text-decoration: none; cursor: pointer; white-space: nowrap; max-width: 100%; transition: background-color 0.15s, border-color 0.15s; }
-.btn-primary { background: var(--hivis); color: #1A0D04; }
-.btn-primary:hover { background: #FF7D36; }
-.btn-ghost { border-color: var(--rule-dark); color: var(--mist); }
-.btn-ghost:hover { border-color: var(--steel); }
-.btn-line { border-color: var(--rule-light); color: var(--ink); background: var(--paper); }
-.btn-line:hover { border-color: var(--ink); }
-.head-row .btn { min-height: 40px; padding: 0 var(--s4); font-size: var(--t-sm); }
-@media (max-width: 560px) { .btn { white-space: normal; text-align: center; padding-block: 6px; } }
-@media (max-width: 960px) {
-  .nav { display: none; position: absolute; top: 100%; left: 0; right: 0; flex-direction: column; gap: 0; background: var(--navy); border-bottom: 1px solid var(--rule-dark); padding: var(--s2) max(16px, env(safe-area-inset-right, 0px)) var(--s4) max(16px, env(safe-area-inset-left, 0px)); }
-  .nav.open { display: flex; }
-  .nav a { padding: var(--s3) 0; border-bottom: 1px solid var(--rule-dark); color: var(--mist); }
-  .menu-btn { display: inline-flex; align-items: center; }
-  .head-row > .btn { display: none; }
-}
-
-/* ---------- Hero ---------- */
-.hero { padding-block: var(--s7) var(--s8); overflow: hidden; }
-.hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: var(--s7); align-items: center; }
-.hero-copy { display: grid; gap: var(--s5); min-width: 0; }
-.hero h1 { font-size: var(--t-2xl); }
-.hero h1 em { font-style: normal; color: var(--hivis); }
-.hero .lead { font-size: var(--t-lg); color: var(--steel); max-width: 36rem; line-height: 1.5; }
-.actions { display: flex; flex-wrap: wrap; gap: var(--s3); }
-.section-drawing { margin: 0; min-width: 0; }
-.section-drawing svg { display: block; width: 100%; height: auto; }
-.drawing-note { margin-top: var(--s3); font-family: var(--f-mono); font-size: var(--t-xs); color: var(--steel); }
-@media (max-width: 860px) { .hero-grid { grid-template-columns: minmax(0, 1fr); } }
-
-.principles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); margin-top: var(--s7); border-top: 1px solid var(--rule-dark); }
-.principles > div { padding: var(--s5) var(--s5) 0 0; display: grid; gap: var(--s2); align-content: start; min-width: 0; }
-.principles > div + div { padding-left: var(--s5); border-left: 1px solid var(--rule-dark); }
-.principles h3 { font-size: 1.05rem; }
-.principles p { font-size: var(--t-sm); color: var(--steel); }
-@media (max-width: 900px) {
-  .principles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .principles > div, .principles > div + div { padding: var(--s4) var(--s4) var(--s4) 0; border-left: 0; border-bottom: 1px solid var(--rule-dark); }
-}
-@media (max-width: 520px) { .principles { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Stats ---------- */
-.stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s6); }
-.stat { display: grid; align-content: start; gap: var(--s3); padding-top: var(--s5); border-top: 3px solid var(--ink); min-width: 0; }
-.stat.alert { border-top-color: var(--hivis); }
-.stat-num { font-family: var(--f-display); font-weight: 700; font-size: clamp(2.6rem, 2rem + 2vw, 3.6rem); line-height: 1; font-variant-numeric: tabular-nums; white-space: nowrap; }
-.stat p { color: var(--ink-2); }
-.stat .src { font-family: var(--f-mono); font-size: var(--t-xs); }
-.stat .src a { color: var(--ink-2); }
-.reg-note { margin-top: var(--s7); display: grid; grid-template-columns: auto minmax(0, 1fr); gap: var(--s5); align-items: start; padding: var(--s5); background: var(--paper); border: 1px solid var(--rule-light); border-radius: var(--r); }
-.reg-tag { font-family: var(--f-mono); font-size: var(--t-xs); font-weight: 500; padding: 4px 8px; border-radius: 4px; background: var(--navy); color: var(--mist); white-space: nowrap; }
-.reg-note p { color: var(--ink-2); max-width: 64ch; }
-.reg-note strong { color: var(--ink); }
-@media (max-width: 1000px) { .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .stats { grid-template-columns: minmax(0, 1fr); } .reg-note { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- The gap ---------- */
-.gap-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: var(--s7); align-items: start; }
-.gap-grid blockquote { margin: 0; font-family: var(--f-display); font-weight: 600; font-size: var(--t-xl); line-height: 1.25; text-wrap: balance; }
-.gap-grid .body { margin-top: var(--s5); color: var(--steel); max-width: 52ch; display: grid; gap: var(--s4); }
-.silos { margin-top: var(--s5); display: flex; flex-wrap: wrap; gap: var(--s2); }
-.silos span { font-family: var(--f-mono); font-size: var(--t-xs); padding: 5px 10px; border: 1px dashed var(--steel); border-radius: 4px; color: var(--steel); }
-.questions { list-style: none; padding: 0; display: grid; }
-.questions li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: var(--s4); padding: var(--s5) 0; border-top: 1px solid var(--rule-dark); }
-.questions li:last-child { border-bottom: 1px solid var(--rule-dark); }
-.q-num { font-family: var(--f-mono); color: var(--hivis); font-size: var(--t-sm); padding-top: 3px; }
-.questions h3 { margin-bottom: var(--s2); }
-.questions p { color: var(--steel); }
-@media (max-width: 860px) { .gap-grid { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Services ---------- */
-.services { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
-.service { border: 1px solid var(--rule-light); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; background: var(--paper); }
-.service.feature { background: var(--navy); color: var(--mist); border-color: var(--navy); }
-.svc-tag { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--hivis-ink); }
-.service.feature .svc-tag { color: var(--hivis); }
-.service h3 { font-size: 1.2rem; }
-.svc-lead { color: var(--ink-2); }
-.service.feature .svc-lead { color: var(--steel); }
-.service ul { list-style: none; padding: 0; display: grid; gap: var(--s2); font-size: var(--t-sm); }
-.service li { position: relative; padding-left: var(--s5); }
-.service li::before { content: ""; position: absolute; left: 0; top: 0.55em; width: 8px; height: 8px; background: var(--hivis); }
-.svc-measure { margin-top: var(--s2); padding-top: var(--s3); border-top: 1px dashed var(--rule-light); font-size: var(--t-sm); color: var(--ink-2); }
-.service.feature .svc-measure { border-top-color: var(--rule-dark); color: var(--steel); }
-.svc-measure b { display: block; font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink); margin-bottom: 2px; }
-.service.feature .svc-measure b { color: var(--mist); }
-.svc-note { margin-top: var(--s5); font-size: var(--t-sm); color: var(--ink-2); }
-.svc-note b { color: var(--ink); }
-@media (max-width: 960px) { .services { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 620px) { .services { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Stages ---------- */
-.stages { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); counter-reset: stage; }
-.stage { background: var(--paper); border: 1px solid var(--rule-light); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; position: relative; }
-.stage .num { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-2); }
-.stage h3 { font-size: 1.3rem; }
-.stage .terms { display: flex; flex-wrap: wrap; gap: var(--s2); }
-.stage .terms span { font-family: var(--f-mono); font-size: var(--t-xs); padding: 3px 8px; border-radius: 4px; background: var(--mist); color: var(--ink); }
-.stage p { color: var(--ink-2); }
-.stage .gate { margin-top: var(--s2); padding-top: var(--s3); border-top: 1px dashed var(--rule-light); font-size: var(--t-sm); color: var(--ink-2); }
-.stage .gate b { display: block; font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--hivis-ink); margin-bottom: 2px; }
-.stage:first-child { border-color: var(--ink); box-shadow: inset 0 3px 0 var(--hivis); }
-.stages-note { margin-top: var(--s5); color: var(--ink-2); font-size: var(--t-sm); }
-@media (max-width: 900px) { .stages { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Product flow ---------- */
-.product { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--s7); align-items: start; }
-.flow { display: grid; gap: 0; min-width: 0; }
-.flow-sources { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s2); }
-.src-chip { border: 1px solid var(--rule-dark); border-radius: 8px; padding: var(--s3); background: var(--navy); min-width: 0; }
-.src-chip b { display: block; font-size: var(--t-sm); font-weight: 600; }
-.src-chip span { display: block; font-size: var(--t-xs); color: var(--steel); }
-.flow-step { border: 1px solid var(--rule-dark); border-radius: 8px; padding: var(--s3) var(--s4); background: var(--navy); display: grid; gap: 2px; }
-.flow-step b { font-weight: 600; }
-.flow-step span { font-size: var(--t-sm); color: var(--steel); }
-.flow-step .ai { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--hivis); letter-spacing: 0.04em; }
-.flow-step.human { border: 2px solid var(--hivis); background: rgba(242, 106, 33, 0.10); }
-.flow-step.agent { background: transparent; border-style: dashed; }
-.arrow { height: 22px; display: grid; place-items: center; }
-.arrow::before { content: ""; width: 2px; height: 14px; background: var(--steel); }
-.arrow::after { content: ""; width: 0; height: 0; border-left: 5px solid transparent; border-right: 5px solid transparent; border-top: 6px solid var(--steel); margin-top: -2px; }
-.arrow { display: flex; flex-direction: column; align-items: center; justify-content: center; }
-.loop { margin-top: var(--s3); font-family: var(--f-mono); font-size: var(--t-xs); color: var(--steel); text-align: center; }
-.features { list-style: none; padding: 0; display: grid; }
-.features li { padding: var(--s4) 0; border-top: 1px solid var(--rule-dark); display: grid; gap: 2px; }
-.features li:last-child { border-bottom: 1px solid var(--rule-dark); }
-.features b { font-weight: 600; }
-.features span { font-size: var(--t-sm); color: var(--steel); }
-@media (max-width: 960px) { .product { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 620px) { .flow-sources { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-
-/* ---------- AI table ---------- */
-.table-wrap { overflow-x: auto; }
-table { border-collapse: collapse; width: 100%; font-size: var(--t-sm); }
-th, td { text-align: left; padding: var(--s3) var(--s4) var(--s3) 0; border-bottom: 1px solid var(--rule-dark); vertical-align: top; }
-th { font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--steel); }
-td:first-child { font-weight: 600; color: var(--mist); }
-td { color: var(--steel); }
-.ai-table { min-width: 640px; }
-@media (max-width: 680px) {
-  .ai-table { min-width: 0; }
-  .ai-table thead { display: none; }
-  .ai-table, .ai-table tbody, .ai-table tr, .ai-table td { display: block; width: 100%; }
-  .ai-table tr { padding: var(--s4) 0; border-bottom: 1px solid var(--rule-dark); }
-  .ai-table td { border: 0; padding: var(--s1) 0; }
-  .ai-table td[data-label]::before { content: attr(data-label); display: block; font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--hivis); margin-top: var(--s2); }
-}
-.rules-grid { list-style: none; padding: 0; margin-top: var(--s6); display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s4); }
-.rules-grid li { border-top: 2px solid var(--hivis); padding-top: var(--s3); display: grid; gap: var(--s1); align-content: start; min-width: 0; }
-.rules-grid b { font-weight: 600; font-size: 0.98rem; }
-.rules-grid span { font-size: var(--t-sm); color: var(--steel); }
-@media (max-width: 1000px) { .rules-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .rules-grid { grid-template-columns: minmax(0, 1fr); } }
-
-.modules { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: var(--s3); }
-.modules li { border: 1px dashed var(--rule-dark); border-radius: 8px; padding: var(--s4); display: grid; gap: var(--s1); align-content: start; min-width: 0; }
-.modules .after { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--steel); }
-.modules b { font-weight: 600; }
-.modules span { font-size: var(--t-sm); color: var(--steel); }
-@media (max-width: 1060px) { .modules { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .modules { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Security layers ---------- */
-.security { display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: var(--s7); align-items: start; }
-.layers { display: grid; gap: var(--s2); min-width: 0; }
-.layer { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: var(--s4); align-items: center; padding: var(--s3) var(--s4); border-radius: 8px; background: var(--paper); border: 1px solid var(--rule-light); }
-.layer .lvl { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--ink-2); letter-spacing: 0.04em; }
-.layer b { display: block; font-weight: 600; }
-.layer span { font-size: var(--t-sm); color: var(--ink-2); }
-.layer.cloud { background: var(--navy); color: var(--mist); border-color: var(--navy); }
-.layer.cloud .lvl, .layer.cloud span { color: var(--steel); }
-.layer.dmz { border: 2px solid var(--hivis); }
-.layer.control { background: transparent; border-style: dashed; }
-.layer.control b::after { content: "No N³ connection"; margin-left: var(--s2); font-family: var(--f-mono); font-size: var(--t-xs); font-weight: 500; color: var(--hivis-ink); white-space: nowrap; }
-.layer-arrow { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--ink-2); padding-left: calc(7.5rem + var(--s4) + var(--s4)); }
-.sec-list { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s5); }
-.sec-list li { display: grid; gap: var(--s1); min-width: 0; padding-top: var(--s3); border-top: 1px solid var(--rule-light); }
-.sec-list b { font-weight: 600; }
-.sec-list span { font-size: var(--t-sm); color: var(--ink-2); }
-@media (max-width: 960px) { .security { grid-template-columns: minmax(0, 1fr); } }
-@media (max-width: 560px) {
-  .sec-list { grid-template-columns: minmax(0, 1fr); }
-  .layer { grid-template-columns: minmax(0, 1fr); gap: var(--s1); }
-  .layer-arrow { padding-left: var(--s4); }
-  .layer.control b::after { display: block; margin-left: 0; }
-}
-
-/* ---------- Mine life cycle ---------- */
-.horizons { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
-.horizon { border: 1px solid var(--rule-dark); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; background: var(--navy-2); }
-.horizon.now { border: 2px solid var(--hivis); }
-.h-when { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.08em; text-transform: uppercase; color: var(--hivis); }
-.horizon h3 { font-size: 1.3rem; }
-.horizon p { color: var(--steel); }
-.h-fact { font-size: var(--t-sm); padding: var(--s3); border-left: 3px solid var(--hivis); background: var(--navy); }
-.h-fact a { color: var(--steel); }
-.h-needs { font-size: var(--t-sm); padding-top: var(--s3); border-top: 1px dashed var(--rule-dark); }
-.h-needs b { display: block; font-family: var(--f-mono); font-weight: 500; font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--mist); margin-bottom: 2px; }
-@media (max-width: 900px) { .horizons { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Partners ---------- */
-.why-back { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s6) var(--s5); }
-.why-back li { display: grid; gap: var(--s2); align-content: start; min-width: 0; }
-.why-back .k { font-family: var(--f-mono); font-size: var(--t-xs); color: var(--hivis-ink); letter-spacing: 0.06em; text-transform: uppercase; }
-.why-back b { font-family: var(--f-display); font-weight: 600; font-size: 1.12rem; line-height: 1.25; }
-.why-back span { color: var(--ink-2); font-size: var(--t-sm); }
-.why-back a { color: var(--ink-2); }
-@media (max-width: 900px) { .why-back { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 560px) { .why-back { grid-template-columns: minmax(0, 1fr); } }
-
-.roadmap { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); }
-.roadmap li { position: relative; padding: var(--s6) var(--s4) 0 0; display: grid; align-content: start; gap: var(--s2); min-width: 0; }
-.roadmap li::before { content: ""; position: absolute; top: 9px; left: 0; right: 0; height: 2px; background: var(--rule-light); }
-.roadmap li::after { content: ""; position: absolute; top: 2px; left: 0; width: 16px; height: 16px; transform: rotate(45deg); background: var(--paper); border: 2px solid var(--ink); }
-.roadmap li.now::after { background: var(--hivis); border-color: var(--hivis); }
-.roadmap .when { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-2); }
-.roadmap h3 { font-size: 1.02rem; }
-.roadmap p { font-size: var(--t-sm); color: var(--ink-2); }
-.roadmap .gate { font-size: var(--t-xs); font-family: var(--f-mono); color: var(--hivis-ink); }
-@media (max-width: 960px) {
-  .roadmap { grid-template-columns: minmax(0, 1fr); }
-  .roadmap li { padding: 0 0 var(--s5) var(--s6); }
-  .roadmap li::before { top: 0; bottom: 0; left: 7px; right: auto; width: 2px; height: auto; }
-}
-.seeking { margin-top: var(--s7); display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: var(--s3); }
-.seeking div { background: var(--mist); border-radius: var(--r); padding: var(--s5); display: grid; gap: var(--s2); align-content: start; min-width: 0; }
-.seeking b { font-weight: 600; }
-.seeking span { font-size: var(--t-sm); color: var(--ink-2); }
-@media (max-width: 960px) { .seeking { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-@media (max-width: 520px) { .seeking { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Lessons and limits ---------- */
-.lessons-grid { display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: var(--s7); align-items: start; }
-.lessons-grid .section-head { margin-bottom: 0; }
-.lessons { list-style: none; padding: 0; display: grid; }
-.lessons li { padding: var(--s4) 0; border-top: 1px solid var(--rule-light); display: grid; gap: var(--s1); min-width: 0; }
-.lessons li:last-child { border-bottom: 1px solid var(--rule-light); }
-.lessons b { font-weight: 600; }
-.lessons span { font-size: var(--t-sm); color: var(--ink-2); }
-.lessons .from { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.03em; }
-@media (max-width: 860px) { .lessons-grid { grid-template-columns: minmax(0, 1fr); } }
-.limits { margin-top: var(--s7); padding: var(--s5); background: var(--navy); color: var(--mist); border-radius: var(--r); display: grid; grid-template-columns: minmax(0, 0.6fr) minmax(0, 1.4fr); gap: var(--s5); }
-.limits h3 { font-size: 1.15rem; }
-.limits ul { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--s2) var(--s5); }
-.limits li { font-size: var(--t-sm); color: var(--steel); padding-left: var(--s5); position: relative; }
-.limits li::before { content: ""; position: absolute; left: 0; top: 0.6em; width: 10px; height: 2px; background: var(--hivis); }
-@media (max-width: 760px) { .limits, .limits ul { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Team ---------- */
-.team { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--s4); }
-.person { border: 1px solid var(--rule-dark); border-radius: var(--r); padding: var(--s5); display: grid; align-content: start; gap: var(--s3); min-width: 0; background: var(--navy-2); }
-.person .mark { display: flex; height: 18px; }
-.person .mark i { width: 16px; height: 18px; background: var(--mist); }
-.person .mark i + i { width: 18px; border-radius: 50%; background: var(--hivis); }
-.person .role { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--hivis); }
-.person p { color: var(--steel); font-size: var(--t-sm); overflow-wrap: anywhere; }
-.person .study { padding-top: var(--s3); border-top: 1px solid var(--rule-dark); }
-.person .study b { display: block; color: var(--mist); font-weight: 600; margin-bottom: 2px; }
-@media (max-width: 900px) { .team { grid-template-columns: minmax(0, 1fr); } }
-.advisor { margin-top: var(--s4); padding: var(--s4) var(--s5); border: 1px dashed var(--rule-dark); border-radius: var(--r); color: var(--steel); font-size: var(--t-sm); }
-.advisor b { color: var(--mist); }
-
-/* ---------- Contact ---------- */
-.contact { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: var(--s7); align-items: start; }
-.contact h2 { font-size: clamp(2rem, 1.3rem + 2.4vw, 3rem); }
-.contact .lead { color: var(--ink-2); font-size: var(--t-lg); margin-top: var(--s4); max-width: 36rem; }
-.card-contact { background: var(--navy); color: var(--mist); border-radius: var(--r); padding: var(--s6); display: grid; gap: var(--s5); min-width: 0; }
-.card-contact dl { margin: 0; display: grid; gap: var(--s4); }
-.card-contact dt { font-family: var(--f-mono); font-size: var(--t-xs); letter-spacing: 0.06em; text-transform: uppercase; color: var(--steel); }
-.card-contact dd { margin: 2px 0 0; font-size: var(--t-lg); font-weight: 600; overflow-wrap: anywhere; }
-.card-contact dd a { text-decoration: none; }
-.card-contact dd a:hover { text-decoration: underline; }
-.card-contact .actions .btn { flex: 1 1 11rem; }
-.copy-state { font-size: var(--t-sm); color: var(--steel); min-height: 1.4em; }
-@media (max-width: 860px) { .contact { grid-template-columns: minmax(0, 1fr); } }
-
-/* ---------- Footer ---------- */
-.site-foot { padding-block: var(--s7) var(--s6); border-top: 1px solid var(--rule-dark); font-size: var(--t-sm); color: var(--steel); }
-.foot-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: var(--s6); }
-.sources { list-style: none; margin-top: var(--s2); padding: 0; display: grid; gap: var(--s1); font-size: var(--t-xs); }
-.sources a { color: var(--steel); overflow-wrap: anywhere; }
-.foot-base { margin-top: var(--s6); padding-top: var(--s4); border-top: 1px solid var(--rule-dark); display: flex; flex-wrap: wrap; gap: var(--s3) var(--s6); justify-content: space-between; font-size: var(--t-xs); }
-@media (max-width: 760px) { .foot-grid { grid-template-columns: minmax(0, 1fr); } }
-</style>
+<link rel="stylesheet" href="assets/site.css">
 </head>
 <body>
 
@@ -391,8 +39,7 @@ td { color: var(--steel); }
     <nav class="nav" id="nav" aria-label="Main">
       <a href="#services">Services</a>
       <a href="#approach">Approach</a>
-      <a href="#technology">Technology</a>
-      <a href="#security">Security</a>
+      <a href="technology.html">Technology</a>
       <a href="#lifecycle">Life cycle</a>
       <a href="#partners">Partners and funders</a>
       <a href="#team">Team</a>
@@ -411,7 +58,7 @@ td { color: var(--steel); }
         <div class="hero-copy">
           <p class="label">Technology · Industry · Mining · South Africa</p>
           <h1>Safer mines,<br><em>more tonnes.</em></h1>
-          <p class="lead">N³ Innovations is a South African mining company. We use AI and sensor intelligence to find the warnings and delays already in a mine's own data, put a rand value on each one, and make sure the right person acts. Our work covers operating mines, closure and rehabilitation, and mine development.</p>
+          <p class="lead">N³ Innovations is a South African mining technology and services company. We use AI and sensor intelligence to find the warnings and delays already in a mine's own data, put a rand value on each one, and make sure the right person acts. Our work covers operating mines, closure and rehabilitation, and mine development.</p>
           <div class="actions">
             <a class="btn btn-primary" href="#contact">Talk to us about your mine</a>
             <a class="btn btn-ghost" href="#services">See our services</a>
@@ -491,7 +138,7 @@ td { color: var(--steel); }
       <div class="stats">
         <article class="stat alert">
           <div class="stat-num">53</div>
-          <p>deaths at South African mines by 12 October 2026, already more than the 41 recorded in all of 2025.</p>
+          <p>deaths at South African mines between January and mid-October 2026, more than the 41 recorded in all of 2025.</p>
           <p class="src">Minerals Council SA, via <a href="https://www.miningweekly.com/article/deaths-prompt-south-african-miners-safety-review-minerals-council-ceo-says-2026-10-15" target="_blank" rel="noopener">Mining Weekly</a></p>
         </article>
         <article class="stat">
@@ -510,6 +157,7 @@ td { color: var(--steel); }
           <p class="src">Minerals Council SA, via <a href="https://engineeringnews.co.za/article/strong-commodity-prices-in-2025-ensure-modest-growth-backing-for-sa-mining-minerals-council-2026-10-16" target="_blank" rel="noopener">Engineering News</a></p>
         </article>
       </div>
+      <p class="stats-note">Figures as published by each source. Last reviewed November 2026.</p>
       <div class="reg-note">
         <span class="reg-tag">MHSA Chapter 8 · Level 9</span>
         <p><strong>Regulation already expects machines and people to communicate.</strong> Since December 2022, diesel trackless mobile machines must slow down and stop on their own when the operator does not act. A system like that is only as good as the information it acts on.</p>
@@ -544,7 +192,7 @@ td { color: var(--steel); }
     <div class="wrap">
       <div class="section-head">
         <p class="label">Services</p>
-        <h2>Six services that turn a mine's own data into safer shifts and more tonnes.</h2>
+        <h2>Three core services that turn a mine's own data into safer shifts, more tonnes and clean audits.</h2>
         <p class="lead">Each service works with the systems a mine already owns, starts from a baseline the mine agrees to, and reports its results in the mine's own numbers.</p>
       </div>
       <div class="services">
@@ -571,48 +219,31 @@ td { color: var(--steel); }
           <p class="svc-measure"><b>Measured by</b>Findings closed on time, and failures that had an earlier warning</p>
         </article>
         <article class="service">
-          <span class="svc-tag">Data</span>
+          <span class="svc-tag">Environment</span>
+          <h3>Environmental compliance and water monitoring</h3>
+          <p class="svc-lead">Every condition in your environmental authorisation, EMPr and water use licence, tracked to an owner, a due date and the evidence that it was met.</p>
+          <ul>
+            <li>A conditions register built from your licences and checked by your team</li>
+            <li>A calendar of monitoring, reports and audits, with overdue alerts</li>
+            <li>Water levels, quality and decant checked against licence limits</li>
+          </ul>
+          <p class="svc-measure"><b>Measured by</b>Conditions with an owner and evidence, and audit findings closed</p>
+        </article>
+      </div>
+
+      <p class="label also-title">Also available</p>
+      <div class="services-also">
+        <article class="also-card">
           <h3>Data integration and reporting</h3>
-          <p class="svc-lead">We connect the systems you already run and take the manual work out of reporting.</p>
-          <ul>
-            <li>Read-only links to your CMMS, historian, SCADA exports and spreadsheets</li>
-            <li>Automated shift, production and safety reports</li>
-            <li>One trusted set of numbers for management</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Hours of manual reporting removed each week</p>
+          <p>Read-only links to your CMMS, historian and spreadsheets, and automated shift, production and safety reports.</p>
         </article>
-        <article class="service">
-          <span class="svc-tag">Connectivity</span>
+        <article class="also-card">
           <h3>Communications and connectivity</h3>
-          <p class="svc-lead">A vendor-neutral view of where radio and network coverage fails underground and in the pit, and what each gap costs.</p>
-          <ul>
-            <li>A coverage map of dead zones and delays</li>
-            <li>An inventory of systems and the data they hold</li>
-            <li>Prioritised recommendations that name no vendor</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Delays to calls and alarms in the areas that matter most</p>
+          <p>A vendor-neutral map of where radio and network coverage fails underground and in the pit, and what each gap costs.</p>
         </article>
-        <article class="service">
-          <span class="svc-tag">Energy</span>
+        <article class="also-card">
           <h3>Energy and compressed-air analytics</h3>
-          <p class="svc-lead">Live energy baselines that show where electricity is wasted, as tariffs keep rising.</p>
-          <ul>
-            <li>kWh-per-tonne baselines by area and shift</li>
-            <li>Detection of compressed-air leaks and misuse</li>
-            <li>Scheduling advice for peak tariff periods</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Energy cost per tonne</p>
-        </article>
-        <article class="service">
-          <span class="svc-tag">Water and closure</span>
-          <h3>Water and closed-mine monitoring</h3>
-          <p class="svc-lead">Continuous visibility of water levels, decant and closed workings between site visits.</p>
-          <ul>
-            <li>Water balance and support for licence reporting</li>
-            <li>Alerts on changes in level, quality and decant</li>
-            <li>Monitoring of closed shafts for subsidence and illegal access</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Time from a change on site to the person who must act</p>
+          <p>kWh-per-tonne baselines, compressed-air leak detection and scheduling advice for peak tariff periods.</p>
         </article>
       </div>
       <p class="svc-note"><b>Every service</b> reads data without changing it, names no vendor, and supports decisions rather than making them. Nothing we install controls equipment or connects to PLCs or SCADA.</p>
@@ -698,58 +329,11 @@ td { color: var(--steel); }
         </div>
       </div>
 
-      <div class="sub-head">
-        <p class="label">Where AI earns its place</p>
-        <h3>We use AI where it does work a person cannot do at scale, and plain software everywhere else.</h3>
+      <div class="tech-more">
+        <a class="btn btn-ghost" href="technology.html">How the technology works, and how it stays secure</a>
+        <p>Where we use AI and where we do not, the rules we build by, and how our software sits on a mine's network.</p>
       </div>
-      <div class="table-wrap">
-        <table class="ai-table">
-          <thead><tr><th scope="col">Task</th><th scope="col">What the AI does</th><th scope="col">What stays plain software</th></tr></thead>
-          <tbody>
-            <tr><td>Reading condition-monitoring reports</td><td data-label="What the AI does">Language models extract the asset, fault mode, severity and recommended action from PDFs and free-text work orders.</td><td data-label="What stays plain software">Storing the finding, its due date and who owns it</td></tr>
-            <tr><td>Matching tags to assets</td><td data-label="What the AI does">Fuzzy matching links names such as "Pump 4 DE bearing" to the right entry in the asset register.</td><td data-label="What stays plain software">The asset register itself, which stays in the mine's CMMS</td></tr>
-            <tr><td>Checking a warning against plant data</td><td data-label="What the AI does">Anomaly detection on historian tags (current, temperature, vibration) shows whether a trend supports the finding.</td><td data-label="What stays plain software">Thresholds, alarms and trend charts</td></tr>
-            <tr><td>Writing the weekly summary</td><td data-label="What the AI does">A draft summary of open risks, which a planner edits and approves.</td><td data-label="What stays plain software">Overdue lists, closure rates and the rand calculation</td></tr>
-          </tbody>
-        </table>
-      </div>
-      <ul class="rules-grid" aria-label="AI rules we build by">
-        <li><b>Decision support only</b><span>No model writes to a PLC, SCADA setpoint or permit system.</span></li>
-        <li><b>Every output shows its evidence</b><span>The page, trend or work order it came from.</span></li>
-        <li><b>A person approves</b><span>Nothing becomes a work order without a named approver.</span></li>
-        <li><b>We publish our misses</b><span>False-alarm rates and lead times are reported, not hidden.</span></li>
-        <li><b>Data stays where the mine allows</b><span>On-site or South African hosting. We send no plant data to a public AI service without written consent.</span></li>
-      </ul>
 
-    </div>
-  </section>
-
-  <!-- Security -->
-  <section class="band light" id="security">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">Security and OT</p>
-        <h2>Built to pass a mine's IT and OT security review.</h2>
-        <p class="lead">A mine is not an office network, and a cyberattack can stop a plant. Our design keeps us out of the control layer entirely.</p>
-      </div>
-      <div class="security">
-        <div class="layers" aria-label="Where N³ software sits on a mine's network">
-          <div class="layer cloud"><span class="lvl">Hosting</span><div><b>N³ service</b><span>South African cloud region, or a server at the mine</span></div></div>
-          <p class="layer-arrow">↑ outbound HTTPS only</p>
-          <div class="layer"><span class="lvl">Levels 4–5</span><div><b>Business IT</b><span>CMMS, email, reports</span></div></div>
-          <div class="layer dmz"><span class="lvl">DMZ</span><div><b>N³ site agent</b><span>Reads exports and a historian replica. Accepts no inbound connections.</span></div></div>
-          <div class="layer"><span class="lvl">Level 3</span><div><b>Site operations</b><span>Historian, alarm logs</span></div></div>
-          <div class="layer control"><span class="lvl">Levels 0–2</span><div><b>Control</b><span>PLCs, SCADA, field devices</span></div></div>
-        </div>
-        <ul class="sec-list">
-          <li><b>Read-only</b><span>We read copies and exports. We never write to plant systems.</span></li>
-          <li><b>No inbound access</b><span>The site agent connects out. No vendor remote sessions are needed.</span></li>
-          <li><b>Out of the control layer</b><span>Nothing we install touches PLCs, SCADA or field devices.</span></li>
-          <li><b>Data sovereignty</b><span>Hosting in South Africa or on the mine's own server, with the same software.</span></li>
-          <li><b>POPIA by design</b><span>Names in work orders are pseudonymised on arrival. Access is by role.</span></li>
-          <li><b>Works offline</b><span>The agent buffers data and syncs when the link returns.</span></li>
-        </ul>
-      </div>
     </div>
   </section>
 
@@ -765,8 +349,8 @@ td { color: var(--steel); }
         <li class="horizon now">
           <span class="h-when">Operate</span>
           <h3>Operating mines and plants</h3>
-          <p>Our six services help operating mines, processing plants and contractors act on the warnings in their own data: fewer unplanned stoppages, faster response and lower cost per tonne.</p>
-          <p class="h-fact"><a href="#services">Operational diagnostics · Maintenance intelligence · Data integration and reporting · Communications and connectivity · Energy and compressed-air analytics · Water and closed-mine monitoring</a></p>
+          <p>Our services help operating mines, processing plants and contractors act on the warnings in their own data: fewer unplanned stoppages, faster response and lower cost per tonne.</p>
+          <p class="h-fact"><a href="#services">Operational diagnostics · Maintenance intelligence · Environmental compliance and water monitoring · Data integration · Connectivity · Energy analytics</a></p>
           <p class="h-needs"><b>Who we work with</b>Mine and plant managers, engineering and maintenance teams, contractors.</p>
         </li>
         <li class="horizon">
@@ -796,7 +380,7 @@ td { color: var(--steel); }
         <p class="lead">Our model is capital-light and measured at every step. Each site adds data, references and recurring revenue, and our services business funds the move into rehabilitation and mine development.</p>
       </div>
       <ul class="why-back">
-        <li><span class="k">Need</span><b>Safety and output are both slipping</b><span>53 deaths by mid-October 2026 against 41 in all of 2025, and production down 12.7% year on year in August 2026.</span></li>
+        <li><span class="k">Need</span><b>Safety and output are both slipping</b><span>53 deaths between January and mid-October 2026, against 41 in all of 2025, and production down 12.7% year on year in August 2026.</span></li>
         <li><span class="k">Market</span><b>AI in mining is growing fast</b><span>MarketsandMarkets forecasts growth from USD 2.60 billion in 2025 to USD 9.93 billion by 2032 (<a href="https://www.marketsandmarkets.com/PressReleases/ai-in-mining.asp" target="_blank" rel="noopener">source</a>).</span></li>
         <li><span class="k">Capital</span><b>No hardware to build</b><span>We read data that mines already collect, so our services need engineers, not capital equipment.</span></li>
         <li><span class="k">Access</span><b>Designed to pass security review</b><span>Read-only, outbound-only software gives a mine's IT and OT teams far fewer reasons to say no.</span></li>
@@ -901,6 +485,7 @@ td { color: var(--steel); }
           <a class="btn btn-primary js-mail" data-subject="Enquiry from a mine" href="mailto:qhubela_nk@live.com?subject=Enquiry%20from%20a%20mine">Talk about your mine</a>
           <a class="btn btn-ghost js-mail" data-subject="Partnership or funding enquiry" href="mailto:qhubela_nk@live.com?subject=Partnership%20or%20funding%20enquiry">Partner or fund</a>
         </div>
+        <a class="btn btn-line" href="assets/N3-Innovations-Company-Profile.pdf" download>Download our company profile (PDF)</a>
         <button class="btn btn-ghost" id="copy-email" type="button">Copy email address</button>
         <p class="copy-state" id="copy-state" aria-live="polite"></p>
       </div>
@@ -914,7 +499,10 @@ td { color: var(--steel); }
     <div class="foot-grid">
       <div>
         <a class="brand" href="#top"><svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg><span>N<sup>3</sup> Innovations</span></a>
-        <p style="margin-top:12px">Technology, rehabilitation and mining.<br>South Africa.</p>
+        <div class="foot-meta">
+          <span>Mining technology and services · South Africa</span>
+          <span><b>100% black-owned</b> · B-BBEE Level 1</span>
+        </div>
       </div>
       <div>
         <p class="label">Sources for the figures on this page</p>
@@ -933,51 +521,11 @@ td { color: var(--steel); }
     </div>
     <div class="foot-base">
       <span>&copy; 2026 N³ Innovations</span>
-      <span>Personal information you share with us is handled under POPIA.</span>
+      <span class="foot-links"><a href="technology.html">Technology</a><a href="privacy.html">Privacy notice</a><a href="assets/N3-Innovations-Company-Profile.pdf" download>Company profile (PDF)</a></span>
     </div>
   </div>
 </footer>
 
-<script>
-/* The contact email appears once here. Change it and every link on the page follows. */
-var CONTACT_EMAIL = 'qhubela_nk@live.com';
-
-(function () {
-  var btn = document.getElementById('menu-btn');
-  var nav = document.getElementById('nav');
-  btn.addEventListener('click', function () {
-    var open = nav.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  });
-  nav.addEventListener('click', function (e) {
-    if (e.target.tagName === 'A') { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); }
-  });
-
-  document.querySelectorAll('.js-email').forEach(function (a) {
-    a.textContent = CONTACT_EMAIL;
-    a.href = 'mailto:' + CONTACT_EMAIL;
-  });
-  document.querySelectorAll('.js-mail').forEach(function (a) {
-    a.href = 'mailto:' + CONTACT_EMAIL + '?subject=' + encodeURIComponent(a.getAttribute('data-subject'));
-  });
-
-  var copyBtn = document.getElementById('copy-email');
-  var state = document.getElementById('copy-state');
-  copyBtn.addEventListener('click', function () {
-    function fallback() {
-      var el = document.querySelector('.js-email');
-      var r = document.createRange();
-      r.selectNodeContents(el);
-      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
-      state.textContent = 'Address selected. Press Ctrl+C or Cmd+C to copy it.';
-    }
-    try {
-      navigator.clipboard.writeText(CONTACT_EMAIL).then(function () {
-        state.textContent = 'Copied ' + CONTACT_EMAIL;
-      }, fallback);
-    } catch (e) { fallback(); }
-  });
-})();
-</script>
+<script src="assets/site.js"></script>
 </body>
 </html>

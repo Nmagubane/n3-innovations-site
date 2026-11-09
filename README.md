@@ -2,7 +2,12 @@
 
 Single-page static site for N³ Innovations, a South African mining company working across operating mines, closure and rehabilitation, and mine development.
 
-Everything is in `index.html` (inline CSS and JS, fonts from Google Fonts). No build step.
+Pages: `index.html` (home), `technology.html` (AI use and security), `privacy.html` (POPIA notice).
+Shared styles and script: `assets/site.css`, `assets/site.js`. Link preview image: `assets/og-image.png`.
+Company profile: `assets/N3-Innovations-Company-Profile.pdf` (regenerate when contact details change).
+Also `CNAME` (custom domain, set by GitHub), `robots.txt`, `sitemap.xml`. No build step.
+
+Live at https://www.n3innovations.co.za (DNS on Cloudflare, all records DNS only).
 
 ## Publish on GitHub Pages
 
@@ -23,13 +28,21 @@ When N³ Innovations has its own domain:
 
 ## Changing the contact email
 
-The email address is set once, near the bottom of `index.html`:
+The email address is set once, in `assets/site.js`:
 
 ```js
 var CONTACT_EMAIL = 'qhubela_nk@live.com';
 ```
 
-Change it there, and also in the two `href="mailto:..."` fallbacks and the visible address in the Contact section, so the page is right even before its script runs.
+Change it there, and also in the `mailto:` fallbacks in `index.html` and `privacy.html`, so pages are right even before the script runs. Then regenerate the company profile PDF.
+
+## Still to add
+
+- Company registration number and city or province in the footer.
+- One-line credentials and LinkedIn links for each founder.
+- The company email (info@n3innovations.co.za) once mailboxes exist.
+- A PAIA manual link in the footer once it is compiled.
+- Review the "Why now" figures every quarter.
 
 ## Before going live, confirm
 
