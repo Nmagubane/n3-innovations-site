@@ -455,3 +455,17 @@ td { color: var(--steel); }
   .slide img, .slide.is-active img { transform: none; transition: none; }
   .slide figcaption > * { transform: none; }
 }
+
+/* ---- Photos in sections ---------------------------------------------------------------- */
+.ph { position: relative; margin: 0; overflow: hidden; background: var(--navy-2); }
+.ph img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.ph-credit { position: absolute; right: 8px; bottom: 6px; font-size: 11px; line-height: 1.2; color: rgba(255,255,255,.85); background: rgba(11,31,51,.55); padding: 2px 6px; border-radius: 3px; text-decoration: none; }
+.ph-credit:hover { color: #fff; text-decoration: underline; }
+.card-photo { margin: calc(-1 * var(--s5)) calc(-1 * var(--s5)) var(--s2); height: 180px; border-radius: calc(var(--r) - 1px) calc(var(--r) - 1px) 0 0; }
+.horizon.now .card-photo { margin: calc(-1 * var(--s5) + 1px) calc(-1 * var(--s5) + 1px) var(--s2); }
+.gap-photo { margin-top: var(--s5); height: 220px; border-radius: var(--r); }
+.banner-photo { margin: var(--s6) 0 var(--s7); aspect-ratio: 21 / 8; border-radius: var(--r); }
+@media (max-width: 720px) {
+  .card-photo { height: 160px; }
+  .banner-photo { aspect-ratio: 4 / 3; }
+}
