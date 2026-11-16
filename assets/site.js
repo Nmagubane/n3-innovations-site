@@ -166,3 +166,38 @@ var CONTACT_EMAIL = 'qhubela_nk@live.com';
   document.addEventListener('visibilitychange', function () { hover = document.hidden; restart(); });
   show(0);
 })();
+
+/* ---- Video banners: load when near the screen, play while visible, pause button ---- */
+(function () {
+  var vids = document.querySelectorAll('video.lazy-video');
+  if (!vids.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  vids.forEach(function (v) {
+    var btn = v.parentNode.querySelector('.video-toggle');
+    var userPaused = reduce, loaded = false;
+    function load() {
+      if (loaded) return;
+      v.src = window.innerWidth < 720 ? v.getAttribute('data-src-sm') : v.getAttribute('data-src-lg');
+      loaded = true;
+    }
+    function setBtn() {
+      if (!btn) return;
+      btn.setAttribute('aria-pressed', userPaused ? 'true' : 'false');
+      btn.setAttribute('aria-label', userPaused ? 'Play the video' : 'Pause the video');
+    }
+    function play() { load(); var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    setBtn();
+    if (btn) btn.addEventListener('click', function () {
+      userPaused = !userPaused; setBtn();
+      if (userPaused) v.pause(); else play();
+    });
+    if ('IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { if (!userPaused) play(); }
+          else if (loaded) v.pause();
+        });
+      }, { rootMargin: '200px 0px' }).observe(v);
+    } else if (!userPaused) { play(); }
+  });
+})();
