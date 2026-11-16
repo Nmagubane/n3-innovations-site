@@ -35,7 +35,7 @@
       <span>N<sup>3</sup> Innovations</span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="index.html#services">Services</a>
+      <a href="index.html#platform">Platform</a>
       <a href="index.html#approach">Approach</a>
       <a href="technology.html">Technology</a>
       <a href="index.html#lifecycle">Life cycle</a>
@@ -55,7 +55,7 @@
       <div class="section-head">
         <p class="label">Our technology</p>
         <h1 class="page-title">How our technology works, and how it stays secure.</h1>
-        <p class="lead">Our software reads the warnings a mine already collects, ranks them by what they put at risk, and tracks each one until the work is done. It advises people. It never controls equipment.</p>
+        <p class="lead">Our software captures a mine's compliance data once, at the source, checks it automatically against licences and limits, and tracks every obligation and warning to an owner. It advises people. It never controls equipment.</p>
       </div>
       <div class="sub-head">
         <p class="label">Where AI earns its place</p>
@@ -65,17 +65,20 @@
         <table class="ai-table">
           <thead><tr><th scope="col">Task</th><th scope="col">What the AI does</th><th scope="col">What stays plain software</th></tr></thead>
           <tbody>
+            <tr><td>Reading field sheets and gauge photos</td><td data-label="What the AI does">Image reading turns a photo of a handwritten field sheet or a gauge into structured readings, and flags values that look impossible.</td><td data-label="What stays plain software">The reading record, its time, GPS position and validation rules</td></tr>
+            <tr><td>Reading lab certificates</td><td data-label="What the AI does">Extracts each parameter, value and unit from emailed PDFs and matches it to its sampling point.</td><td data-label="What stays plain software">The comparison against licence limits, which is a fixed rule</td></tr>
+            <tr><td>Reading licences and plans</td><td data-label="What the AI does">Drafts each condition from an EA, EMPr or water use licence, with its frequency and the evidence it needs.</td><td data-label="What stays plain software">The register a person approves, due dates and reminders</td></tr>
             <tr><td>Reading condition-monitoring reports</td><td data-label="What the AI does">Language models extract the asset, fault mode, severity and recommended action from PDFs and free-text work orders.</td><td data-label="What stays plain software">Storing the finding, its due date and who owns it</td></tr>
             <tr><td>Matching tags to assets</td><td data-label="What the AI does">Fuzzy matching links names such as "Pump 4 DE bearing" to the right entry in the asset register.</td><td data-label="What stays plain software">The asset register itself, which stays in the mine's CMMS</td></tr>
             <tr><td>Checking a warning against plant data</td><td data-label="What the AI does">Anomaly detection on historian tags (current, temperature, vibration) shows whether a trend supports the finding.</td><td data-label="What stays plain software">Thresholds, alarms and trend charts</td></tr>
-            <tr><td>Writing the weekly summary</td><td data-label="What the AI does">A draft summary of open risks, which a planner edits and approves.</td><td data-label="What stays plain software">Overdue lists, closure rates and the rand calculation</td></tr>
+            <tr><td>Drafting reports</td><td data-label="What the AI does">Draft monthly, audit and weekly summaries from the data, which a person edits and approves.</td><td data-label="What stays plain software">The figures, overdue lists, closure rates and the rand calculation</td></tr>
           </tbody>
         </table>
       </div>
       <ul class="rules-grid" aria-label="AI rules we build by">
         <li><b>Decision support only</b><span>No model writes to a PLC, SCADA setpoint or permit system.</span></li>
         <li><b>Every output shows its evidence</b><span>The page, trend or work order it came from.</span></li>
-        <li><b>A person approves</b><span>Nothing becomes a work order without a named approver.</span></li>
+        <li><b>A person approves</b><span>No condition, result or work order is final without a named approver.</span></li>
         <li><b>We publish our misses</b><span>False-alarm rates and lead times are reported, not hidden.</span></li>
         <li><b>Data stays where the mine allows</b><span>On-site or South African hosting. We send no plant data to a public AI service without written consent.</span></li>
       </ul>
@@ -96,7 +99,7 @@
           <div class="layer cloud"><span class="lvl">Hosting</span><div><b>N³ service</b><span>South African cloud region, or a server at the mine</span></div></div>
           <p class="layer-arrow">↑ outbound HTTPS only</p>
           <div class="layer"><span class="lvl">Levels 4–5</span><div><b>Business IT</b><span>CMMS, email, reports</span></div></div>
-          <div class="layer dmz"><span class="lvl">DMZ</span><div><b>N³ site agent</b><span>Reads exports and a historian replica. Accepts no inbound connections.</span></div></div>
+          <div class="layer dmz"><span class="lvl">DMZ</span><div><b>N³ site agent (maintenance module only)</b><span>Reads exports and a historian replica. Accepts no inbound connections.</span></div></div>
           <div class="layer"><span class="lvl">Level 3</span><div><b>Site operations</b><span>Historian, alarm logs</span></div></div>
           <div class="layer control"><span class="lvl">Levels 0–2</span><div><b>Control</b><span>PLCs, SCADA, field devices</span></div></div>
         </div>
@@ -106,7 +109,7 @@
           <li><b>Out of the control layer</b><span>Nothing we install touches PLCs, SCADA or field devices.</span></li>
           <li><b>Data sovereignty</b><span>Hosting in South Africa or on the mine's own server, with the same software.</span></li>
           <li><b>POPIA by design</b><span>Names in work orders are pseudonymised on arrival. Access is by role.</span></li>
-          <li><b>Works offline</b><span>The agent buffers data and syncs when the link returns.</span></li>
+          <li><b>Works offline</b><span>The field app and the site agent store data and sync when the link returns.</span></li>
         </ul>
       </div>
     </div>
@@ -125,7 +128,7 @@
         <ul class="lessons">
           <li><b>Problem first, product later</b><span>We find and measure problems before we build anything.</span><span class="from">Lesson from GE Predix and Argo AI</span></li>
           <li><b>Mining people in the room</b><span>We work alongside each mine's own staff and experienced mining practitioners.</span><span class="from">Lesson from Plotlogic and KoBold Metals</span></li>
-          <li><b>One use case, proven, before a platform</b><span>We recommend one fix at a time, proven against a measured baseline.</span><span class="from">Lesson from GE Predix and Komatsu FrontRunner</span></li>
+          <li><b>One module, proven, before the next</b><span>Each module is proven at one operation against a measured baseline before it extends.</span><span class="from">Lesson from GE Predix and Komatsu FrontRunner</span></li>
           <li><b>No AI claims we cannot show</b><span>Every figure we report traces back to a data source or an interview at the mine.</span><span class="from">Lesson from Builder.ai and IBM Watson Health</span></li>
           <li><b>Plan for integration and people</b><span>Level 9 shows that technology alone does not change outcomes.</span><span class="from">Lesson from Rio Tinto AutoHaul</span></li>
           <li><b>Work with what the mine already has</b><span>Any fix must connect to the radios, networks and systems in use.</span><span class="from">Lesson from Newtrax</span></li>
@@ -166,7 +169,7 @@
       <div>
         <a class="brand" href="index.html#top"><svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg><span>N<sup>3</sup> Innovations</span></a>
         <div class="foot-meta">
-          <span>Mining technology and services</span>
+          <span>Mining compliance and operations software</span>
           <span>Based in Johannesburg · working at mines across South Africa</span>
           <span><b>100% black-owned</b> · B-BBEE Level 1</span>
         </div>
