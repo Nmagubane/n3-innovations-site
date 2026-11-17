@@ -31,17 +31,16 @@ When N³ Innovations has its own domain:
 The email address is set once, in `assets/site.js`:
 
 ```js
-var CONTACT_EMAIL = 'qhubela_nk@live.com';
+var CONTACT_EMAIL = 'info@n3innovations.co.za';
 ```
 
 Change it there, and also in the `mailto:` fallbacks in `index.html` and `privacy.html`, so pages are right even before the script runs. Then regenerate the company profile PDF.
 
 ## Still to add
 
-- Company registration number and city or province in the footer.
+- Company registration number in the footer.
 - One-line credentials and LinkedIn links for each founder.
-- The company email (info@n3innovations.co.za) once mailboxes exist.
-- A PAIA manual link in the footer once it is compiled.
+- Confirm the PAIA Information Officer and register them with the Information Regulator.
 - Review the "Why now" figures every quarter.
 
 ## Before going live, confirm
@@ -49,4 +48,4 @@ Change it there, and also in the `mailto:` fallbacks in `index.html` and `privac
 - Formal company titles for the three co-founders. The site shows names and co-founder roles only.
 - Whether the study lead's mobile number should be public.
 - The product name "N³ Action Ledger" (a working name).
-- That each of the six services can be delivered from the first engagement.
+- That each platform module marked as available can be delivered in a pilot.

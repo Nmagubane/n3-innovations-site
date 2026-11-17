@@ -1,5 +1,5 @@
 /* The contact email appears once here. Change it and every link on the page follows. */
-var CONTACT_EMAIL = 'qhubela_nk@live.com';
+var CONTACT_EMAIL = 'info@n3innovations.co.za';
 
 (function () {
   var btn = document.getElementById('menu-btn');
