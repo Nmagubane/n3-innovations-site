@@ -27,32 +27,31 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Figtree:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<link rel="stylesheet" href="assets/site.css?v=10">
+<link rel="stylesheet" href="assets/site.css?v=11">
 </head>
 <body>
 
 <header class="site-head">
   <div class="wrap head-row">
-    <a class="brand" href="#top" aria-label="N³ Innovations, home">
+    <a class="brand" href="index.html" aria-label="N³ Innovations, home">
       <svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg>
       <span>N<sup>3</sup> Innovations</span>
     </a>
     <nav class="nav" id="nav" aria-label="Main">
-      <a href="#platform">Platform</a>
-      <a href="#approach">Approach</a>
+      <a href="index.html#platform">Platform</a>
+      <a href="index.html#how">How it works</a>
       <a href="technology.html">Technology</a>
-      <a href="#lifecycle">Life cycle</a>
-      <a href="partners.html">Partners and funders</a>
-      <a href="#team">Team</a>
+      <a href="company.html">Company</a>
+      <a href="partners.html">Partners</a>
+      <a class="nav-contact" href="contact.html">Contact us</a>
     </nav>
     <button class="menu-btn" id="menu-btn" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-    <a class="btn btn-primary" href="#contact">Contact us</a>
+    <a class="btn btn-primary" href="contact.html">Contact us</a>
   </div>
 </header>
 
 <main id="top">
 
-  <!-- Hero -->
   <section class="hero">
     <div class="wrap">
       <div class="hero-grid">
@@ -61,62 +60,29 @@
           <h1>Safer mines,<br><em>more tonnes.</em></h1>
           <p class="lead">N³ Innovations builds <b>N³ Mining Intelligence</b>, software that turns the data your operation already produces into clear decisions every morning: more machines working, less diesel lost, lower cost per tonne. Every finding has an owner and is tracked until it is closed.</p>
           <div class="actions">
-            <a class="btn btn-primary" href="#contact">Talk to us about your operation</a>
+            <a class="btn btn-primary" href="contact.html">Talk to us about your operation</a>
             <a class="btn btn-ghost" href="#platform">See the platform</a>
           </div>
         </div>
 
-        <figure class="section-drawing">
-          <svg viewBox="0 0 520 430" role="img" aria-label="Section drawing of a mine: a control room at surface, a shaft and three working levels, with places where machines stand, reports arrive late or warnings are missed.">
-            <defs>
-              <pattern id="rock" width="14" height="14" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
-                <line x1="0" y1="0" x2="0" y2="14" stroke="#9DB4C3" stroke-opacity="0.10" stroke-width="1"/>
-              </pattern>
-            </defs>
-            <rect x="0" y="92" width="520" height="338" fill="url(#rock)"/>
-            <line x1="0" y1="92" x2="520" y2="92" stroke="#9DB4C3" stroke-width="1.5"/>
-            <text x="8" y="82" font-family="IBM Plex Mono, monospace" font-size="13" fill="#9DB4C3">SURFACE</text>
-            <g stroke="#EEF2F4" stroke-width="2" fill="none">
-              <path d="M150 92 L170 30 L190 92"/>
-              <path d="M160 62 L180 62"/>
-              <circle cx="170" cy="28" r="7"/>
-            </g>
-            <rect x="163" y="92" width="14" height="300" fill="#0B1F33" stroke="#EEF2F4" stroke-width="1.5"/>
-            <line x1="170" y1="96" x2="170" y2="388" stroke="#9DB4C3" stroke-dasharray="2 6"/>
-            <rect class="cage" x="165" y="100" width="10" height="16" rx="1" fill="#F26A21"/>
-            <rect x="318" y="38" width="144" height="54" rx="3" fill="#12304B" stroke="#EEF2F4" stroke-width="1.5"/>
-            <text x="390" y="60" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#EEF2F4">CONTROL</text>
-            <text x="390" y="78" text-anchor="middle" font-family="IBM Plex Mono, monospace" font-size="13" fill="#EEF2F4">ROOM</text>
-            <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#9DB4C3">
-              <text x="190" y="176">LEVEL A</text>
-              <text x="190" y="266">LEVEL B</text>
-              <text x="190" y="356">LEVEL C</text>
-            </g>
-            <g stroke="#EEF2F4" stroke-width="10" stroke-linecap="square" stroke-opacity="0.9">
-              <line x1="177" y1="190" x2="490" y2="190"/>
-              <line x1="40" y1="280" x2="163" y2="280"/>
-              <line x1="177" y1="280" x2="470" y2="280"/>
-              <line x1="177" y1="370" x2="420" y2="370"/>
-            </g>
-            <path class="sig" d="M380 92 L380 182" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
-            <circle cx="380" cy="190" r="4" fill="#0B1F33"/>
-            <path class="sig" d="M438 92 L438 180" stroke="#9DB4C3" stroke-width="1.2" stroke-dasharray="4 4"/>
-            <path class="sig" d="M438 200 L438 234" stroke="#F26A21" stroke-width="1.2" stroke-dasharray="4 4"/>
-            <g class="truck">
-              <rect x="300" y="268" width="38" height="20" rx="3" fill="#F26A21"/>
-              <circle cx="309" cy="290" r="4" fill="#0B1F33"/><circle cx="330" cy="290" r="4" fill="#0B1F33"/>
-            </g>
-            <g fill="#EEF2F4"><circle cx="364" cy="264" r="5"/><rect x="360" y="270" width="8" height="12" rx="2"/></g>
-            <g font-family="IBM Plex Mono, monospace" font-size="13" fill="#F26A21" text-anchor="middle">
-              <circle cx="440" cy="280" r="22" class="ping" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
-              <text x="440" y="324">MACHINE DOWN?</text>
-              <circle cx="100" cy="280" r="22" class="ping" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
-              <text x="100" y="324">LATE REPORT?</text>
-              <circle cx="300" cy="370" r="22" class="ping" fill="none" stroke="#F26A21" stroke-width="1.5" stroke-dasharray="3 4"/>
-              <text x="300" y="414">MISSED WARNING?</text>
-            </g>
-          </svg>
-          <figcaption class="drawing-note">Illustrative section. Every gap becomes a finding with an owner.</figcaption>
+        <figure class="console" aria-label="Illustrative example of the N³ morning brief">
+          <div class="console-head">
+            <span class="console-brand"><i class="live"></i>N³ Mining Intelligence</span>
+            <span class="mono">06:00 · Morning brief</span>
+          </div>
+          <div class="console-kpis">
+            <div><span class="mono">Fleet available</span><b>41<small>/48</small></b><em class="up">+2 since yesterday</em></div>
+            <div><span class="mono">Needs attention</span><b>3</b><em class="warn">1 critical</em></div>
+            <div><span class="mono">Tonnes vs plan</span><b>+4<small>%</small></b><em class="up">Week to date</em></div>
+          </div>
+          <ul class="feed">
+            <li class="crit"><b>2 machines down at Site 3</b><span>Parts on order · Owner assigned</span></li>
+            <li class="warn"><b>Diesel variance at Site 5</b><span>Check today · Evidence attached</span></li>
+            <li class="info"><b>Services due on 4 machines</b><span>This week · Scheduled</span></li>
+            <li class="good"><b>Site 1 ahead of plan</b><span>Third day running</span></li>
+          </ul>
+          <div class="console-ask"><span>Ask about your operation</span><i class="caret"></i></div>
+          <figcaption class="mono">Illustrative example</figcaption>
         </figure>
       </div>
 
@@ -129,149 +95,14 @@
     </div>
   </section>
 
-  <!-- Built for the whole mine (photo slider) -->
-  <section class="band showcase" id="where" aria-labelledby="where-title">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">Built for the whole mine</p>
-        <h2 id="where-title">From the pit and the plant to the control room and the water around the mine.</h2>
-      </div>
-      <div class="slider" aria-roledescription="carousel" aria-label="Built for the whole mine">
-        <div class="slides">
-          <figure class="slide is-active" role="group" aria-roledescription="slide" aria-label="1 of 7: Underground operations">
-            <img src="https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1586161148512-64a1b3dac527?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="A truck in a dimly lit underground tunnel" loading="eager" decoding="async">
-            <figcaption>
-              <span class="slide-tag">01 · Underground</span>
-              <h3>Underground operations</h3>
-              <p>Warnings from machines, radios and shift reports, brought together and ranked by what they put at risk.</p>
-              <a class="slide-credit" href="https://unsplash.com/photos/construction-truck-inside-dark-tunnel-F2iCP_knaj8" target="_blank" rel="noopener">Photo: Ricardo Gomez Angel / Unsplash</a>
-            </figcaption>
-          </figure>
-          <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 7: Open-pit operations" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1517089152318-42ec560349c0?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="Aerial view of haul trucks and loaders working in an open pit" loading="lazy" decoding="async">
-            <figcaption>
-              <span class="slide-tag">02 · Open pit</span>
-              <h3>Open-pit operations</h3>
-              <p>Delays and downtime measured against the mine's own baseline, so every improvement is counted in tonnes and rand.</p>
-              <a class="slide-credit" href="https://unsplash.com/photos/aerial-photography-of-dump-trucks-EN1tF2EG-50" target="_blank" rel="noopener">Photo: Shane McLendon / Unsplash</a>
-            </figcaption>
-          </figure>
-          <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 7: Processing plants" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1651672395480-76f41eb0b591?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="Conveyor gantries and steel walkways at a processing plant" loading="lazy" decoding="async">
-            <figcaption>
-              <span class="slide-tag">03 · Processing</span>
-              <h3>Processing plants</h3>
-              <p>Condition data from conveyors, pumps and crushers, turned into jobs that are done before the failure.</p>
-              <a class="slide-credit" href="https://unsplash.com/photos/a-building-under-construction-JipsToMInVI" target="_blank" rel="noopener">Photo: Jandira Sonnendeck / Unsplash</a>
-            </figcaption>
-          </figure>
-          <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 7: Maintenance teams" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1513828742140-ccaa28f3eda0?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="Pumps and pipework in an industrial plant room" loading="lazy" decoding="async">
-            <figcaption>
-              <span class="slide-tag">04 · Maintenance</span>
-              <h3>Maintenance teams</h3>
-              <p>Every warning linked to an asset, approved by a planner and tracked to a closed work order.</p>
-              <a class="slide-credit" href="https://unsplash.com/photos/grey-industrial-equipment-mhUsz2ezlXQ" target="_blank" rel="noopener">Photo: Crystal Kwok / Unsplash</a>
-            </figcaption>
-          </figure>
-          <figure class="slide" role="group" aria-roledescription="slide" aria-label="5 of 7: Control rooms" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1652145595413-0a79398e5888?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="An industrial control room with rows of consoles and screens" loading="lazy" decoding="async">
-            <figcaption>
-              <span class="slide-tag">05 · Control room</span>
-              <h3>Control rooms</h3>
-              <p>Read-only software that advises people and never controls equipment.</p>
-              <a class="slide-credit" href="https://unsplash.com/photos/a-room-with-many-screens-and-monitors-wrx2tdzzgDw" target="_blank" rel="noopener">Photo: Ana Garnica / Unsplash</a>
-            </figcaption>
-          </figure>
-          <figure class="slide" role="group" aria-roledescription="slide" aria-label="6 of 7: Water and environment" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1592577495540-60f4b9270c6d?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="Red-tinted water filling a flooded open-pit mine" loading="lazy" decoding="async">
-            <figcaption>
-              <span class="slide-tag">06 · Water</span>
-              <h3>Water and environment</h3>
-              <p>Water quality and discharge data kept current, so audits are clean and problems are caught early.</p>
-              <a class="slide-credit" href="https://unsplash.com/photos/lake-near-mountain-during-daytime-EY83fMqR4_o" target="_blank" rel="noopener">Photo: Evgenii Pliusnin / Unsplash</a>
-            </figcaption>
-          </figure>
-          <figure class="slide" role="group" aria-roledescription="slide" aria-label="7 of 7: Closure and mine development" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=1280&amp;q=70" srcset="https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=640&amp;q=70 640w, https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=960&amp;q=70 960w, https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=1280&amp;q=70 1280w, https://images.unsplash.com/photo-1616079537574-0e1b4d27be4e?auto=format&amp;fit=crop&amp;w=1800&amp;q=70 1800w" sizes="(min-width: 1184px) 1120px, 100vw" alt="A steel mine headframe against a blue sky" loading="lazy" decoding="async">
-            <figcaption>
-              <span class="slide-tag">07 · Closure and development</span>
-              <h3>Closure and mine development</h3>
-              <p>Closed and derelict sites rehabilitated on evidence, and mines under care and maintenance brought back.</p>
-              <a class="slide-credit" href="https://unsplash.com/photos/black-metal-tower-under-blue-sky-IjOPD3VosTs" target="_blank" rel="noopener">Photo: Colter Olmstead / Unsplash</a>
-            </figcaption>
-          </figure>
-        </div>
-        <div class="slider-ui">
-          <button class="slider-btn prev" type="button" aria-label="Previous slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
-          <div class="dots">
-            <button class="dot is-active" type="button" aria-label="Show slide 1: Underground operations" aria-current="true"></button>
-            <button class="dot" type="button" aria-label="Show slide 2: Open-pit operations"></button>
-            <button class="dot" type="button" aria-label="Show slide 3: Processing plants"></button>
-            <button class="dot" type="button" aria-label="Show slide 4: Maintenance teams"></button>
-            <button class="dot" type="button" aria-label="Show slide 5: Control rooms"></button>
-            <button class="dot" type="button" aria-label="Show slide 6: Water and environment"></button>
-            <button class="dot" type="button" aria-label="Show slide 7: Closure and mine development"></button>
-          </div>
-          <button class="slider-btn next" type="button" aria-label="Next slide"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2.2"/></svg></button>
-          <button class="slider-btn pause" type="button" aria-label="Pause the slideshow" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" d="M8 5v14M16 5v14" stroke="currentColor" stroke-width="2.6"/><path class="i-play" d="M8 5l11 7-11 7z" fill="currentColor"/></svg></button>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Why now -->
-  <section class="band light" id="why">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">Why now</p>
-        <h2>South African mining is under pressure on safety and output at the same time.</h2>
-        <p class="lead">Better information saves lives and money together. Four figures make the case.</p>
-      </div>
-      <div class="stats">
-        <article class="stat alert">
-          <div class="stat-num">53</div>
-          <p>deaths at South African mines between January and mid-October 2026, more than the 41 recorded in all of 2025.</p>
-          <p class="src">Minerals Council SA, via <a href="https://www.miningweekly.com/article/deaths-prompt-south-african-miners-safety-review-minerals-council-ceo-says-2026-10-15" target="_blank" rel="noopener">Mining Weekly</a></p>
-        </article>
-        <article class="stat">
-          <div class="stat-num">&minus;12.7%</div>
-          <p>mining production in August 2026 against August 2025, the largest year-on-year fall since October 2022.</p>
-          <p class="src"><a href="https://www.statssa.gov.za/publications/P2041/P2041August2026.pdf" target="_blank" rel="noopener">Stats SA</a>, 13 October 2026</p>
-        </article>
-        <article class="stat">
-          <div class="stat-num">15</div>
-          <p>fall-of-ground deaths in 2025, up from 12 in 2024, in a year when total deaths reached a record low.</p>
-          <p class="src"><a href="https://www.miningmx.com/news/markets/64075-despite-improvements-last-year-sa-mines-remain-deadly/" target="_blank" rel="noopener">Miningmx</a>, February 2026</p>
-        </article>
-        <article class="stat">
-          <div class="stat-num">6.2%</div>
-          <p>of South Africa's nominal GDP in 2025 came from mining, a total of R477.1 billion.</p>
-          <p class="src">Minerals Council SA, via <a href="https://engineeringnews.co.za/article/strong-commodity-prices-in-2025-ensure-modest-growth-backing-for-sa-mining-minerals-council-2026-10-16" target="_blank" rel="noopener">Engineering News</a></p>
-        </article>
-      </div>
-      <p class="stats-note">Figures as published by each source. Last reviewed November 2026.</p>
-      <div class="reg-note">
-        <span class="reg-tag">MHSA Chapter 8 · Level 9</span>
-        <p><strong>Regulation already expects machines and people to communicate.</strong> Since December 2022, diesel trackless mobile machines must slow down and stop on their own when the operator does not act. A system like that is only as good as the information it acts on.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- The gap -->
-  <section class="band" id="gap">
+  <section class="band" id="problem">
     <div class="wrap gap-grid">
       <div>
         <p class="label" style="margin-bottom:12px">The problem we solve</p>
         <blockquote>Mines already have the data. It sits in separate systems, on paper and in spreadsheets, and it reaches the right person too late.</blockquote>
         <div class="body">
-          <p>Machine data sits in one portal, diesel in a logbook, breakdowns on job cards and tonnes in a spreadsheet. By the time someone pieces it together, a machine has stood for days, money has leaked or a cost has crept up without anyone noticing.</p>
-          <p>Each large vendor owns one source of data: the machines, the sensors, the historian or the work-order system. Nobody owns the step between "the data exists" and "the right person has acted, with the evidence to prove it". That step is what our platform does.</p>
+          <p>Each large vendor owns one source of data: the machines, the sensors or the work-order system. Nobody owns the step between "the data exists" and "the right person has acted, with the evidence to prove it". That step is what our platform does.</p>
         </div>
-        <div class="silos" aria-label="Where warnings sit today">
-          <span>Equipment portals</span><span>Logbooks</span><span>Job cards</span><span>Load sheets</span><span>Spreadsheets</span><span>WhatsApp groups</span>
-        </div>
-        <figure class="ph gap-photo"><img src="https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&amp;fit=crop&amp;w=800&amp;q=70" srcset="https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&amp;fit=crop&amp;w=480&amp;q=70 480w, https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&amp;fit=crop&amp;w=800&amp;q=70 800w, https://images.unsplash.com/photo-1523705480679-b5d0cc17a656?auto=format&amp;fit=crop&amp;w=1200&amp;q=70 1200w" sizes="(min-width: 1184px) 520px, 100vw" alt="A handwritten log sheet on a clipboard" loading="lazy" decoding="async"><a class="ph-credit" href="https://unsplash.com/photos/date-organizer-clipboard-lUShu7PHIGA" target="_blank" rel="noopener">Photo: Eco Warrior Princess / Unsplash</a></figure>
       </div>
       <ol class="questions">
         <li><span class="q-num">01</span><div><h3>Which machines are working?</h3><p>Available, standing or down, at every site, and why. Before the first shift starts.</p></div></li>
@@ -281,7 +112,6 @@
     </div>
   </section>
 
-  <!-- Platform -->
   <section class="band white" id="platform">
     <div class="wrap">
       <div class="section-head">
@@ -291,67 +121,49 @@
       </div>
 
       <p class="label group-title">Operations intelligence</p>
-      <div class="services four">
-        <article class="service mod">
-          <span class="svc-tag">01 · Intelligence</span>
-          <h3>Fleet</h3>
-          <p class="svc-lead">Which machines are working, which are down, and what it costs.</p>
-          <ul>
-            <li>Availability by site, every day</li>
-            <li>Downtime in hours, tonnes and rand</li>
-            <li>Every brand in one view</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Machine hours recovered</p>
+      <div class="mods">
+        <article class="mod-card">
+          <div class="mod-viz"><svg viewBox="0 0 234 62" aria-hidden="true"><rect class="v-on" x="0" y="4" width="24" height="24" rx="4"/><rect class="v-on" x="30" y="4" width="24" height="24" rx="4"/><rect class="v-on" x="60" y="4" width="24" height="24" rx="4"/><rect class="v-alert" x="90" y="4" width="24" height="24" rx="4"/><rect class="v-on" x="120" y="4" width="24" height="24" rx="4"/><rect class="v-on" x="150" y="4" width="24" height="24" rx="4"/><rect class="v-on" x="180" y="4" width="24" height="24" rx="4"/><rect class="v-on" x="210" y="4" width="24" height="24" rx="4"/><rect class="v-on" x="0" y="34" width="24" height="24" rx="4"/><rect class="v-idle" x="31" y="35" width="22" height="22" rx="4"/><rect class="v-on" x="60" y="34" width="24" height="24" rx="4"/><rect class="v-on" x="90" y="34" width="24" height="24" rx="4"/><rect class="v-alert" x="120" y="34" width="24" height="24" rx="4"/><rect class="v-on" x="150" y="34" width="24" height="24" rx="4"/><rect class="v-on" x="180" y="34" width="24" height="24" rx="4"/><rect class="v-on" x="210" y="34" width="24" height="24" rx="4"/></svg></div>
+          <div class="mod-title"><span class="mod-num">01</span><h3>Fleet</h3></div>
+          <p class="mod-lead">Which machines are working, which are down, and what it costs.</p>
+          <ul class="mod-list"><li>Availability by site, every day</li><li>Downtime in hours, tonnes and rand</li><li>Every brand in one view</li></ul>
+          <p class="mod-measure"><b>Measured in</b>Machine hours recovered</p>
         </article>
-        <article class="service mod">
-          <span class="svc-tag">02 · Intelligence</span>
-          <h3>Fuel</h3>
-          <p class="svc-lead">Where every litre of diesel goes, and where the numbers do not add up.</p>
-          <ul>
-            <li>Variances flagged early, with evidence</li>
-            <li>Diesel cost per machine and tonne</li>
-            <li>Records ready for the diesel refund</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Rand recovered, confirmed by your team</p>
+        <article class="mod-card">
+          <div class="mod-viz"><svg viewBox="0 0 234 62" aria-hidden="true"><path class="v-grid" d="M0 52H234M0 30H234M0 8H234"/><polyline class="v-line" points="0,40 26,37 52,39 78,33 104,35 130,31 156,33 172,14 190,32 212,29 234,30"/><line class="v-mark" x1="172" y1="14" x2="172" y2="58"/><circle class="v-ring" cx="172" cy="14" r="9"/><circle class="v-dot" cx="172" cy="14" r="4"/></svg></div>
+          <div class="mod-title"><span class="mod-num">02</span><h3>Fuel</h3></div>
+          <p class="mod-lead">Where every litre of diesel goes, and where the numbers do not add up.</p>
+          <ul class="mod-list"><li>Variances flagged early, with evidence</li><li>Diesel cost per machine and tonne</li><li>Records ready for the diesel refund</li></ul>
+          <p class="mod-measure"><b>Measured in</b>Rand recovered, confirmed by your team</p>
         </article>
-        <article class="service mod">
-          <span class="svc-tag">03 · Intelligence</span>
-          <h3>Maintenance</h3>
-          <p class="svc-lead">Early warnings on the machines that matter most, tracked until fixed.</p>
-          <ul>
-            <li>One ranked list of warnings</li>
-            <li>Overdue services and repeat failures</li>
-            <li>Fewer breakdowns mid-shift</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Failures that had an earlier warning</p>
+        <article class="mod-card">
+          <div class="mod-viz"><svg viewBox="0 0 234 62" aria-hidden="true"><path class="v-grid" d="M0 52H234"/><path class="v-line" d="M0 38H44l5-9 6 18 5-9H104l5-7 6 13 5-6H178l5-24 7 40 5-16H234"/><circle class="v-ring" cx="146" cy="38" r="9"/><circle class="v-dot" cx="146" cy="38" r="4"/></svg></div>
+          <div class="mod-title"><span class="mod-num">03</span><h3>Maintenance</h3></div>
+          <p class="mod-lead">Early warnings on the machines that matter most, tracked until fixed.</p>
+          <ul class="mod-list"><li>One ranked list of warnings</li><li>Overdue services and repeat failures</li><li>Fewer breakdowns mid-shift</li></ul>
+          <p class="mod-measure"><b>Measured in</b>Failures that had an earlier warning</p>
         </article>
-        <article class="service mod">
-          <span class="svc-tag">04 · Intelligence</span>
-          <h3>Production</h3>
-          <p class="svc-lead">Tonnes, loads and cost per tonne by site, machine and shift.</p>
-          <ul>
-            <li>Output against plan, every day</li>
-            <li>A cost per tonne you can trust</li>
-            <li>Sites and shifts compared fairly</li>
-          </ul>
-          <p class="svc-measure"><b>Measured by</b>Cost per tonne against plan</p>
+        <article class="mod-card">
+          <div class="mod-viz"><svg viewBox="0 0 234 62" aria-hidden="true"><rect class="v-on" x="0" y="30" width="20" height="30" rx="3"/><rect class="v-on" x="30" y="22" width="20" height="38" rx="3"/><rect class="v-on" x="60" y="34" width="20" height="26" rx="3"/><rect class="v-on" x="90" y="18" width="20" height="42" rx="3"/><rect class="v-on" x="120" y="24" width="20" height="36" rx="3"/><rect class="v-on" x="150" y="14" width="20" height="46" rx="3"/><rect class="v-on" x="180" y="20" width="20" height="40" rx="3"/><rect class="v-on" x="210" y="10" width="20" height="50" rx="3"/><line class="v-plan" x1="0" y1="22" x2="234" y2="22"/></svg></div>
+          <div class="mod-title"><span class="mod-num">04</span><h3>Production</h3></div>
+          <p class="mod-lead">Tonnes, loads and cost per tonne by site, machine and shift.</p>
+          <ul class="mod-list"><li>Output against plan, every day</li><li>A cost per tonne you can trust</li><li>Sites and shifts compared fairly</li></ul>
+          <p class="mod-measure"><b>Measured in</b>Cost per tonne against plan</p>
         </article>
       </div>
 
       <div class="engine">
         <div class="engine-copy">
           <span class="svc-tag">The intelligence layer</span>
-          <h3>One morning brief. Everything that needs you.</h3>
-          <p>Every morning, owners and managers get a short brief on their phone: what changed overnight, what it costs and what to do first. Ask a question in plain language and get an answer with the evidence behind it, whether you are on site or away.</p>
+          <h3>Ask your operation a question. Get an answer with the evidence.</h3>
+          <p>Owners and managers get a short brief on their phone every morning: what changed overnight, what it costs and what to do first. Ask in plain language, on site or away, and every answer links to the records behind it.</p>
           <p class="engine-rule"><b>AI explains and drafts. People decide.</b> Every finding has an owner and is tracked until it is closed.</p>
         </div>
-        <figure class="brief" aria-label="Illustrative example of a morning brief">
-          <div class="brief-head"><span>06:00 · Morning brief</span><span>Illustrative</span></div>
-          <ul>
-            <li class="crit"><b>2 machines down at Site 3</b><span>Parts on order. Owner assigned.</span></li>
-            <li class="warn"><b>Diesel variance at Site 5</b><span>Needs a check today. Evidence attached.</span></li>
-            <li class="good"><b>Site 1 ahead of plan</b><span>Third day running.</span></li>
-          </ul>
+        <figure class="ask" aria-label="Illustrative example of a question and answer">
+          <div class="ask-q"><span class="mono">You</span><p>Why is Site 3 behind plan this week?</p></div>
+          <div class="ask-a"><span class="mono">N³</span><p>Two loaders have been down since Tuesday, so loading has run short every shift. Parts arrive Thursday and the owner is assigned.</p><span class="ask-ev">3 records attached</span></div>
+          <div class="ask-input"><span>Ask about your operation</span><i class="caret"></i></div>
+          <figcaption class="mono">Illustrative</figcaption>
         </figure>
       </div>
 
@@ -386,193 +198,48 @@
     </div>
   </section>
 
-  <!-- Approach -->
-  <section class="band light" id="approach">
+  <section class="band light" id="how">
     <div class="wrap">
       <div class="section-head">
-        <p class="label">How we work</p>
+        <p class="label">How it works</p>
         <h2>Deploy, run, expand. Every rand is counted.</h2>
         <p class="lead">No long implementation and no open-ended project. We start at the operation where the value is largest, and grow with you site by site.</p>
       </div>
-      <ol class="stages">
-        <li class="stage">
-          <span class="num">Step 1</span>
+      <ol class="stepper">
+        <li>
+          <span class="step-node">1</span>
           <h3>Deploy</h3>
-          <div class="terms"><span>One operation</span><span>Fixed setup scope and price</span></div>
+          <p class="step-term">One operation · fixed setup scope and price</p>
           <p>We bring the operation's existing records onto the platform. Your team uses it from the first week.</p>
-          <p class="gate"><b>You receive</b>The morning brief, live status by site, and findings measured in rand.</p>
+          <p class="step-get"><b>You receive</b>The morning brief, live status by site, and findings measured in rand.</p>
         </li>
-        <li class="stage">
-          <span class="num">Step 2</span>
+        <li>
+          <span class="step-node">2</span>
           <h3>Run</h3>
-          <div class="terms"><span>Annual licence per operation</span></div>
+          <p class="step-term">Annual licence per operation</p>
           <p>The operation runs on the platform, with support, updates and training for new staff.</p>
-          <p class="gate"><b>You receive</b>A monthly value report your finance team can audit.</p>
+          <p class="step-get"><b>You receive</b>A monthly value report your finance team can audit.</p>
         </li>
-        <li class="stage">
-          <span class="num">Step 3</span>
+        <li>
+          <span class="step-node">3</span>
           <h3>Expand</h3>
-          <div class="terms"><span>More sites</span><span>More modules</span></div>
+          <p class="step-term">More sites · more modules</p>
           <p>Add the next site, department or module without starting a new system each time.</p>
-          <p class="gate"><b>You receive</b>One view of every operation, and every finding, in one place.</p>
-        </li>
-      </ol>
-      <p class="stages-note">Setup is fixed in scope and price, so it never turns into an open-ended project.</p>
-    </div>
-  </section>
-
-  <!-- Product -->
-  <section class="band raised" id="technology">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">Our technology</p>
-        <h2>From data to decision, every morning.</h2>
-        <p class="lead">N³ Mining Intelligence brings an operation's records together, finds what needs attention and puts it in front of the right person, with the evidence attached. AI does the reading, explaining and drafting. A person decides.</p>
-      </div>
-      <div class="product">
-        <div class="flow" aria-label="How N³ Mining Intelligence works">
-          <div class="flow-sources">
-            <div class="src-chip"><b>Machines</b><span>Any brand</span></div>
-            <div class="src-chip"><b>Fuel</b><span>Records you keep</span></div>
-            <div class="src-chip"><b>Workshop</b><span>Jobs and services</span></div>
-            <div class="src-chip"><b>Production</b><span>Loads and tonnes</span></div>
-          </div>
-          <div class="arrow" aria-hidden="true"></div>
-          <div class="flow-step agent"><b>Secure intake</b><span>Read-only. Hosted in South Africa. Never connects to control systems.</span></div>
-          <div class="arrow" aria-hidden="true"></div>
-          <div class="flow-step"><span class="ai">N³ intelligence</span><b>Find what needs attention</b><span>Downtime, variances and early warnings, ranked by what they cost.</span></div>
-          <div class="arrow" aria-hidden="true"></div>
-          <div class="flow-step human"><b>A person approves</b><span>Every finding shows the records behind it before anyone acts.</span></div>
-          <div class="arrow" aria-hidden="true"></div>
-          <div class="flow-step"><b>Owner, due date, evidence</b><span>Each finding assigned and tracked until it is closed, so nothing falls between shifts.</span></div>
-          <div class="arrow" aria-hidden="true"></div>
-          <div class="flow-step"><b>Morning brief and reports</b><span>A short brief on every manager's phone, and monthly value reports finance can audit.</span></div>
-          <p class="loop">Every closed finding adds to the operation's record.</p>
-        </div>
-
-        <div>
-          <p class="label col-title">What it gives an operation</p>
-          <ul class="features">
-            <li><b>Know before the first shift</b><span>The state of every site on your phone, before the day starts.</span></li>
-            <li><b>Money you can see</b><span>Downtime, diesel and repeat breakdowns, counted in rand.</span></li>
-            <li><b>Every finding owned</b><span>Each one has an owner, a due date and the evidence that it was resolved.</span></li>
-            <li><b>Proof, not opinions</b><span>Every number links to the records behind it.</span></li>
-            <li><b>One system as you grow</b><span>New sites and modules are configuration, not a new project.</span></li>
-            <li><b>Your data stays yours</b><span>Hosted in South Africa, handled under POPIA, and exportable in full at any time.</span></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="tech-more">
-        <a class="btn btn-ghost" href="technology.html">How the technology works, and how it stays secure</a>
-        <p>Where we use AI and where we do not, the rules we build by, and how our software sits on a mine's network.</p>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Mine life cycle -->
-  <section class="band" id="lifecycle">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">Across the mine life cycle</p>
-        <h2>From operating mines to closure and new projects.</h2>
-        <p class="lead">The same data discipline that makes an operating mine safer and more productive also guides how a site is closed, rehabilitated and brought back into production.</p>
-      </div>
-      <ol class="horizons">
-        <li class="horizon now">
-          <figure class="ph card-photo"><img src="https://images.unsplash.com/photo-1647969476632-17261bc91afa?auto=format&amp;fit=crop&amp;w=800&amp;q=70" srcset="https://images.unsplash.com/photo-1647969476632-17261bc91afa?auto=format&amp;fit=crop&amp;w=480&amp;q=70 480w, https://images.unsplash.com/photo-1647969476632-17261bc91afa?auto=format&amp;fit=crop&amp;w=800&amp;q=70 800w, https://images.unsplash.com/photo-1647969476632-17261bc91afa?auto=format&amp;fit=crop&amp;w=1200&amp;q=70 1200w" sizes="(min-width: 1184px) 360px, (min-width: 721px) 33vw, 100vw" alt="A large open-pit mine surrounded by forest" loading="lazy" decoding="async"><a class="ph-credit" href="https://unsplash.com/photos/a-large-open-pit-in-the-middle-of-a-forest-JaQUPf4UcBY" target="_blank" rel="noopener">Photo: Noah Ridge / Unsplash</a></figure>
-          <span class="h-when">Now · Operate</span>
-          <h3>Operating mines and plants</h3>
-          <p>Our platform helps contract miners, operating mines and processing plants keep machines working, diesel accounted for and costs under control.</p>
-          <p class="h-fact"><a href="#platform">Fleet · Fuel · Maintenance · Production · Compliance</a></p>
-          <p class="h-needs"><b>Who we work with</b>Contract miners, mine and plant managers, and maintenance, environmental and safety teams.</p>
-        </li>
-        <li class="horizon">
-          <figure class="ph card-photo"><img src="https://images.unsplash.com/photo-1632685722964-e609cb5c01b4?auto=format&amp;fit=crop&amp;w=800&amp;q=70" srcset="https://images.unsplash.com/photo-1632685722964-e609cb5c01b4?auto=format&amp;fit=crop&amp;w=480&amp;q=70 480w, https://images.unsplash.com/photo-1632685722964-e609cb5c01b4?auto=format&amp;fit=crop&amp;w=800&amp;q=70 800w, https://images.unsplash.com/photo-1632685722964-e609cb5c01b4?auto=format&amp;fit=crop&amp;w=1200&amp;q=70 1200w" sizes="(min-width: 1184px) 360px, (min-width: 721px) 33vw, 100vw" alt="Aerial view of a flooded former pit surrounded by trees" loading="lazy" decoding="async"><a class="ph-credit" href="https://unsplash.com/photos/an-aerial-view-of-a-lake-surrounded-by-trees-xSMLIH8Qex0" target="_blank" rel="noopener">Photo: Ilia / Unsplash</a></figure>
-          <span class="h-when">Next · Close and rehabilitate</span>
-          <h3>Closure and rehabilitation</h3>
-          <p>Rehabilitating closed and derelict sites with specialist partners, planned on evidence, with progress that can be shown.</p>
-          <p class="h-fact">The Department of Mineral and Petroleum Resources puts the closure cost of derelict and ownerless mine sites at about R51.5 billion, R8.6 billion of it for high-priority sites (<a href="https://pmg.org.za/committee-question/41520/" target="_blank" rel="noopener">parliamentary reply</a>, October 2026).</p>
-          <p class="h-needs"><b>Who we work with</b>Mine owners, the state, and environmental and rehabilitation specialists.</p>
-        </li>
-        <li class="horizon">
-          <figure class="ph card-photo"><img src="https://images.unsplash.com/photo-1524037755327-dc2def03712a?auto=format&amp;fit=crop&amp;w=800&amp;q=70" srcset="https://images.unsplash.com/photo-1524037755327-dc2def03712a?auto=format&amp;fit=crop&amp;w=480&amp;q=70 480w, https://images.unsplash.com/photo-1524037755327-dc2def03712a?auto=format&amp;fit=crop&amp;w=800&amp;q=70 800w, https://images.unsplash.com/photo-1524037755327-dc2def03712a?auto=format&amp;fit=crop&amp;w=1200&amp;q=70 1200w" sizes="(min-width: 1184px) 360px, (min-width: 721px) 33vw, 100vw" alt="A coal processing plant and conveyors lit at night" loading="lazy" decoding="async"><a class="ph-credit" href="https://unsplash.com/photos/lighted-brown-concrete-buildings-near-body-of-water-at-nighttime-F1B0-iuAxO4" target="_blank" rel="noopener">Photo: Dominik Vanyi / Unsplash</a></figure>
-          <span class="h-when">Later · Develop</span>
-          <h3>Mine development</h3>
-          <p>In time, we will develop mining opportunities ourselves, with a focus on mines under care and maintenance, where existing infrastructure lowers the cost of returning to production.</p>
-          <p class="h-fact">The Minerals Council has recommended opening derelict mines and the more than 30 mines under care and maintenance to junior miners (<a href="https://www.dailymaverick.co.za/article/2026-04-14-zama-zama-operations-easier-than-legal-mining-new-report-details-woes-of-sas-junior-miners/" target="_blank" rel="noopener">Daily Maverick</a>, April 2026).</p>
-          <p class="h-needs"><b>Who we work with</b>Rights holders, investors and experienced mining partners.</p>
+          <p class="step-get"><b>You receive</b>One view of every operation, and every finding, in one place.</p>
         </li>
       </ol>
     </div>
   </section>
 
-  <!-- Partners and funders (summary) -->
-  <section class="band white" id="partners">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">For partners and funders</p>
-        <h2>A disciplined route from a measured mine problem to recurring revenue.</h2>
-        <p class="lead">Our model is a software licence per operation. Each operation adds data, references and recurring revenue, and that revenue funds the move into rehabilitation and mine development.</p>
-      </div>
-      <div class="seeking">
-        <div><b>Mines and contractors</b><span>Contract miners, mid-tier operations and processing plants that want more output from the same fleet.</span></div>
-        <div><b>Channel partners</b><span>Environmental consultancies, condition-monitoring providers and integrators already working on site.</span></div>
-        <div><b>Rehabilitation partners</b><span>Environmental and rehabilitation specialists to deliver with us on closed and derelict sites.</span></div>
-        <div><b>Funding partners</b><span>Grant funders, development finance and investors to fund growth across sites.</span></div>
-      </div>
-      <div class="tech-more" style="margin-top:var(--s6)">
-        <a class="btn btn-line" href="partners.html">Our case, and where we are going</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team -->
-  <section class="band" id="team">
-    <div class="wrap">
-      <div class="section-head">
-        <p class="label">The founders</p>
-        <h2>Three co-founders who start in the mine, with the people who do the work.</h2>
-        <p class="lead">N³ (N-cubed) Innovations takes its name from its three founders, whose first names all start with N.</p>
-      </div>
-      <div class="team">
-        <article class="person">
-          <div class="mark" aria-hidden="true"><i></i><i></i></div>
-          <div><h3>Nkanyiso Gracious Maqubela</h3><p class="role" style="margin-top:6px">Co-founder · Partnerships and stakeholders</p></div>
-        </article>
-        <article class="person">
-          <div class="mark" aria-hidden="true"><i></i><i></i></div>
-          <div><h3>Neo Magubane</h3><p class="role" style="margin-top:6px">Co-founder · Operations and software</p></div>
-        </article>
-        <article class="person">
-          <div class="mark" aria-hidden="true"><i></i><i></i></div>
-          <div><h3>Nkululeko Mdluli</h3><p class="role" style="margin-top:6px">Co-founder · Technology and data</p></div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="band light" id="contact">
-    <div class="wrap contact">
+  <section class="band cta-band">
+    <div class="wrap cta-row">
       <div>
-        <p class="label" style="margin-bottom:12px">Contact us</p>
         <h2>See your whole operation, every morning.</h2>
-        <p class="lead">Mines and contractors: tell us the operational problem that costs you the most, and we will show you the platform on it. Partners and funders: ask for our plan and we will arrange a meeting.</p>
+        <p class="lead">Tell us the operational problem that costs you the most, and we will show you the platform on it.</p>
       </div>
-      <div class="card-contact">
-        <dl>
-          <div><dt>Email</dt><dd><a class="js-email" href="mailto:info@n3innovations.co.za">info@n3innovations.co.za</a></dd></div>
-          <div><dt>Phone</dt><dd><a href="tel:+27715983895">071 598 3895</a></dd></div>
-          <div><dt>Based in</dt><dd>Johannesburg, Gauteng. We work at mines across South Africa.</dd></div>
-        </dl>
-        <div class="actions">
-          <a class="btn btn-primary js-mail" data-subject="Enquiry about an operation" href="mailto:info@n3innovations.co.za?subject=Enquiry%20about%20an%20operation">Talk about your operation</a>
-          <a class="btn btn-ghost js-mail" data-subject="Partnership or funding enquiry" href="mailto:info@n3innovations.co.za?subject=Partnership%20or%20funding%20enquiry">Partner or fund</a>
-        </div>
-        <div class="contact-links"><a href="assets/N3-Innovations-Company-Profile.pdf" download>Download our company profile (PDF)</a><button id="copy-email" type="button">Copy email address</button></div>
-        <p class="copy-state" id="copy-state" aria-live="polite"></p>
+      <div class="actions">
+        <a class="btn btn-primary" href="contact.html">Talk to us about your operation</a>
+        <a class="btn btn-ghost" href="partners.html">Partner or fund</a>
       </div>
     </div>
   </section>
@@ -583,36 +250,22 @@
   <div class="wrap">
     <div class="foot-grid">
       <div>
-        <a class="brand" href="#top"><svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg><span>N<sup>3</sup> Innovations</span></a>
+        <a class="brand" href="index.html"><svg viewBox="0 0 34 24" aria-hidden="true"><rect x="0" y="0" width="16" height="24" fill="#EEF2F4"/><circle cx="25" cy="12" r="9" fill="#F26A21"/></svg><span>N<sup>3</sup> Innovations</span></a>
         <div class="foot-meta">
           <span>N³ Mining Intelligence · mining intelligence software</span>
           <span>Based in Johannesburg · working at mines across South Africa</span>
           <span><b>100% black-owned</b> · B-BBEE Level 1</span>
         </div>
       </div>
-      <div>
-        <p class="label">Sources for the figures on this page</p>
-        <ul class="sources">
-          <li><a href="https://www.miningweekly.com/article/deaths-prompt-south-african-miners-safety-review-minerals-council-ceo-says-2026-10-15" target="_blank" rel="noopener">Mining Weekly (Reuters): Deaths prompt South African miners' safety review, 15 October 2026</a></li>
-          <li><a href="https://www.statssa.gov.za/publications/P2041/P2041August2026.pdf" target="_blank" rel="noopener">Stats SA P2041: Mining production and sales, August 2026</a></li>
-          <li><a href="https://www.ewn.co.za/sa-mining-production-reports-127-plunge-in-august/" target="_blank" rel="noopener">EWN: SA mining production plunged 12.7% in August, 13 October 2026</a></li>
-          <li><a href="https://www.miningmx.com/news/markets/64075-despite-improvements-last-year-sa-mines-remain-deadly/" target="_blank" rel="noopener">Miningmx: Despite improvements last year, SA mines remain deadly</a></li>
-          <li><a href="https://engineeringnews.co.za/article/strong-commodity-prices-in-2025-ensure-modest-growth-backing-for-sa-mining-minerals-council-2026-10-16" target="_blank" rel="noopener">Engineering News: Minerals Council Facts and Figures 2025</a></li>
-          <li><a href="https://miningfocusafrica.com/?p=6511" target="_blank" rel="noopener">Mining Focus Africa: Level 9 collision avoidance in law, December 2022</a></li>
-          <li><a href="https://www.marketsandmarkets.com/PressReleases/ai-in-mining.asp" target="_blank" rel="noopener">MarketsandMarkets: AI in Mining Market</a></li>
-          <li><a href="https://pmg.org.za/committee-question/41520/" target="_blank" rel="noopener">Parliamentary Monitoring Group: Question NW5121 to the Minister of Mineral and Petroleum Resources, October 2026</a></li>
-          <li><a href="https://www.dailymaverick.co.za/article/2026-04-14-zama-zama-operations-easier-than-legal-mining-new-report-details-woes-of-sas-junior-miners/" target="_blank" rel="noopener">Daily Maverick: Minerals Council report on junior miners, April 2026</a></li>
-        </ul>
-      </div>
     </div>
     <div class="foot-base">
       <span>&copy; 2026 N³ Innovations</span>
-      <span class="foot-links"><a href="technology.html">Technology</a><a href="partners.html">Partners and funders</a><a href="privacy.html">Privacy notice</a><a href="paia.html">PAIA manual</a><a href="assets/N3-Innovations-Company-Profile.pdf" download>Company profile (PDF)</a></span>
+      <span class="foot-links"><a href="index.html#platform">Platform</a><a href="technology.html">Technology</a><a href="company.html">Company</a><a href="partners.html">Partners</a><a href="contact.html">Contact</a><a href="privacy.html">Privacy notice</a><a href="paia.html">PAIA manual</a><a href="assets/N3-Innovations-Company-Profile.pdf" download>Company profile (PDF)</a></span>
     </div>
   </div>
 </footer>
 
-<script src="assets/site.js?v=8"></script>
+<script src="assets/site.js?v=9"></script>
 <!-- Cloudflare Web Analytics --><script defer type='module' src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "e5d907d3fe0f4707b20e3c5c5f0090de"}'></script><!-- End Cloudflare Web Analytics -->
 </body>
 </html>
