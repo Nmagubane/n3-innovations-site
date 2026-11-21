@@ -1,8 +1,8 @@
 # N³ Innovations website
 
-Single-page static site for N³ Innovations, a South African mining company working across operating mines, closure and rehabilitation, and mine development.
+Static site for N³ Innovations, a South African mining technology company. Its product is N³ Mining Intelligence (fleet, fuel, maintenance and production intelligence, with compliance and safety on the same core). Longer term: closure, rehabilitation and mine development.
 
-Pages: `index.html` (home), `technology.html` (AI use and security), `privacy.html` (POPIA notice).
+Pages: `index.html` (home), `technology.html` (AI use and security), `partners.html` (partners and funders), `privacy.html` (POPIA notice), `paia.html` (PAIA manual).
 Shared styles and script: `assets/site.css`, `assets/site.js`. Link preview image: `assets/og-image.png`.
 Company profile: `assets/N3-Innovations-Company-Profile.pdf` (regenerate when contact details change).
 Also `CNAME` (custom domain, set by GitHub), `robots.txt`, `sitemap.xml`. No build step.
@@ -47,5 +47,8 @@ Change it there, and also in the `mailto:` fallbacks in `index.html` and `privac
 
 - Formal company titles for the three co-founders. The site shows names and co-founder roles only.
 - Whether the study lead's mobile number should be public.
-- The product name "N³ Action Ledger" (a working name).
-- That each platform module marked as available can be delivered in a pilot.
+- That each platform module described can be delivered at a first operation.
+
+## Content rule
+
+Public pages say what changes for the customer, never how we find it: no data-combination methods, detection rules, thresholds or data model. The product prototype never goes in this repository (it is public).
