@@ -511,3 +511,13 @@ td { color: var(--steel); }
 .video-toggle .i-play { display: none; }
 .video-toggle[aria-pressed="true"] .i-play { display: block; }
 .video-toggle[aria-pressed="true"] .i-pause { display: none; }
+
+/* Module cards: align rows across the four cards */
+@supports (grid-template-rows: subgrid) {
+  .services.four .service { grid-row: span 5; grid-template-rows: subgrid; row-gap: var(--s3); }
+}
+.services.four .svc-measure { align-self: end; }
+/* Contact card: secondary links */
+.contact-links { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); font-size: var(--t-sm); }
+.contact-links a, .contact-links button { color: var(--steel); background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.contact-links a:hover, .contact-links button:hover { color: var(--mist); }
