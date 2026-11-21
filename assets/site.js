@@ -51,7 +51,7 @@ var CONTACT_EMAIL = 'info@n3innovations.co.za';
 
   // Scroll reveals, staggered among siblings (opacity only when reduced motion is on).
   var sel = '.section-head, .stat, .service, .also-card, .principles > div, .questions > li, .src-chip, .flow-step, ' +
-            '.stage, .horizon, .person, .seeking > div, .reg-note, .slider, .prose, .tech-more';
+            '.stage, .horizon, .person, .seeking > div, .reg-note, .slider, .prose, .tech-more, .engine';
   var items = Array.prototype.slice.call(document.querySelectorAll(sel));
   items.forEach(function (el) {
     var sibs = Array.prototype.filter.call(el.parentNode.children, function (c) { return c.matches(sel); });
