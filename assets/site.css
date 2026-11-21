@@ -516,8 +516,16 @@ td { color: var(--steel); }
 @supports (grid-template-rows: subgrid) {
   .services.four .service { grid-row: span 5; grid-template-rows: subgrid; row-gap: var(--s3); }
 }
-.services.four .svc-measure { align-self: end; }
 /* Contact card: secondary links */
 .contact-links { display: flex; flex-wrap: wrap; gap: var(--s2) var(--s5); font-size: var(--t-sm); }
 .contact-links a, .contact-links button { color: var(--steel); background: none; border: 0; padding: 0; font: inherit; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
 .contact-links a:hover, .contact-links button:hover { color: var(--mist); }
+
+/* Module cards v2: compact, aligned, one-line titles */
+.services.four .service.mod { padding: var(--s5); transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+.services.four .service.mod h3 { font-size: 1.45rem; line-height: 1.1; }
+.services.four .service.mod .svc-lead { font-size: var(--t-md); line-height: 1.5; }
+.services.four .service.mod .svc-measure { align-self: start; }
+.services.four .service.mod:hover { border-top-color: var(--hivis); transform: translateY(-2px); box-shadow: 0 10px 28px rgba(11,31,51,.08); }
+@media (prefers-reduced-motion: reduce) { .services.four .service.mod:hover { transform: none; } }
+.services.four .service.mod ul { align-content: start; }
